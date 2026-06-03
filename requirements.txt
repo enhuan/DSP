@@ -1,5 +1,5 @@
-streamlit==1.38.0
-pandas==2.2.2
+streamlit>=1.40.0 
+pandas>=2.2.2
 numpy==1.26.4
 presidio-analyzer==2.2.355
 stripe==10.12.0
