@@ -1,0 +1,1501 @@
+service_id,customer_id,service_category,service_status,region,access_technology,router_model,device_os,sla_tier,service_start_date,service_end_date,bandwidth_mbps,monthly_usage_gb,avg_latency_ms,jitter_ms,monthly_outages
+SRV000001,CUST00849,Unifi Business,Active,East Coast,Fibre,D Link DIR 842,iOS,Silver,2023-01-30,,1000,345,7,19,0
+SRV000002,CUST01077,IoT Connectivity,Active,Sabah,4G/LTE,ZTE ZXHN F670L,Linux,Gold,2018-12-14,,100,333,68,7,5
+SRV000003,CUST00027,Cloud Storage,Active,Northern,5G,TP Link Archer A6,iOS,Silver,2024-04-10,,300,335,22,8,6
+SRV000004,CUST00399,Managed Security,Terminated,Southern,Fibre,ZTE ZXHN F670L,Linux,Gold,2018-08-11,2019-10-12,500,1284,6,25,0
+SRV000005,CUST00636,Unifi Home,Active,Northern,Fibre,Nokia G 2425G A,Windows,Silver,2019-05-03,,1000,1790,15,17,0
+SRV000006,CUST00700,Cloud Storage,Terminated,Sarawak,Fibre,Nokia G 2425G A,macOS,Silver,2018-12-16,2019-08-19,1000,670,11,20,2
+SRV000007,CUST00316,Cloud Compute,Terminated,Northern,5G,ZTE ZXHN F670L,Linux,Gold,2021-01-17,2023-08-18,300,760,27,29,0
+SRV000008,CUST00521,Managed Security,Suspended,Central,Fibre,ZTE ZXHN F670L,Embedded,Platinum,2021-11-05,2022-08-14,1000,176,8,23,2
+SRV000009,CUST00810,Mobile Postpaid,Active,Central,4G/LTE,TP Link Archer A6,Windows,Bronze,2020-09-17,,100,101,34,4,2
+SRV000010,CUST00798,Cloud Compute,Provisioning,Sarawak,4G/LTE,Huawei HG8145V5,Android,Gold,2018-06-26,,1000,1167,62,24,2
+SRV000011,CUST00095,Cloud Storage,Provisioning,Sabah,5G,TP Link Archer A6,macOS,Silver,2024-09-22,,500,165,27,24,4
+SRV000012,CUST00361,Unifi Home,Active,Northern,Fibre,Huawei HG8145V5,Windows,Silver,2023-09-20,,800,1020,7,3,0
+SRV000013,CUST00442,Cloud Storage,Active,Northern,5G,D Link DIR 842,Android,Bronze,2021-02-25,,100,1080,17,23,2
+SRV000014,CUST00023,Cloud Compute,Active,East Coast,4G/LTE,Huawei HG8145V5,Embedded,Silver,2020-10-19,,100,1363,53,29,6
+SRV000015,CUST00471,Unifi Business,Active,Northern,DSL,Huawei HG8145V5,Embedded,Silver,2018-05-23,,500,229,92,29,4
+SRV000016,CUST00205,Cloud Compute,Active,East Coast,Fibre,TP Link Archer A6,macOS,Gold,2019-02-20,,300,1470,5,6,2
+SRV000017,CUST00573,Mobile Postpaid,Suspended,Southern,4G/LTE,ZTE ZXHN F670L,Embedded,Silver,2022-03-02,2023-07-26,100,43,27,22,5
+SRV000018,CUST01055,Cloud Storage,Provisioning,Sabah,5G,D Link DIR 842,Windows,Bronze,2020-12-28,,500,311,19,16,2
+SRV000019,CUST00395,IoT Connectivity,Active,East Coast,4G/LTE,ZTE ZXHN F670L,iOS,Silver,2023-10-18,,500,1403,28,10,6
+SRV000020,CUST00666,Unifi Home,Provisioning,Northern,Fibre,Nokia G 2425G A,iOS,Bronze,2019-04-20,,100,255,11,11,1
+SRV000021,CUST00655,IoT Connectivity,Active,Central,4G/LTE,Nokia G 2425G A,macOS,Platinum,2021-04-08,,300,595,50,13,5
+SRV000022,CUST00782,Managed Security,Active,Southern,5G,Nokia G 2425G A,iOS,Gold,2020-09-23,,500,578,17,18,3
+SRV000023,CUST00192,Cloud Compute,Active,Northern,Fibre,Nokia G 2425G A,iOS,Silver,2022-12-29,,300,725,9,9,2
+SRV000024,CUST00305,Cloud Compute,Active,Central,5G,Huawei HG8145V5,macOS,Silver,2023-10-26,,1000,491,16,26,2
+SRV000025,CUST01060,IoT Connectivity,Active,Sarawak,Fibre,TP Link Archer A6,iOS,Silver,2024-02-15,,1000,993,13,24,0
+SRV000026,CUST01040,Cloud Storage,Provisioning,Sabah,5G,TP Link Archer A6,iOS,Bronze,2021-06-12,,300,885,29,5,4
+SRV000027,CUST00676,Cloud Storage,Active,Northern,5G,Huawei HG8145V5,Windows,Gold,2019-04-16,,500,434,27,21,4
+SRV000028,CUST00765,Cloud Compute,Suspended,Northern,5G,ZTE ZXHN F670L,iOS,Silver,2021-05-19,2024-01-28,1000,680,20,7,2
+SRV000029,CUST00197,Cloud Storage,Active,Southern,Fibre,TP Link Archer A6,Linux,Bronze,2022-01-28,,300,109,6,25,2
+SRV000030,CUST00697,Cloud Storage,Active,Central,4G/LTE,D Link DIR 842,iOS,Platinum,2018-03-24,,1000,1465,44,17,3
+SRV000031,CUST00881,Cloud Storage,Active,Central,4G/LTE,Nokia G 2425G A,Windows,Bronze,2021-08-26,,100,1037,64,28,6
+SRV000032,CUST00046,Cloud Storage,Active,Sabah,Fibre,TP Link Archer A6,macOS,Bronze,2024-06-03,,100,153,11,26,2
+SRV000033,CUST00534,Managed Security,Active,East Coast,5G,D Link DIR 842,Windows,Silver,2024-02-25,,100,1436,20,3,4
+SRV000034,CUST01035,Cloud Storage,Terminated,Northern,4G/LTE,ZTE ZXHN F670L,Linux,Bronze,2022-09-16,2023-09-08,300,518,38,23,1
+SRV000035,CUST00754,Cloud Storage,Active,Sarawak,5G,ZTE ZXHN F670L,Windows,Bronze,2020-09-22,,500,937,23,28,5
+SRV000036,CUST01181,Mobile Postpaid,Active,Northern,4G/LTE,ZTE ZXHN F670L,iOS,Gold,2018-08-21,,30,131,24,16,6
+SRV000037,CUST01100,Mobile Postpaid,Suspended,Northern,4G/LTE,ZTE ZXHN F670L,Windows,Platinum,2021-02-22,2022-04-26,30,81,54,11,6
+SRV000038,CUST01005,Managed Security,Provisioning,Northern,5G,TP Link Archer A6,macOS,Platinum,2024-12-07,,1000,610,26,21,2
+SRV000039,CUST01174,Mobile Postpaid,Provisioning,Central,4G/LTE,Nokia G 2425G A,Android,Silver,2021-11-12,,100,109,34,1,5
+SRV000040,CUST00174,Unifi Home,Provisioning,Central,DSL,Huawei HG8145V5,Linux,Silver,2018-08-24,,1000,882,90,26,4
+SRV000041,CUST00427,Unifi Business,Provisioning,East Coast,Fibre,Nokia G 2425G A,Windows,Silver,2018-06-01,,800,1141,16,17,1
+SRV000042,CUST00973,Unifi Home,Suspended,Central,Fibre,D Link DIR 842,iOS,Bronze,2018-04-08,2020-08-10,800,641,13,10,2
+SRV000043,CUST00577,Mobile Postpaid,Active,Central,4G/LTE,D Link DIR 842,macOS,Silver,2024-04-28,,30,79,26,18,0
+SRV000044,CUST00309,Cloud Compute,Active,East Coast,5G,D Link DIR 842,Android,Silver,2023-05-23,,1000,550,13,29,3
+SRV000045,CUST00618,Cloud Storage,Suspended,East Coast,5G,D Link DIR 842,Linux,Silver,2024-06-28,2025-02-12,1000,601,22,15,4
+SRV000046,CUST00642,Unifi Business,Active,Central,DSL,Nokia G 2425G A,macOS,Silver,2018-03-20,,500,1804,143,25,6
+SRV000047,CUST00767,Cloud Compute,Provisioning,Northern,4G/LTE,Huawei HG8145V5,Windows,Gold,2024-01-27,,300,1303,42,28,1
+SRV000048,CUST00914,Managed Security,Provisioning,Southern,Fibre,Huawei HG8145V5,Linux,Silver,2020-03-10,,1000,676,5,9,0
+SRV000049,CUST00047,Cloud Storage,Active,Southern,5G,ZTE ZXHN F670L,Windows,Silver,2018-12-22,,300,710,12,3,2
+SRV000050,CUST00965,Mobile Postpaid,Provisioning,Northern,5G,ZTE ZXHN F670L,macOS,Silver,2022-03-01,,30,91,11,26,3
+SRV000051,CUST00764,Managed Security,Active,East Coast,4G/LTE,Huawei HG8145V5,iOS,Gold,2021-09-13,,500,600,53,26,2
+SRV000052,CUST00866,Cloud Compute,Active,Northern,Fibre,Huawei HG8145V5,Embedded,Bronze,2021-03-19,,1000,165,5,28,0
+SRV000053,CUST00533,Managed Security,Active,Northern,4G/LTE,ZTE ZXHN F670L,Android,Bronze,2020-11-13,,500,1297,68,22,2
+SRV000054,CUST00864,Unifi Home,Active,Northern,Fibre,Nokia G 2425G A,macOS,Silver,2022-07-26,,500,364,7,18,0
+SRV000055,CUST00652,Mobile Postpaid,Provisioning,Central,4G/LTE,TP Link Archer A6,Linux,Bronze,2022-11-09,,100,140,48,14,0
+SRV000056,CUST01046,Cloud Storage,Active,Central,4G/LTE,ZTE ZXHN F670L,Windows,Silver,2024-09-05,,1000,918,62,21,6
+SRV000057,CUST00786,IoT Connectivity,Suspended,Central,4G/LTE,Nokia G 2425G A,Android,Gold,2019-08-14,2020-11-23,1000,802,58,19,2
+SRV000058,CUST00035,Unifi Home,Active,Northern,Fibre,Huawei HG8145V5,Embedded,Bronze,2023-06-15,,1000,1642,10,16,1
+SRV000059,CUST00586,Unifi Business,Active,Northern,DSL,Huawei HG8145V5,macOS,Gold,2021-11-08,,300,337,112,2,2
+SRV000060,CUST00138,Cloud Compute,Suspended,Southern,4G/LTE,D Link DIR 842,Linux,Bronze,2021-07-16,2022-08-24,1000,598,33,18,4
+SRV000061,CUST00185,Cloud Compute,Active,Central,4G/LTE,Nokia G 2425G A,Windows,Bronze,2023-07-29,,500,719,72,5,0
+SRV000062,CUST00385,Cloud Compute,Active,Central,5G,ZTE ZXHN F670L,Android,Gold,2023-11-04,,300,562,26,16,5
+SRV000063,CUST00463,Cloud Compute,Terminated,Southern,4G/LTE,D Link DIR 842,Linux,Bronze,2025-02-17,2026-09-20,500,295,33,3,1
+SRV000064,CUST00751,Unifi Business,Active,Sabah,Fibre,Huawei HG8145V5,Windows,Gold,2024-04-21,,500,1056,15,18,0
+SRV000065,CUST00716,Cloud Compute,Terminated,Central,4G/LTE,Nokia G 2425G A,Windows,Gold,2022-11-06,2023-06-05,1000,1227,58,11,2
+SRV000066,CUST00119,Cloud Compute,Provisioning,Central,4G/LTE,ZTE ZXHN F670L,iOS,Platinum,2020-05-15,,1000,776,43,26,4
+SRV000067,CUST00227,Managed Security,Active,East Coast,4G/LTE,Huawei HG8145V5,iOS,Gold,2021-01-22,,300,737,54,25,4
+SRV000068,CUST00188,IoT Connectivity,Suspended,Central,Fibre,ZTE ZXHN F670L,iOS,Platinum,2019-11-28,2022-06-13,500,888,11,9,0
+SRV000069,CUST00355,Cloud Storage,Terminated,Northern,Fibre,Nokia G 2425G A,Windows,Gold,2023-06-25,2025-11-12,100,1303,8,6,0
+SRV000070,CUST01055,Cloud Compute,Active,Sabah,Fibre,TP Link Archer A6,Android,Platinum,2020-11-22,,1000,280,11,8,0
+SRV000071,CUST00681,Cloud Compute,Active,Central,Fibre,ZTE ZXHN F670L,Windows,Bronze,2019-06-20,,100,729,14,1,1
+SRV000072,CUST00904,Unifi Home,Provisioning,Sabah,Fibre,ZTE ZXHN F670L,macOS,Platinum,2024-11-19,,500,1457,14,22,1
+SRV000073,CUST00655,Managed Security,Active,Central,4G/LTE,D Link DIR 842,iOS,Gold,2021-05-13,,500,721,27,26,4
+SRV000074,CUST00377,IoT Connectivity,Active,Northern,Fibre,D Link DIR 842,macOS,Gold,2022-08-29,,500,798,9,2,1
+SRV000075,CUST00629,Unifi Business,Terminated,Central,DSL,ZTE ZXHN F670L,Android,Silver,2018-01-28,2020-04-08,800,1512,128,23,4
+SRV000076,CUST00192,Unifi Home,Active,Northern,DSL,Nokia G 2425G A,Embedded,Bronze,2023-03-22,,500,474,95,13,4
+SRV000077,CUST00290,Cloud Storage,Suspended,Sabah,Fibre,Huawei HG8145V5,Embedded,Bronze,2020-08-12,2021-11-09,1000,449,17,27,2
+SRV000078,CUST01165,Managed Security,Terminated,Sarawak,Fibre,Nokia G 2425G A,iOS,Gold,2021-10-19,2023-08-26,100,107,5,12,2
+SRV000079,CUST00472,Cloud Compute,Provisioning,Sabah,4G/LTE,TP Link Archer A6,Linux,Silver,2022-12-27,,1000,200,65,7,1
+SRV000080,CUST00299,Unifi Business,Active,Southern,Fibre,D Link DIR 842,Windows,Gold,2022-01-21,,800,1705,9,9,0
+SRV000081,CUST01140,Cloud Storage,Terminated,Sabah,Fibre,Nokia G 2425G A,Windows,Bronze,2020-04-10,2021-01-15,100,778,5,23,0
+SRV000082,CUST01057,Cloud Storage,Active,Southern,5G,ZTE ZXHN F670L,Windows,Silver,2023-03-05,,300,636,10,14,6
+SRV000083,CUST00735,Cloud Storage,Suspended,Southern,5G,D Link DIR 842,Linux,Gold,2022-01-03,2023-03-18,100,1286,10,9,6
+SRV000084,CUST00171,Cloud Compute,Active,Northern,4G/LTE,TP Link Archer A6,iOS,Bronze,2022-10-16,,500,1384,73,12,3
+SRV000085,CUST00276,Cloud Compute,Active,Northern,5G,Nokia G 2425G A,macOS,Platinum,2022-06-10,,1000,811,23,23,4
+SRV000086,CUST00487,Unifi Home,Active,East Coast,Fibre,ZTE ZXHN F670L,Linux,Silver,2022-05-30,,1000,247,7,4,2
+SRV000087,CUST00397,Cloud Storage,Active,Central,5G,D Link DIR 842,macOS,Bronze,2022-08-01,,100,1282,29,1,1
+SRV000088,CUST01043,Unifi Home,Active,Southern,Fibre,TP Link Archer A6,macOS,Silver,2024-07-05,,300,1347,10,23,2
+SRV000089,CUST00594,Cloud Storage,Active,Northern,4G/LTE,ZTE ZXHN F670L,Windows,Silver,2018-05-12,,100,840,34,10,3
+SRV000090,CUST00263,Mobile Postpaid,Active,Central,5G,D Link DIR 842,Linux,Bronze,2019-10-31,,100,76,14,22,5
+SRV000091,CUST00807,Managed Security,Active,Northern,4G/LTE,TP Link Archer A6,macOS,Gold,2019-03-05,,1000,779,44,23,5
+SRV000092,CUST00306,Mobile Postpaid,Active,Northern,5G,Huawei HG8145V5,macOS,Gold,2020-08-21,,30,48,26,7,1
+SRV000093,CUST00503,Cloud Storage,Active,Northern,5G,Nokia G 2425G A,macOS,Silver,2019-02-12,,500,1495,23,16,3
+SRV000094,CUST01015,Unifi Home,Active,Sabah,Fibre,TP Link Archer A6,macOS,Bronze,2024-06-30,,500,1376,15,27,2
+SRV000095,CUST00973,Cloud Compute,Active,Central,Fibre,TP Link Archer A6,Embedded,Bronze,2018-05-15,,500,805,15,20,2
+SRV000096,CUST00325,IoT Connectivity,Provisioning,Northern,5G,TP Link Archer A6,macOS,Gold,2018-08-16,,100,231,30,10,4
+SRV000097,CUST00791,Mobile Postpaid,Active,East Coast,4G/LTE,ZTE ZXHN F670L,Embedded,Silver,2018-12-31,,100,128,36,11,1
+SRV000098,CUST00550,Cloud Storage,Active,Southern,5G,ZTE ZXHN F670L,Windows,Silver,2021-11-15,,500,328,29,13,3
+SRV000099,CUST01085,IoT Connectivity,Active,Sarawak,4G/LTE,ZTE ZXHN F670L,Android,Gold,2019-06-15,,500,1132,72,6,0
+SRV000100,CUST00226,Cloud Storage,Provisioning,East Coast,Fibre,ZTE ZXHN F670L,Embedded,Bronze,2022-02-21,,300,453,13,5,0
+SRV000101,CUST01074,Cloud Compute,Provisioning,Southern,4G/LTE,Huawei HG8145V5,Windows,Silver,2023-12-17,,300,1082,44,14,4
+SRV000102,CUST00100,Cloud Compute,Active,Northern,4G/LTE,ZTE ZXHN F670L,Android,Gold,2024-12-27,,100,662,20,26,1
+SRV000103,CUST00403,Cloud Storage,Active,East Coast,Fibre,TP Link Archer A6,iOS,Silver,2021-06-22,,500,1179,17,13,2
+SRV000104,CUST00996,Unifi Home,Terminated,Northern,Fibre,TP Link Archer A6,Linux,Gold,2023-02-03,2024-01-09,1000,515,17,2,2
+SRV000105,CUST00896,Managed Security,Suspended,East Coast,4G/LTE,D Link DIR 842,Embedded,Gold,2022-09-08,2023-04-25,100,1388,41,24,1
+SRV000106,CUST00810,Cloud Compute,Active,Central,Fibre,ZTE ZXHN F670L,macOS,Silver,2020-11-20,,500,937,19,24,2
+SRV000107,CUST00315,IoT Connectivity,Active,Northern,Fibre,Huawei HG8145V5,Android,Gold,2020-12-19,,500,1429,11,18,0
+SRV000108,CUST00041,Managed Security,Active,Sabah,5G,Nokia G 2425G A,iOS,Bronze,2019-03-08,,1000,473,23,9,1
+SRV000109,CUST00760,Managed Security,Active,Central,4G/LTE,TP Link Archer A6,Windows,Gold,2020-11-08,,1000,1249,59,25,6
+SRV000110,CUST00046,Cloud Storage,Suspended,Sabah,Fibre,Nokia G 2425G A,Embedded,Silver,2024-06-05,2026-05-17,100,1034,20,12,1
+SRV000111,CUST00141,Cloud Compute,Active,Central,4G/LTE,TP Link Archer A6,Windows,Bronze,2020-06-23,,300,794,33,22,0
+SRV000112,CUST00880,Cloud Storage,Active,Northern,Fibre,Nokia G 2425G A,Embedded,Gold,2019-06-10,,500,1457,20,9,1
+SRV000113,CUST00912,Cloud Storage,Active,Central,5G,Nokia G 2425G A,Android,Bronze,2021-05-07,,500,720,29,9,5
+SRV000114,CUST00431,Cloud Storage,Active,Central,5G,Nokia G 2425G A,Linux,Gold,2024-03-10,,500,940,28,6,1
+SRV000115,CUST00006,Cloud Compute,Provisioning,East Coast,Fibre,D Link DIR 842,Linux,Gold,2018-05-23,,300,711,8,12,0
+SRV000116,CUST00738,Cloud Storage,Active,Central,Fibre,ZTE ZXHN F670L,Android,Bronze,2020-06-06,,500,1046,19,28,0
+SRV000117,CUST00590,Cloud Compute,Active,Northern,Fibre,TP Link Archer A6,Embedded,Silver,2020-01-21,,300,821,16,15,2
+SRV000118,CUST00690,Cloud Storage,Active,Southern,Fibre,TP Link Archer A6,Windows,Silver,2019-09-26,,1000,732,8,13,2
+SRV000119,CUST00674,Cloud Compute,Active,Northern,4G/LTE,TP Link Archer A6,iOS,Bronze,2018-02-23,,500,863,42,18,0
+SRV000120,CUST01193,Cloud Compute,Active,Sabah,4G/LTE,TP Link Archer A6,Linux,Bronze,2022-05-18,,100,1438,46,13,0
+SRV000121,CUST00319,IoT Connectivity,Provisioning,Northern,5G,ZTE ZXHN F670L,iOS,Silver,2022-06-04,,300,1441,30,10,3
+SRV000122,CUST00004,Cloud Compute,Active,Central,Fibre,TP Link Archer A6,Linux,Gold,2020-05-31,,100,621,20,22,2
+SRV000123,CUST01002,Cloud Compute,Terminated,Northern,Fibre,Nokia G 2425G A,Windows,Gold,2020-10-06,2021-12-18,100,1161,11,16,1
+SRV000124,CUST00764,Managed Security,Active,East Coast,5G,ZTE ZXHN F670L,iOS,Gold,2021-09-29,,100,139,12,15,2
+SRV000125,CUST00064,Unifi Business,Provisioning,Sarawak,Fibre,ZTE ZXHN F670L,Linux,Silver,2024-06-12,,500,1376,6,16,2
+SRV000126,CUST00886,Mobile Postpaid,Terminated,Central,4G/LTE,TP Link Archer A6,Embedded,Bronze,2023-01-07,2023-09-13,30,113,57,26,6
+SRV000127,CUST00485,Cloud Storage,Active,Sabah,4G/LTE,Huawei HG8145V5,Windows,Platinum,2018-11-24,,1000,591,43,29,5
+SRV000128,CUST00730,IoT Connectivity,Active,Northern,Fibre,D Link DIR 842,Android,Silver,2021-04-08,,300,653,7,7,0
+SRV000129,CUST00708,Unifi Home,Provisioning,Northern,Fibre,ZTE ZXHN F670L,Windows,Bronze,2023-04-14,,800,1955,14,6,1
+SRV000130,CUST00635,Mobile Postpaid,Active,Northern,5G,TP Link Archer A6,Linux,Silver,2021-09-28,,100,133,12,23,2
+SRV000131,CUST01066,Unifi Business,Active,Northern,DSL,ZTE ZXHN F670L,Embedded,Bronze,2024-03-24,,300,1847,126,25,5
+SRV000132,CUST00895,Cloud Compute,Active,East Coast,Fibre,D Link DIR 842,Android,Silver,2018-12-19,,300,1470,18,8,2
+SRV000133,CUST00965,Cloud Compute,Provisioning,Northern,Fibre,Huawei HG8145V5,macOS,Gold,2022-05-02,,1000,978,8,3,0
+SRV000134,CUST00264,Mobile Postpaid,Provisioning,Central,5G,ZTE ZXHN F670L,Windows,Silver,2023-01-25,,100,60,22,3,0
+SRV000135,CUST01200,Cloud Storage,Provisioning,Southern,4G/LTE,Nokia G 2425G A,iOS,Gold,2021-07-15,,500,907,68,25,2
+SRV000136,CUST00925,Cloud Storage,Active,Central,5G,D Link DIR 842,Windows,Gold,2023-10-04,,500,749,18,10,0
+SRV000137,CUST00225,Unifi Home,Provisioning,Southern,Fibre,TP Link Archer A6,Android,Bronze,2024-07-28,,300,1246,5,22,1
+SRV000138,CUST00296,Unifi Home,Active,Southern,DSL,Nokia G 2425G A,Android,Silver,2020-06-19,,800,1915,134,17,2
+SRV000139,CUST00205,Cloud Compute,Suspended,East Coast,Fibre,TP Link Archer A6,Linux,Silver,2019-02-07,2019-06-05,100,634,12,7,0
+SRV000140,CUST00663,Cloud Storage,Terminated,Northern,Fibre,ZTE ZXHN F670L,iOS,Silver,2024-06-13,2025-04-11,1000,123,11,1,2
+SRV000141,CUST00987,Cloud Storage,Terminated,Central,5G,D Link DIR 842,Android,Silver,2022-11-09,2024-04-13,1000,991,13,18,1
+SRV000142,CUST00953,Cloud Storage,Active,Southern,4G/LTE,TP Link Archer A6,Android,Bronze,2019-06-24,,1000,234,60,14,1
+SRV000143,CUST00193,Cloud Storage,Active,Central,5G,Nokia G 2425G A,macOS,Gold,2018-04-28,,100,1445,19,4,4
+SRV000144,CUST00799,Mobile Postpaid,Active,Sarawak,5G,D Link DIR 842,Windows,Silver,2022-11-29,,100,129,24,10,0
+SRV000145,CUST00171,Cloud Storage,Active,Northern,4G/LTE,Huawei HG8145V5,macOS,Silver,2022-10-16,,500,1265,22,19,5
+SRV000146,CUST00997,Unifi Home,Active,Central,Fibre,ZTE ZXHN F670L,Embedded,Platinum,2022-06-04,,100,452,7,24,1
+SRV000147,CUST01145,IoT Connectivity,Active,Northern,5G,Nokia G 2425G A,iOS,Gold,2024-08-05,,100,1046,18,6,0
+SRV000148,CUST00681,Mobile Postpaid,Active,Central,5G,D Link DIR 842,Embedded,Bronze,2019-07-09,,30,122,10,5,1
+SRV000149,CUST00232,Managed Security,Active,Sarawak,Fibre,Nokia G 2425G A,Embedded,Gold,2018-04-22,,500,1153,5,5,2
+SRV000150,CUST00475,Cloud Compute,Provisioning,Central,5G,Nokia G 2425G A,iOS,Gold,2020-04-21,,300,1497,29,21,0
+SRV000151,CUST00009,Managed Security,Active,East Coast,Fibre,TP Link Archer A6,Android,Silver,2020-09-20,,500,872,11,25,2
+SRV000152,CUST00707,Unifi Business,Active,Northern,Fibre,ZTE ZXHN F670L,Windows,Bronze,2023-04-18,,300,1312,12,7,0
+SRV000153,CUST01171,Cloud Compute,Active,Sabah,4G/LTE,Nokia G 2425G A,Embedded,Bronze,2019-02-07,,100,551,41,26,6
+SRV000154,CUST00930,Unifi Home,Active,Southern,Fibre,D Link DIR 842,Embedded,Bronze,2021-04-01,,500,1041,19,30,0
+SRV000155,CUST01174,Cloud Compute,Active,Central,5G,D Link DIR 842,Android,Bronze,2021-12-07,,500,1207,17,25,5
+SRV000156,CUST01138,Cloud Compute,Active,East Coast,5G,D Link DIR 842,macOS,Bronze,2020-09-30,,1000,926,24,15,6
+SRV000157,CUST00893,Unifi Home,Active,East Coast,Fibre,TP Link Archer A6,Windows,Gold,2022-09-16,,1000,1836,19,22,2
+SRV000158,CUST00478,Unifi Home,Active,Northern,Fibre,Huawei HG8145V5,Android,Bronze,2023-04-01,,500,1388,18,24,2
+SRV000159,CUST00925,Cloud Storage,Terminated,Central,5G,TP Link Archer A6,Windows,Silver,2023-09-11,2024-10-14,500,1192,11,19,2
+SRV000160,CUST00899,Cloud Compute,Suspended,Central,4G/LTE,ZTE ZXHN F670L,Windows,Silver,2023-12-06,2026-07-18,500,432,50,2,3
+SRV000161,CUST01196,Cloud Compute,Suspended,Central,4G/LTE,TP Link Archer A6,Linux,Bronze,2022-10-28,2023-05-13,100,204,50,19,3
+SRV000162,CUST00804,Cloud Compute,Suspended,East Coast,5G,TP Link Archer A6,Embedded,Silver,2020-02-16,2021-04-30,1000,406,26,19,6
+SRV000163,CUST00934,Cloud Compute,Active,Southern,4G/LTE,Nokia G 2425G A,iOS,Silver,2019-11-09,,500,1493,21,25,1
+SRV000164,CUST01188,Unifi Business,Active,Central,Fibre,D Link DIR 842,macOS,Gold,2022-09-06,,100,1926,18,13,2
+SRV000165,CUST00373,Managed Security,Active,Northern,4G/LTE,Huawei HG8145V5,Linux,Gold,2021-04-19,,100,1379,69,28,3
+SRV000166,CUST00903,Managed Security,Active,Central,5G,D Link DIR 842,Android,Gold,2021-08-14,,1000,395,22,8,3
+SRV000167,CUST00960,IoT Connectivity,Active,Central,4G/LTE,D Link DIR 842,Android,Gold,2022-05-27,,100,996,68,8,2
+SRV000168,CUST00253,Cloud Compute,Active,East Coast,5G,Huawei HG8145V5,iOS,Gold,2019-10-13,,1000,1205,30,30,1
+SRV000169,CUST00589,Cloud Compute,Active,Northern,Fibre,Huawei HG8145V5,Android,Gold,2024-09-24,,300,616,13,13,0
+SRV000170,CUST00822,Unifi Business,Suspended,Central,DSL,D Link DIR 842,macOS,Platinum,2022-07-27,2024-10-18,300,1592,80,13,4
+SRV000171,CUST00705,Cloud Compute,Active,East Coast,5G,Nokia G 2425G A,Linux,Silver,2023-06-10,,500,285,14,17,2
+SRV000172,CUST00497,Cloud Storage,Provisioning,East Coast,Fibre,ZTE ZXHN F670L,Linux,Gold,2023-10-31,,500,1187,15,10,2
+SRV000173,CUST00981,Cloud Compute,Active,East Coast,Fibre,Nokia G 2425G A,Embedded,Silver,2019-07-14,,100,624,10,12,1
+SRV000174,CUST00637,Cloud Compute,Active,Central,Fibre,TP Link Archer A6,iOS,Platinum,2021-03-05,,500,370,16,11,0
+SRV000175,CUST00983,IoT Connectivity,Suspended,Sarawak,5G,Nokia G 2425G A,macOS,Gold,2023-09-10,2025-06-18,1000,156,15,2,1
+SRV000176,CUST00267,Mobile Postpaid,Active,East Coast,5G,D Link DIR 842,Android,Gold,2023-06-20,,100,122,23,30,1
+SRV000177,CUST01182,Cloud Compute,Active,Central,5G,Nokia G 2425G A,macOS,Gold,2024-01-13,,1000,515,12,9,6
+SRV000178,CUST00323,Cloud Compute,Active,Northern,5G,Huawei HG8145V5,macOS,Gold,2023-01-20,,1000,734,19,4,3
+SRV000179,CUST00018,Cloud Compute,Active,Southern,Fibre,Nokia G 2425G A,macOS,Gold,2024-02-22,,100,139,15,3,2
+SRV000180,CUST00085,Mobile Postpaid,Active,Northern,4G/LTE,TP Link Archer A6,Embedded,Bronze,2019-01-21,,30,60,66,23,5
+SRV000181,CUST00008,Unifi Home,Provisioning,Central,Fibre,TP Link Archer A6,Windows,Gold,2023-07-20,,800,764,20,20,0
+SRV000182,CUST00140,Unifi Home,Suspended,Sarawak,Fibre,D Link DIR 842,iOS,Gold,2018-03-19,2020-04-12,100,1797,8,12,0
+SRV000183,CUST00831,IoT Connectivity,Active,East Coast,5G,Huawei HG8145V5,Android,Silver,2020-03-05,,100,1085,27,30,6
+SRV000184,CUST00700,Cloud Compute,Provisioning,Sarawak,Fibre,Huawei HG8145V5,Android,Silver,2019-01-17,,1000,390,12,23,2
+SRV000185,CUST00443,Managed Security,Active,Southern,4G/LTE,ZTE ZXHN F670L,Linux,Bronze,2022-08-18,,500,787,48,20,1
+SRV000186,CUST00470,Cloud Compute,Active,East Coast,Fibre,TP Link Archer A6,Embedded,Gold,2020-09-13,,100,1371,19,1,0
+SRV000187,CUST00748,Unifi Home,Provisioning,East Coast,Fibre,D Link DIR 842,macOS,Platinum,2022-12-18,,300,256,9,12,0
+SRV000188,CUST01171,Mobile Postpaid,Active,Sabah,5G,Nokia G 2425G A,Embedded,Silver,2018-12-11,,30,78,14,19,3
+SRV000189,CUST00008,Cloud Compute,Active,Central,Fibre,D Link DIR 842,macOS,Bronze,2023-08-01,,100,803,16,30,1
+SRV000190,CUST00256,Unifi Home,Active,Sarawak,Fibre,Nokia G 2425G A,Embedded,Bronze,2025-01-01,,1000,537,5,29,1
+SRV000191,CUST00685,Cloud Storage,Active,Northern,Fibre,TP Link Archer A6,iOS,Bronze,2021-05-25,,300,1293,18,6,1
+SRV000192,CUST00267,Cloud Compute,Active,East Coast,4G/LTE,Nokia G 2425G A,iOS,Silver,2023-07-01,,500,1437,56,26,3
+SRV000193,CUST00921,Cloud Compute,Provisioning,East Coast,4G/LTE,D Link DIR 842,Embedded,Gold,2018-08-25,,300,628,39,7,5
+SRV000194,CUST00627,Cloud Compute,Active,Central,5G,TP Link Archer A6,macOS,Gold,2024-11-14,,1000,437,29,28,3
+SRV000195,CUST00742,Cloud Storage,Active,Sarawak,5G,TP Link Archer A6,iOS,Gold,2023-04-30,,100,420,29,30,4
+SRV000196,CUST00097,Cloud Compute,Active,Southern,4G/LTE,ZTE ZXHN F670L,Embedded,Silver,2021-05-25,,1000,1290,75,14,0
+SRV000197,CUST00063,Unifi Home,Active,Sarawak,Fibre,ZTE ZXHN F670L,Linux,Silver,2023-01-13,,300,1178,18,5,1
+SRV000198,CUST00344,Cloud Storage,Active,Sarawak,4G/LTE,Huawei HG8145V5,iOS,Bronze,2024-05-20,,300,167,34,14,6
+SRV000199,CUST00473,Unifi Business,Active,Central,Fibre,TP Link Archer A6,Embedded,Platinum,2024-05-13,,500,503,19,8,0
+SRV000200,CUST00233,Managed Security,Active,East Coast,Fibre,D Link DIR 842,Windows,Platinum,2020-02-23,,1000,772,18,19,0
+SRV000201,CUST00024,Unifi Home,Active,Northern,Fibre,Nokia G 2425G A,iOS,Bronze,2023-09-04,,1000,1280,13,15,1
+SRV000202,CUST00336,Mobile Postpaid,Active,Northern,5G,TP Link Archer A6,macOS,Bronze,2024-11-12,,100,142,12,12,1
+SRV000203,CUST00041,Cloud Compute,Active,Sabah,Fibre,TP Link Archer A6,Linux,Gold,2019-03-18,,1000,764,5,2,2
+SRV000204,CUST00416,Mobile Postpaid,Active,Northern,5G,Nokia G 2425G A,Android,Silver,2023-03-15,,30,130,19,27,3
+SRV000205,CUST00833,Unifi Business,Suspended,Central,Fibre,TP Link Archer A6,iOS,Silver,2021-01-21,2022-01-01,500,851,13,22,0
+SRV000206,CUST00582,Mobile Postpaid,Active,East Coast,5G,D Link DIR 842,macOS,Bronze,2021-04-08,,30,130,24,12,6
+SRV000207,CUST00549,Mobile Postpaid,Active,Southern,4G/LTE,Huawei HG8145V5,Embedded,Silver,2019-03-05,,30,90,40,28,1
+SRV000208,CUST00376,Cloud Compute,Active,East Coast,5G,Nokia G 2425G A,Embedded,Bronze,2020-02-15,,300,608,26,4,1
+SRV000209,CUST00505,Unifi Home,Terminated,Northern,Fibre,TP Link Archer A6,iOS,Silver,2022-10-04,2023-08-03,100,570,12,14,1
+SRV000210,CUST00208,Cloud Compute,Active,Northern,5G,TP Link Archer A6,Android,Gold,2025-01-11,,500,490,24,6,0
+SRV000211,CUST00496,Mobile Postpaid,Active,Sabah,4G/LTE,ZTE ZXHN F670L,Linux,Bronze,2023-10-08,,30,103,26,27,0
+SRV000212,CUST00999,Unifi Home,Active,Northern,Fibre,Nokia G 2425G A,Linux,Bronze,2024-07-10,,500,1498,6,9,0
+SRV000213,CUST00312,Cloud Compute,Terminated,Central,5G,TP Link Archer A6,Android,Bronze,2023-11-24,2024-07-31,500,862,12,5,2
+SRV000214,CUST00477,Unifi Home,Terminated,Sabah,DSL,ZTE ZXHN F670L,macOS,Bronze,2024-10-16,2027-05-06,500,243,124,23,5
+SRV000215,CUST00458,Cloud Storage,Active,Sabah,5G,ZTE ZXHN F670L,macOS,Gold,2019-04-08,,100,782,25,28,6
+SRV000216,CUST00644,Cloud Compute,Active,Sarawak,Fibre,D Link DIR 842,Linux,Silver,2020-07-25,,300,668,18,8,0
+SRV000217,CUST00882,Unifi Business,Provisioning,Northern,Fibre,ZTE ZXHN F670L,Embedded,Gold,2019-03-16,,500,1666,18,8,1
+SRV000218,CUST00270,Unifi Home,Suspended,East Coast,Fibre,D Link DIR 842,Android,Bronze,2023-05-17,2024-01-19,100,843,17,17,1
+SRV000219,CUST00861,Cloud Storage,Active,Southern,Fibre,TP Link Archer A6,iOS,Silver,2018-06-09,,1000,149,6,24,2
+SRV000220,CUST00078,Unifi Business,Active,Northern,DSL,D Link DIR 842,Embedded,Bronze,2019-06-23,,300,1428,99,16,6
+SRV000221,CUST01052,Unifi Home,Active,Northern,Fibre,TP Link Archer A6,Linux,Silver,2018-02-19,,300,1336,8,14,2
+SRV000222,CUST00969,Cloud Compute,Active,Northern,4G/LTE,TP Link Archer A6,Linux,Gold,2018-05-09,,500,1385,22,22,4
+SRV000223,CUST00782,Cloud Storage,Terminated,Southern,4G/LTE,Nokia G 2425G A,iOS,Silver,2020-08-04,2022-04-22,100,124,50,5,5
+SRV000224,CUST01000,Mobile Postpaid,Suspended,Southern,5G,TP Link Archer A6,Linux,Bronze,2022-07-10,2024-01-20,30,110,23,10,0
+SRV000225,CUST00955,IoT Connectivity,Active,Central,4G/LTE,ZTE ZXHN F670L,macOS,Silver,2020-05-22,,1000,1165,68,20,4
+SRV000226,CUST01167,Cloud Storage,Active,Northern,5G,TP Link Archer A6,Windows,Gold,2023-05-30,,1000,1045,12,9,3
+SRV000227,CUST00985,Cloud Storage,Active,East Coast,5G,D Link DIR 842,macOS,Gold,2022-03-13,,1000,863,12,28,4
+SRV000228,CUST00692,Cloud Storage,Suspended,East Coast,Fibre,D Link DIR 842,Windows,Bronze,2020-01-16,2021-04-09,500,923,11,10,0
+SRV000229,CUST00184,Unifi Home,Terminated,Southern,Fibre,Huawei HG8145V5,macOS,Gold,2018-12-30,2021-04-05,100,475,16,17,1
+SRV000230,CUST00878,Cloud Compute,Provisioning,Sabah,Fibre,Huawei HG8145V5,Linux,Silver,2023-10-23,,300,137,11,4,1
+SRV000231,CUST01015,Cloud Storage,Active,Sabah,Fibre,D Link DIR 842,Android,Bronze,2024-08-05,,1000,1478,9,1,0
+SRV000232,CUST00295,Cloud Compute,Provisioning,East Coast,Fibre,TP Link Archer A6,Windows,Bronze,2018-03-20,,100,800,14,19,0
+SRV000233,CUST01039,Unifi Business,Provisioning,East Coast,Fibre,Nokia G 2425G A,iOS,Gold,2019-06-13,,800,1492,19,8,2
+SRV000234,CUST01045,Cloud Storage,Active,Sabah,5G,ZTE ZXHN F670L,Linux,Bronze,2023-11-28,,500,609,26,8,6
+SRV000235,CUST00122,Unifi Home,Active,East Coast,Fibre,Huawei HG8145V5,Windows,Bronze,2018-07-06,,1000,662,5,16,2
+SRV000236,CUST00570,Unifi Home,Active,Northern,Fibre,D Link DIR 842,Windows,Platinum,2024-07-23,,800,512,20,23,0
+SRV000237,CUST00736,Unifi Home,Active,Central,DSL,Huawei HG8145V5,iOS,Bronze,2021-01-04,,500,1494,131,2,0
+SRV000238,CUST00340,Cloud Compute,Active,Southern,Fibre,Huawei HG8145V5,Windows,Bronze,2022-12-08,,1000,1024,8,6,1
+SRV000239,CUST00162,Cloud Compute,Active,Southern,4G/LTE,ZTE ZXHN F670L,Windows,Bronze,2022-05-05,,300,1138,76,30,0
+SRV000240,CUST00690,Unifi Home,Active,Southern,Fibre,Nokia G 2425G A,Android,Gold,2019-08-03,,1000,460,20,17,2
+SRV000241,CUST00602,Cloud Compute,Active,Central,4G/LTE,ZTE ZXHN F670L,macOS,Silver,2018-07-12,,1000,269,40,5,3
+SRV000242,CUST00801,IoT Connectivity,Active,Sabah,4G/LTE,TP Link Archer A6,Windows,Silver,2023-05-03,,300,427,71,9,5
+SRV000243,CUST01138,Mobile Postpaid,Active,East Coast,4G/LTE,Huawei HG8145V5,Embedded,Bronze,2020-09-18,,30,138,24,10,2
+SRV000244,CUST00086,Mobile Postpaid,Terminated,East Coast,5G,Nokia G 2425G A,Android,Silver,2024-02-08,2026-04-03,100,51,18,26,0
+SRV000245,CUST00510,IoT Connectivity,Active,Central,5G,ZTE ZXHN F670L,Android,Silver,2022-05-02,,100,308,28,26,6
+SRV000246,CUST00257,Cloud Compute,Suspended,Sabah,5G,Nokia G 2425G A,iOS,Gold,2020-11-03,2022-03-27,300,692,12,2,1
+SRV000247,CUST00537,Unifi Home,Active,Southern,Fibre,ZTE ZXHN F670L,macOS,Bronze,2023-09-29,,100,839,5,11,0
+SRV000248,CUST00475,Cloud Compute,Active,Central,Fibre,D Link DIR 842,macOS,Gold,2020-04-22,,500,1022,6,17,1
+SRV000249,CUST00849,Unifi Business,Active,East Coast,Fibre,ZTE ZXHN F670L,Linux,Silver,2022-12-27,,1000,1139,11,3,0
+SRV000250,CUST00406,Unifi Business,Active,Northern,DSL,D Link DIR 842,Windows,Silver,2019-11-03,,300,1137,121,22,3
+SRV000251,CUST00551,Unifi Business,Active,Central,Fibre,Huawei HG8145V5,iOS,Gold,2022-04-21,,500,728,19,1,2
+SRV000252,CUST00471,Cloud Compute,Active,Northern,4G/LTE,Huawei HG8145V5,Linux,Gold,2018-06-30,,500,282,31,27,5
+SRV000253,CUST00829,Cloud Compute,Active,Southern,5G,ZTE ZXHN F670L,iOS,Bronze,2023-10-18,,500,578,12,23,5
+SRV000254,CUST01140,Unifi Home,Active,Sabah,DSL,D Link DIR 842,iOS,Bronze,2020-03-03,,100,254,148,20,3
+SRV000255,CUST00681,Cloud Compute,Active,Central,Fibre,Huawei HG8145V5,Windows,Bronze,2019-05-31,,1000,691,5,2,1
+SRV000256,CUST00903,Cloud Storage,Terminated,Central,5G,D Link DIR 842,macOS,Silver,2021-09-28,2023-01-18,500,1141,18,17,0
+SRV000257,CUST00958,Unifi Business,Suspended,Central,Fibre,ZTE ZXHN F670L,Android,Platinum,2023-09-20,2026-03-15,800,208,7,15,1
+SRV000258,CUST00455,Cloud Storage,Active,Sabah,5G,Nokia G 2425G A,iOS,Gold,2022-01-21,,1000,1180,13,4,0
+SRV000259,CUST00906,Unifi Home,Active,Northern,DSL,ZTE ZXHN F670L,Android,Bronze,2024-04-04,,300,390,114,10,2
+SRV000260,CUST00177,Cloud Storage,Active,Central,4G/LTE,D Link DIR 842,Linux,Silver,2019-02-20,,300,1463,62,17,2
+SRV000261,CUST01157,Managed Security,Terminated,Northern,5G,TP Link Archer A6,iOS,Silver,2021-09-01,2023-04-05,100,532,17,12,1
+SRV000262,CUST00003,Unifi Home,Active,East Coast,Fibre,Nokia G 2425G A,macOS,Bronze,2023-11-27,,800,912,11,24,1
+SRV000263,CUST00229,Cloud Storage,Active,Northern,5G,Huawei HG8145V5,Android,Platinum,2023-10-30,,500,975,14,9,4
+SRV000264,CUST01015,Mobile Postpaid,Terminated,Sabah,5G,Nokia G 2425G A,Windows,Gold,2024-07-14,2027-03-09,100,82,29,5,6
+SRV000265,CUST00982,Cloud Storage,Active,East Coast,4G/LTE,ZTE ZXHN F670L,Windows,Silver,2020-01-19,,500,1280,32,26,0
+SRV000266,CUST00987,Cloud Storage,Active,Central,Fibre,D Link DIR 842,Android,Bronze,2023-01-18,,100,1078,12,27,1
+SRV000267,CUST00948,Mobile Postpaid,Active,Northern,5G,D Link DIR 842,iOS,Bronze,2025-01-30,,30,114,18,13,2
+SRV000268,CUST00821,Mobile Postpaid,Suspended,Central,4G/LTE,ZTE ZXHN F670L,Android,Gold,2023-03-28,2025-03-30,100,112,51,1,6
+SRV000269,CUST00473,IoT Connectivity,Provisioning,Central,5G,Huawei HG8145V5,Linux,Gold,2024-05-13,,1000,914,28,5,2
+SRV000270,CUST00660,Cloud Compute,Active,East Coast,4G/LTE,ZTE ZXHN F670L,Windows,Bronze,2024-06-28,,1000,209,20,2,5
+SRV000271,CUST00165,Unifi Home,Provisioning,East Coast,DSL,ZTE ZXHN F670L,Windows,Bronze,2022-04-26,,100,1932,138,7,4
+SRV000272,CUST00529,Cloud Storage,Terminated,Sabah,4G/LTE,Nokia G 2425G A,Embedded,Gold,2019-12-26,2020-06-22,300,102,23,22,5
+SRV000273,CUST01139,Mobile Postpaid,Provisioning,Sabah,5G,Nokia G 2425G A,Windows,Silver,2021-12-12,,30,123,25,5,1
+SRV000274,CUST00447,Unifi Business,Active,Southern,Fibre,Nokia G 2425G A,Android,Silver,2020-06-05,,300,1486,18,28,1
+SRV000275,CUST00650,Cloud Storage,Active,East Coast,Fibre,Huawei HG8145V5,Android,Silver,2018-03-30,,300,386,5,14,0
+SRV000276,CUST00168,Cloud Storage,Suspended,East Coast,Fibre,D Link DIR 842,Linux,Bronze,2018-06-16,2020-06-17,300,159,9,7,1
+SRV000277,CUST00537,Unifi Home,Provisioning,Southern,Fibre,Huawei HG8145V5,Linux,Silver,2023-08-29,,1000,1410,7,14,1
+SRV000278,CUST00890,Cloud Compute,Active,Sabah,Fibre,Huawei HG8145V5,iOS,Silver,2019-03-31,,100,1270,12,22,0
+SRV000279,CUST00704,Cloud Compute,Provisioning,Central,4G/LTE,Huawei HG8145V5,Embedded,Gold,2020-06-22,,100,458,44,29,4
+SRV000280,CUST00493,Cloud Storage,Active,Southern,4G/LTE,Nokia G 2425G A,macOS,Bronze,2018-06-18,,300,741,31,30,4
+SRV000281,CUST00849,Cloud Storage,Active,East Coast,4G/LTE,Nokia G 2425G A,Windows,Gold,2022-12-21,,1000,1210,47,17,0
+SRV000282,CUST00238,Unifi Home,Active,Northern,DSL,Huawei HG8145V5,Android,Bronze,2023-01-21,,1000,1649,146,1,2
+SRV000283,CUST01151,Cloud Storage,Active,Central,5G,TP Link Archer A6,Embedded,Bronze,2021-11-18,,100,1411,22,23,1
+SRV000284,CUST00987,Cloud Storage,Terminated,Central,Fibre,Huawei HG8145V5,Windows,Silver,2023-02-04,2023-10-07,100,645,17,8,1
+SRV000285,CUST00345,Unifi Home,Active,Central,DSL,D Link DIR 842,Linux,Silver,2020-06-08,,300,589,121,17,2
+SRV000286,CUST00149,IoT Connectivity,Provisioning,East Coast,Fibre,Nokia G 2425G A,Windows,Silver,2019-03-24,,1000,1059,12,24,1
+SRV000287,CUST01170,Mobile Postpaid,Active,Sabah,4G/LTE,D Link DIR 842,macOS,Bronze,2023-10-15,,30,57,36,24,3
+SRV000288,CUST00552,Unifi Business,Active,Northern,Fibre,Huawei HG8145V5,Linux,Platinum,2019-07-22,,100,647,18,5,1
+SRV000289,CUST00805,Cloud Storage,Suspended,Southern,Fibre,ZTE ZXHN F670L,iOS,Bronze,2024-07-12,2025-08-04,300,520,11,1,0
+SRV000290,CUST01113,Unifi Home,Active,East Coast,DSL,ZTE ZXHN F670L,Embedded,Gold,2020-08-13,,300,1383,101,21,2
+SRV000291,CUST01145,Cloud Compute,Active,Northern,Fibre,Huawei HG8145V5,Android,Bronze,2024-08-06,,300,270,10,21,1
+SRV000292,CUST00471,Managed Security,Terminated,Northern,5G,Nokia G 2425G A,Windows,Silver,2018-04-13,2019-11-07,300,113,12,20,3
+SRV000293,CUST00047,Cloud Compute,Active,Southern,5G,TP Link Archer A6,Embedded,Bronze,2019-02-03,,300,1103,29,23,3
+SRV000294,CUST00429,Cloud Storage,Active,Northern,Fibre,Nokia G 2425G A,Embedded,Silver,2022-08-19,,500,287,5,1,1
+SRV000295,CUST00166,Unifi Business,Active,Southern,Fibre,Nokia G 2425G A,Windows,Gold,2021-12-21,,800,1996,10,7,2
+SRV000296,CUST00098,Unifi Business,Active,East Coast,Fibre,D Link DIR 842,iOS,Silver,2018-10-30,,100,514,12,1,2
+SRV000297,CUST00390,Cloud Compute,Provisioning,Central,4G/LTE,TP Link Archer A6,iOS,Platinum,2021-04-17,,300,1276,27,14,6
+SRV000298,CUST01174,Mobile Postpaid,Suspended,Central,5G,Nokia G 2425G A,Android,Gold,2022-01-16,2023-05-26,30,51,23,27,6
+SRV000299,CUST00874,Cloud Storage,Suspended,Northern,5G,TP Link Archer A6,Android,Bronze,2023-04-19,2024-04-03,500,670,18,3,0
+SRV000300,CUST00798,Unifi Business,Active,Sarawak,Fibre,D Link DIR 842,Android,Bronze,2018-07-05,,500,794,15,18,0
+SRV000301,CUST00205,Cloud Compute,Provisioning,East Coast,Fibre,D Link DIR 842,Linux,Bronze,2019-04-01,,1000,448,5,19,0
+SRV000302,CUST00606,Unifi Home,Active,Southern,Fibre,ZTE ZXHN F670L,Embedded,Silver,2018-05-17,,1000,1373,18,4,2
+SRV000303,CUST00400,Unifi Business,Active,East Coast,Fibre,TP Link Archer A6,Windows,Silver,2021-03-20,,300,472,6,11,2
+SRV000304,CUST01123,Cloud Compute,Terminated,Northern,4G/LTE,D Link DIR 842,Embedded,Silver,2020-09-15,2021-09-17,100,726,51,13,1
+SRV000305,CUST00697,Cloud Compute,Active,Central,Fibre,ZTE ZXHN F670L,Android,Silver,2018-03-30,,300,764,15,17,2
+SRV000306,CUST00892,Mobile Postpaid,Active,East Coast,5G,D Link DIR 842,Android,Bronze,2021-11-11,,100,24,17,1,2
+SRV000307,CUST00735,IoT Connectivity,Suspended,Southern,4G/LTE,ZTE ZXHN F670L,Embedded,Gold,2021-12-17,2022-07-15,1000,238,71,29,6
+SRV000308,CUST00634,Cloud Compute,Active,Sarawak,Fibre,TP Link Archer A6,Embedded,Silver,2024-04-18,,500,1453,16,20,0
+SRV000309,CUST00093,Cloud Storage,Provisioning,East Coast,5G,Nokia G 2425G A,Linux,Silver,2022-06-14,,1000,1327,29,28,0
+SRV000310,CUST00220,Mobile Postpaid,Provisioning,Central,5G,ZTE ZXHN F670L,Embedded,Bronze,2022-09-04,,100,125,14,15,6
+SRV000311,CUST00513,Cloud Storage,Provisioning,Northern,4G/LTE,ZTE ZXHN F670L,Android,Platinum,2019-10-06,,500,1186,56,15,0
+SRV000312,CUST00224,Cloud Compute,Provisioning,Sarawak,Fibre,Huawei HG8145V5,Android,Silver,2022-07-23,,1000,1168,17,2,0
+SRV000313,CUST01053,Mobile Postpaid,Active,Central,4G/LTE,ZTE ZXHN F670L,iOS,Silver,2024-10-21,,30,21,63,30,3
+SRV000314,CUST00576,Cloud Storage,Terminated,Central,4G/LTE,ZTE ZXHN F670L,Embedded,Bronze,2024-12-19,2026-11-27,1000,1282,76,28,6
+SRV000315,CUST00260,Cloud Storage,Active,Central,5G,D Link DIR 842,Android,Gold,2022-03-08,,300,1166,25,24,4
+SRV000316,CUST01064,Cloud Compute,Suspended,Northern,Fibre,Nokia G 2425G A,Windows,Silver,2023-05-09,2026-01-04,1000,1149,8,18,1
+SRV000317,CUST00481,IoT Connectivity,Active,Southern,4G/LTE,Huawei HG8145V5,Android,Gold,2022-10-13,,100,1421,20,16,1
+SRV000318,CUST01017,Cloud Compute,Active,Northern,4G/LTE,TP Link Archer A6,Windows,Bronze,2024-10-27,,500,734,37,4,6
+SRV000319,CUST00089,Managed Security,Active,Central,Fibre,D Link DIR 842,iOS,Silver,2024-02-18,,500,1439,12,10,1
+SRV000320,CUST00727,IoT Connectivity,Active,Southern,5G,ZTE ZXHN F670L,Embedded,Silver,2024-07-18,,300,1351,26,11,5
+SRV000321,CUST01163,Unifi Business,Active,Northern,Fibre,Nokia G 2425G A,Linux,Silver,2021-11-26,,800,1239,12,30,2
+SRV000322,CUST01018,Cloud Storage,Active,Sabah,4G/LTE,ZTE ZXHN F670L,Linux,Silver,2019-09-20,,300,727,63,2,3
+SRV000323,CUST00432,Unifi Home,Terminated,East Coast,Fibre,ZTE ZXHN F670L,Embedded,Gold,2023-09-17,2025-01-16,100,1605,11,11,2
+SRV000324,CUST00053,Unifi Home,Active,Sarawak,Fibre,D Link DIR 842,macOS,Bronze,2018-12-15,,300,1665,15,10,0
+SRV000325,CUST00484,Cloud Compute,Active,Northern,4G/LTE,Nokia G 2425G A,Windows,Silver,2018-04-08,,500,1496,69,2,5
+SRV000326,CUST00384,Mobile Postpaid,Active,Central,5G,D Link DIR 842,Windows,Bronze,2023-06-23,,30,100,20,26,0
+SRV000327,CUST00584,Cloud Storage,Active,East Coast,4G/LTE,ZTE ZXHN F670L,iOS,Bronze,2021-10-22,,300,648,50,16,0
+SRV000328,CUST00599,Cloud Storage,Provisioning,Sabah,5G,ZTE ZXHN F670L,macOS,Bronze,2024-05-01,,500,853,21,23,3
+SRV000329,CUST00086,Mobile Postpaid,Active,East Coast,4G/LTE,ZTE ZXHN F670L,Linux,Bronze,2024-01-15,,100,99,36,30,6
+SRV000330,CUST00739,Cloud Compute,Provisioning,Sarawak,5G,ZTE ZXHN F670L,iOS,Bronze,2023-07-08,,300,1457,29,3,5
+SRV000331,CUST00303,Managed Security,Provisioning,Central,Fibre,D Link DIR 842,Windows,Bronze,2018-04-16,,100,415,10,28,0
+SRV000332,CUST01109,Cloud Compute,Provisioning,Northern,4G/LTE,ZTE ZXHN F670L,Windows,Silver,2019-07-13,,1000,1241,64,12,1
+SRV000333,CUST00009,Cloud Storage,Active,East Coast,5G,TP Link Archer A6,macOS,Silver,2020-08-24,,1000,534,20,14,0
+SRV000334,CUST01024,Managed Security,Active,Northern,4G/LTE,Nokia G 2425G A,Embedded,Silver,2020-05-29,,300,1423,28,16,3
+SRV000335,CUST00393,IoT Connectivity,Provisioning,Sarawak,Fibre,TP Link Archer A6,Embedded,Gold,2020-08-24,,100,1164,10,23,2
+SRV000336,CUST00501,Managed Security,Active,Southern,4G/LTE,Huawei HG8145V5,Linux,Gold,2018-09-01,,100,476,80,22,1
+SRV000337,CUST00307,Unifi Business,Active,East Coast,Fibre,TP Link Archer A6,Embedded,Bronze,2020-02-05,,800,1783,6,14,2
+SRV000338,CUST00947,Unifi Home,Terminated,Central,Fibre,TP Link Archer A6,Embedded,Bronze,2022-09-23,2023-02-17,300,1396,11,9,1
+SRV000339,CUST00068,Managed Security,Active,Sabah,5G,Huawei HG8145V5,Android,Silver,2024-12-30,,300,586,17,19,5
+SRV000340,CUST00149,IoT Connectivity,Active,East Coast,5G,Nokia G 2425G A,iOS,Silver,2019-02-16,,300,150,25,3,1
+SRV000341,CUST00355,Managed Security,Active,Northern,Fibre,Nokia G 2425G A,iOS,Gold,2023-07-30,,300,1436,19,15,2
+SRV000342,CUST00573,Mobile Postpaid,Active,Southern,5G,TP Link Archer A6,Windows,Silver,2022-02-15,,100,133,15,29,4
+SRV000343,CUST00298,Unifi Home,Active,East Coast,Fibre,Nokia G 2425G A,Embedded,Silver,2024-12-23,,100,542,18,19,2
+SRV000344,CUST00109,Cloud Compute,Active,Sarawak,4G/LTE,D Link DIR 842,Windows,Silver,2023-12-16,,300,654,51,14,0
+SRV000345,CUST01163,Managed Security,Suspended,Northern,Fibre,D Link DIR 842,Windows,Silver,2022-01-13,2024-01-15,500,801,10,12,1
+SRV000346,CUST00446,Managed Security,Active,Northern,4G/LTE,TP Link Archer A6,Linux,Silver,2021-08-11,,500,128,48,1,6
+SRV000347,CUST00559,Cloud Storage,Active,Northern,5G,D Link DIR 842,Android,Platinum,2020-09-27,,300,1359,26,17,4
+SRV000348,CUST00930,Mobile Postpaid,Active,Southern,5G,D Link DIR 842,macOS,Bronze,2021-06-12,,30,57,22,22,5
+SRV000349,CUST00146,Managed Security,Active,East Coast,5G,ZTE ZXHN F670L,Android,Silver,2020-05-08,,100,1421,26,14,0
+SRV000350,CUST00686,Managed Security,Provisioning,East Coast,5G,Nokia G 2425G A,macOS,Bronze,2019-12-31,,100,1413,22,13,2
+SRV000351,CUST00967,Cloud Compute,Active,Northern,Fibre,D Link DIR 842,macOS,Silver,2022-12-10,,300,637,9,18,2
+SRV000352,CUST00740,Mobile Postpaid,Terminated,Central,4G/LTE,ZTE ZXHN F670L,Linux,Silver,2023-06-18,2025-04-28,30,86,55,1,4
+SRV000353,CUST00902,Unifi Business,Terminated,East Coast,Fibre,ZTE ZXHN F670L,Embedded,Gold,2021-01-12,2022-05-26,800,1986,8,12,0
+SRV000354,CUST00081,Cloud Storage,Active,Central,Fibre,ZTE ZXHN F670L,Linux,Gold,2021-09-22,,500,563,12,14,2
+SRV000355,CUST01186,Cloud Compute,Provisioning,Central,4G/LTE,D Link DIR 842,Linux,Silver,2019-05-25,,500,944,25,22,0
+SRV000356,CUST00671,Unifi Business,Active,Central,DSL,Nokia G 2425G A,Android,Bronze,2023-11-11,,100,1869,93,16,4
+SRV000357,CUST00742,Unifi Home,Provisioning,Sarawak,Fibre,ZTE ZXHN F670L,iOS,Bronze,2023-03-11,,1000,1169,10,22,2
+SRV000358,CUST00471,IoT Connectivity,Active,Northern,Fibre,ZTE ZXHN F670L,Embedded,Silver,2018-06-12,,500,1378,20,9,2
+SRV000359,CUST00944,Cloud Storage,Active,Sarawak,4G/LTE,D Link DIR 842,Windows,Gold,2023-02-03,,500,621,73,25,1
+SRV000360,CUST00710,Cloud Compute,Active,Southern,4G/LTE,Nokia G 2425G A,Embedded,Silver,2024-06-07,,300,215,38,3,3
+SRV000361,CUST00583,Unifi Business,Active,Southern,DSL,D Link DIR 842,Windows,Bronze,2024-08-27,,500,390,104,8,3
+SRV000362,CUST00471,Managed Security,Provisioning,Northern,5G,Nokia G 2425G A,Embedded,Gold,2018-05-31,,100,1484,22,25,0
+SRV000363,CUST01086,Cloud Storage,Active,Southern,Fibre,D Link DIR 842,Windows,Gold,2020-06-01,,500,1166,14,20,2
+SRV000364,CUST00801,IoT Connectivity,Active,Sabah,5G,TP Link Archer A6,macOS,Gold,2023-07-06,,100,533,20,17,3
+SRV000365,CUST00351,Cloud Compute,Provisioning,Southern,4G/LTE,TP Link Archer A6,Linux,Bronze,2022-06-07,,100,1256,59,19,4
+SRV000366,CUST00895,Mobile Postpaid,Active,East Coast,4G/LTE,Huawei HG8145V5,Windows,Bronze,2019-01-01,,30,44,77,4,0
+SRV000367,CUST00117,Cloud Compute,Suspended,Central,Fibre,Nokia G 2425G A,Windows,Bronze,2022-04-21,2023-12-25,500,1321,12,27,0
+SRV000368,CUST00157,Cloud Compute,Active,Northern,4G/LTE,D Link DIR 842,Android,Gold,2020-09-12,,100,1449,49,24,5
+SRV000369,CUST00407,Cloud Compute,Provisioning,Northern,4G/LTE,ZTE ZXHN F670L,Android,Gold,2024-03-29,,1000,642,29,12,4
+SRV000370,CUST01015,Mobile Postpaid,Active,Sabah,4G/LTE,TP Link Archer A6,macOS,Gold,2024-08-08,,100,46,65,20,1
+SRV000371,CUST00132,Cloud Storage,Active,Sabah,4G/LTE,TP Link Archer A6,macOS,Gold,2023-04-01,,1000,724,44,1,2
+SRV000372,CUST00358,Mobile Postpaid,Terminated,Southern,5G,D Link DIR 842,Embedded,Silver,2018-12-23,2021-02-18,100,66,12,9,3
+SRV000373,CUST00161,Cloud Storage,Active,Sabah,5G,Nokia G 2425G A,Android,Gold,2020-01-22,,300,1372,15,14,3
+SRV000374,CUST00877,Cloud Storage,Active,East Coast,4G/LTE,Nokia G 2425G A,Linux,Gold,2021-05-15,,500,670,41,17,2
+SRV000375,CUST00926,Cloud Compute,Terminated,Central,Fibre,TP Link Archer A6,Android,Bronze,2020-12-11,2021-07-28,300,951,5,23,1
+SRV000376,CUST00891,Mobile Postpaid,Provisioning,Sarawak,4G/LTE,ZTE ZXHN F670L,Embedded,Silver,2022-07-06,,100,83,53,20,0
+SRV000377,CUST00228,Cloud Compute,Suspended,Sarawak,4G/LTE,TP Link Archer A6,Windows,Silver,2019-04-11,2020-09-14,500,933,27,30,0
+SRV000378,CUST00738,Cloud Storage,Active,Central,5G,Huawei HG8145V5,Embedded,Bronze,2020-05-25,,100,1053,10,22,3
+SRV000379,CUST00687,Cloud Compute,Active,Sarawak,5G,Huawei HG8145V5,Android,Bronze,2024-01-31,,300,1020,30,30,2
+SRV000380,CUST00495,Cloud Compute,Active,Northern,5G,Huawei HG8145V5,Embedded,Gold,2020-04-10,,100,1199,23,21,5
+SRV000381,CUST00332,Cloud Compute,Active,Central,5G,D Link DIR 842,iOS,Gold,2023-12-28,,300,1381,12,7,4
+SRV000382,CUST00030,Cloud Storage,Active,Sabah,Fibre,Nokia G 2425G A,Linux,Silver,2023-04-17,,1000,952,7,11,2
+SRV000383,CUST00612,Cloud Compute,Active,Sabah,4G/LTE,TP Link Archer A6,macOS,Bronze,2021-09-22,,500,986,40,23,6
+SRV000384,CUST00608,Unifi Business,Active,Sabah,Fibre,Nokia G 2425G A,Embedded,Gold,2024-06-06,,300,355,10,30,2
+SRV000385,CUST01072,IoT Connectivity,Active,Sabah,4G/LTE,ZTE ZXHN F670L,Windows,Gold,2022-07-29,,500,898,57,30,5
+SRV000386,CUST01078,Cloud Compute,Active,Northern,4G/LTE,Huawei HG8145V5,Embedded,Gold,2019-12-16,,1000,173,41,5,0
+SRV000387,CUST00497,Unifi Home,Provisioning,East Coast,DSL,Huawei HG8145V5,macOS,Silver,2023-11-25,,100,1823,101,7,5
+SRV000388,CUST00327,Unifi Business,Active,East Coast,Fibre,D Link DIR 842,macOS,Silver,2023-06-28,,300,1813,19,30,2
+SRV000389,CUST00985,IoT Connectivity,Active,East Coast,5G,Nokia G 2425G A,Embedded,Gold,2022-03-03,,300,1065,14,17,3
+SRV000390,CUST00776,Unifi Home,Provisioning,Northern,Fibre,Nokia G 2425G A,Linux,Bronze,2019-02-06,,500,1096,7,24,0
+SRV000391,CUST00833,Cloud Compute,Provisioning,Central,Fibre,Huawei HG8145V5,Windows,Gold,2021-01-03,,500,1083,12,11,1
+SRV000392,CUST00356,Cloud Compute,Terminated,Sarawak,Fibre,D Link DIR 842,Linux,Gold,2023-10-26,2024-03-21,500,777,11,11,2
+SRV000393,CUST00731,Cloud Storage,Active,Southern,Fibre,D Link DIR 842,iOS,Silver,2024-08-03,,300,448,16,27,1
+SRV000394,CUST00047,Cloud Compute,Provisioning,Southern,5G,ZTE ZXHN F670L,Embedded,Platinum,2018-12-20,,500,791,19,30,3
+SRV000395,CUST01068,Mobile Postpaid,Terminated,Northern,4G/LTE,D Link DIR 842,Embedded,Bronze,2019-01-03,2019-07-18,100,142,55,18,6
+SRV000396,CUST00142,Cloud Compute,Provisioning,Northern,5G,TP Link Archer A6,Linux,Gold,2020-12-14,,300,1180,22,27,6
+SRV000397,CUST00704,Managed Security,Active,Central,5G,TP Link Archer A6,macOS,Gold,2020-05-28,,1000,1122,17,7,1
+SRV000398,CUST00366,IoT Connectivity,Suspended,Central,4G/LTE,Huawei HG8145V5,Windows,Gold,2019-03-08,2020-05-31,1000,996,21,1,5
+SRV000399,CUST00867,Mobile Postpaid,Active,Northern,4G/LTE,TP Link Archer A6,macOS,Gold,2023-11-07,,100,60,46,9,0
+SRV000400,CUST01000,Cloud Storage,Active,Southern,4G/LTE,Nokia G 2425G A,Windows,Bronze,2022-06-26,,300,196,34,28,1
+SRV000401,CUST01180,Unifi Home,Provisioning,Northern,Fibre,Nokia G 2425G A,Linux,Bronze,2019-09-26,,300,1314,12,8,1
+SRV000402,CUST00869,Unifi Home,Active,Southern,DSL,ZTE ZXHN F670L,Android,Silver,2024-06-18,,100,949,107,7,3
+SRV000403,CUST00574,Cloud Compute,Active,East Coast,5G,ZTE ZXHN F670L,iOS,Gold,2024-04-27,,1000,439,26,25,3
+SRV000404,CUST00146,Cloud Storage,Terminated,East Coast,5G,Nokia G 2425G A,Linux,Gold,2020-04-22,2021-11-06,500,823,25,11,4
+SRV000405,CUST00703,IoT Connectivity,Active,Northern,5G,ZTE ZXHN F670L,Windows,Silver,2021-09-29,,300,1388,22,5,4
+SRV000406,CUST00170,Managed Security,Active,Central,4G/LTE,TP Link Archer A6,Windows,Gold,2019-10-26,,300,1378,42,6,5
+SRV000407,CUST00641,Mobile Postpaid,Provisioning,Southern,4G/LTE,Huawei HG8145V5,Android,Gold,2023-04-11,,30,39,45,21,2
+SRV000408,CUST00198,Unifi Business,Active,Central,DSL,ZTE ZXHN F670L,Windows,Gold,2021-01-29,,800,804,117,11,1
+SRV000409,CUST00123,Cloud Compute,Active,Northern,4G/LTE,Huawei HG8145V5,Linux,Gold,2021-03-01,,500,1048,32,1,4
+SRV000410,CUST01121,Cloud Compute,Active,Sabah,Fibre,Huawei HG8145V5,Embedded,Silver,2025-01-12,,300,287,10,24,1
+SRV000411,CUST00586,Unifi Business,Provisioning,Northern,Fibre,Huawei HG8145V5,Linux,Silver,2022-01-07,,100,1379,13,3,0
+SRV000412,CUST00182,Unifi Home,Active,Central,DSL,Huawei HG8145V5,Windows,Bronze,2020-12-17,,1000,1363,87,23,0
+SRV000413,CUST00579,Cloud Storage,Active,Central,5G,ZTE ZXHN F670L,iOS,Gold,2022-01-23,,300,415,20,10,3
+SRV000414,CUST00017,Unifi Business,Active,East Coast,Fibre,ZTE ZXHN F670L,iOS,Gold,2018-06-04,,500,1840,16,16,0
+SRV000415,CUST00414,Cloud Compute,Active,Southern,4G/LTE,Nokia G 2425G A,Linux,Gold,2019-04-17,,1000,1219,46,3,1
+SRV000416,CUST01011,Mobile Postpaid,Active,Northern,5G,ZTE ZXHN F670L,Android,Bronze,2022-05-27,,30,72,26,3,1
+SRV000417,CUST00081,Unifi Home,Active,Central,DSL,Nokia G 2425G A,Android,Bronze,2021-11-21,,1000,303,149,21,4
+SRV000418,CUST00144,IoT Connectivity,Active,Central,5G,TP Link Archer A6,Windows,Silver,2018-01-22,,100,1484,28,28,4
+SRV000419,CUST00074,Mobile Postpaid,Active,Southern,5G,Huawei HG8145V5,Windows,Bronze,2020-08-23,,30,44,24,5,1
+SRV000420,CUST00883,Managed Security,Active,East Coast,5G,ZTE ZXHN F670L,Linux,Bronze,2022-03-07,,300,1222,28,3,4
+SRV000421,CUST00236,Cloud Storage,Active,Northern,5G,ZTE ZXHN F670L,Android,Bronze,2020-03-20,,300,146,17,9,6
+SRV000422,CUST00540,Cloud Compute,Active,Sabah,5G,ZTE ZXHN F670L,Windows,Gold,2023-12-08,,1000,806,11,27,5
+SRV000423,CUST01016,Cloud Storage,Active,Central,4G/LTE,Huawei HG8145V5,Windows,Silver,2024-11-04,,1000,411,34,3,6
+SRV000424,CUST00773,Cloud Compute,Active,East Coast,Fibre,Huawei HG8145V5,Embedded,Silver,2019-01-14,,100,290,6,11,2
+SRV000425,CUST00901,Unifi Home,Terminated,Central,DSL,Nokia G 2425G A,macOS,Bronze,2020-01-17,2020-06-16,800,1017,139,1,0
+SRV000426,CUST00708,Cloud Compute,Active,Northern,4G/LTE,D Link DIR 842,Linux,Silver,2023-02-27,,300,607,33,23,3
+SRV000427,CUST00122,Unifi Home,Active,East Coast,DSL,TP Link Archer A6,macOS,Gold,2018-05-31,,1000,1214,88,9,5
+SRV000428,CUST00100,Cloud Storage,Active,Northern,Fibre,Huawei HG8145V5,Windows,Bronze,2024-10-27,,1000,791,20,10,1
+SRV000429,CUST01110,IoT Connectivity,Active,Sarawak,4G/LTE,Huawei HG8145V5,iOS,Silver,2019-06-10,,100,1283,51,6,1
+SRV000430,CUST01075,Cloud Compute,Terminated,Central,4G/LTE,Huawei HG8145V5,Embedded,Bronze,2020-09-29,2023-01-27,500,829,40,28,0
+SRV000431,CUST00434,Unifi Home,Suspended,Sarawak,DSL,ZTE ZXHN F670L,iOS,Gold,2022-04-23,2024-12-20,300,1793,110,14,3
+SRV000432,CUST01112,Mobile Postpaid,Active,Southern,4G/LTE,Huawei HG8145V5,Linux,Gold,2018-08-30,,30,57,80,8,4
+SRV000433,CUST00035,Unifi Home,Active,Northern,Fibre,TP Link Archer A6,Linux,Bronze,2023-07-01,,800,1062,13,17,1
+SRV000434,CUST00983,Cloud Storage,Active,Sarawak,Fibre,D Link DIR 842,Android,Silver,2023-09-04,,300,316,19,11,1
+SRV000435,CUST00346,Cloud Storage,Active,Sabah,Fibre,ZTE ZXHN F670L,Windows,Bronze,2024-08-23,,100,1150,8,4,2
+SRV000436,CUST00552,Cloud Storage,Provisioning,Northern,5G,D Link DIR 842,iOS,Gold,2019-08-23,,500,538,22,29,0
+SRV000437,CUST00149,Managed Security,Active,East Coast,Fibre,ZTE ZXHN F670L,Windows,Silver,2019-01-07,,300,868,7,3,2
+SRV000438,CUST00341,Managed Security,Provisioning,Sarawak,Fibre,TP Link Archer A6,Windows,Silver,2022-09-13,,500,876,16,30,1
+SRV000439,CUST00360,Cloud Storage,Active,Central,Fibre,D Link DIR 842,macOS,Silver,2021-03-21,,1000,1025,7,9,0
+SRV000440,CUST00407,Cloud Compute,Suspended,Northern,4G/LTE,TP Link Archer A6,Embedded,Silver,2024-04-15,2025-06-25,500,1481,46,26,3
+SRV000441,CUST00059,Unifi Home,Active,Sarawak,Fibre,ZTE ZXHN F670L,Android,Silver,2019-09-09,,300,511,20,25,0
+SRV000442,CUST00452,Cloud Storage,Provisioning,East Coast,5G,TP Link Archer A6,Embedded,Bronze,2019-02-01,,1000,525,22,26,4
+SRV000443,CUST00475,IoT Connectivity,Active,Central,Fibre,Nokia G 2425G A,Windows,Gold,2020-06-02,,1000,143,11,9,0
+SRV000444,CUST01175,Unifi Business,Active,Central,DSL,TP Link Archer A6,Android,Gold,2021-04-01,,300,1043,113,28,6
+SRV000445,CUST00040,Mobile Postpaid,Active,Northern,4G/LTE,Nokia G 2425G A,Windows,Bronze,2024-09-11,,100,28,20,23,3
+SRV000446,CUST00354,Managed Security,Terminated,Central,5G,Nokia G 2425G A,Windows,Gold,2021-11-19,2022-12-26,300,1316,21,9,2
+SRV000447,CUST00793,Managed Security,Active,Northern,5G,Huawei HG8145V5,Android,Platinum,2024-12-13,,1000,824,23,5,3
+SRV000448,CUST00703,Cloud Compute,Active,Northern,Fibre,ZTE ZXHN F670L,Linux,Platinum,2021-07-16,,1000,519,13,10,1
+SRV000449,CUST01188,Cloud Storage,Provisioning,Central,5G,Nokia G 2425G A,iOS,Silver,2022-10-09,,100,938,16,18,1
+SRV000450,CUST00333,Cloud Storage,Active,Central,4G/LTE,Nokia G 2425G A,macOS,Bronze,2022-01-25,,100,208,25,15,0
+SRV000451,CUST00953,Unifi Home,Active,Southern,DSL,TP Link Archer A6,Embedded,Silver,2019-05-29,,800,353,110,2,6
+SRV000452,CUST00555,IoT Connectivity,Active,East Coast,5G,ZTE ZXHN F670L,Embedded,Platinum,2024-09-26,,300,1381,30,28,6
+SRV000453,CUST00503,Cloud Storage,Provisioning,Northern,Fibre,Nokia G 2425G A,iOS,Gold,2019-02-05,,300,1481,20,23,1
+SRV000454,CUST00831,Managed Security,Active,East Coast,4G/LTE,ZTE ZXHN F670L,Embedded,Silver,2020-02-01,,1000,767,44,9,5
+SRV000455,CUST00935,Cloud Storage,Active,East Coast,Fibre,TP Link Archer A6,macOS,Silver,2024-05-11,,1000,176,13,3,2
+SRV000456,CUST00005,Cloud Storage,Provisioning,Southern,Fibre,ZTE ZXHN F670L,Linux,Bronze,2019-09-08,,1000,627,13,13,2
+SRV000457,CUST00168,Unifi Home,Terminated,East Coast,DSL,Huawei HG8145V5,Android,Silver,2018-05-25,2019-08-29,500,553,118,28,3
+SRV000458,CUST00436,Cloud Compute,Terminated,Northern,Fibre,Huawei HG8145V5,Linux,Platinum,2021-06-20,2023-01-25,500,1245,20,15,0
+SRV000459,CUST00116,Cloud Storage,Active,Central,Fibre,Huawei HG8145V5,Windows,Bronze,2019-10-18,,100,421,7,25,2
+SRV000460,CUST01137,Unifi Home,Active,Northern,Fibre,Huawei HG8145V5,Linux,Bronze,2020-07-09,,100,1458,18,22,1
+SRV000461,CUST00844,Unifi Business,Active,Sabah,Fibre,Huawei HG8145V5,macOS,Platinum,2018-05-29,,500,1140,7,14,1
+SRV000462,CUST00825,Mobile Postpaid,Terminated,Northern,5G,ZTE ZXHN F670L,iOS,Silver,2019-09-10,2019-12-18,30,134,11,26,1
+SRV000463,CUST00999,Unifi Home,Active,Northern,Fibre,D Link DIR 842,Embedded,Silver,2024-06-20,,1000,660,10,2,1
+SRV000464,CUST00072,Mobile Postpaid,Active,Central,4G/LTE,Nokia G 2425G A,iOS,Silver,2022-03-13,,100,145,66,10,4
+SRV000465,CUST00902,Managed Security,Terminated,East Coast,Fibre,Nokia G 2425G A,Linux,Silver,2020-12-16,2023-06-11,500,1478,13,26,1
+SRV000466,CUST00809,Cloud Compute,Active,Sabah,5G,D Link DIR 842,Linux,Bronze,2018-02-25,,100,1324,26,6,4
+SRV000467,CUST00211,Cloud Storage,Terminated,Sarawak,5G,D Link DIR 842,Linux,Silver,2022-02-04,2024-09-30,100,496,19,11,6
+SRV000468,CUST00272,Cloud Compute,Active,Central,5G,Huawei HG8145V5,Linux,Gold,2021-10-30,,100,543,14,28,5
+SRV000469,CUST00797,Cloud Compute,Active,Sarawak,5G,D Link DIR 842,iOS,Bronze,2025-01-19,,100,1045,18,25,6
+SRV000470,CUST00081,Cloud Storage,Active,Central,Fibre,D Link DIR 842,macOS,Bronze,2021-12-06,,300,656,19,13,2
+SRV000471,CUST00981,Cloud Compute,Active,East Coast,5G,Nokia G 2425G A,iOS,Bronze,2019-07-29,,100,226,21,27,6
+SRV000472,CUST00430,Cloud Storage,Provisioning,Southern,5G,Nokia G 2425G A,iOS,Bronze,2020-04-05,,1000,572,16,9,1
+SRV000473,CUST00307,IoT Connectivity,Terminated,East Coast,4G/LTE,D Link DIR 842,iOS,Gold,2020-03-29,2021-02-18,1000,386,77,26,6
+SRV000474,CUST00449,Managed Security,Provisioning,Southern,Fibre,TP Link Archer A6,macOS,Silver,2022-02-25,,300,569,20,27,2
+SRV000475,CUST00109,Unifi Home,Active,Sarawak,Fibre,Huawei HG8145V5,Embedded,Bronze,2023-11-09,,300,1721,19,1,1
+SRV000476,CUST00405,Mobile Postpaid,Active,Central,5G,ZTE ZXHN F670L,Embedded,Silver,2024-07-26,,30,91,21,13,5
+SRV000477,CUST00169,Mobile Postpaid,Active,Sabah,4G/LTE,Nokia G 2425G A,Embedded,Gold,2020-08-26,,100,76,48,4,4
+SRV000478,CUST01073,Cloud Storage,Provisioning,Sabah,4G/LTE,ZTE ZXHN F670L,Linux,Platinum,2018-05-20,,1000,1206,21,29,5
+SRV000479,CUST00791,Cloud Compute,Active,East Coast,4G/LTE,TP Link Archer A6,Windows,Bronze,2019-01-10,,300,296,43,16,5
+SRV000480,CUST01105,Cloud Compute,Active,Sarawak,4G/LTE,Huawei HG8145V5,Linux,Silver,2018-09-01,,300,397,60,27,3
+SRV000481,CUST00406,IoT Connectivity,Active,Northern,4G/LTE,TP Link Archer A6,macOS,Silver,2019-11-03,,300,1401,71,19,0
+SRV000482,CUST00453,IoT Connectivity,Active,Northern,4G/LTE,D Link DIR 842,Embedded,Gold,2018-04-17,,300,264,64,12,0
+SRV000483,CUST00488,Cloud Compute,Active,East Coast,4G/LTE,TP Link Archer A6,macOS,Gold,2020-12-25,,500,843,69,3,5
+SRV000484,CUST00062,Cloud Compute,Active,Sarawak,5G,D Link DIR 842,Linux,Gold,2022-05-24,,1000,1406,11,13,5
+SRV000485,CUST00938,Mobile Postpaid,Terminated,Sarawak,4G/LTE,D Link DIR 842,Linux,Bronze,2022-02-08,2024-09-03,100,83,29,18,4
+SRV000486,CUST00734,IoT Connectivity,Active,Central,4G/LTE,ZTE ZXHN F670L,iOS,Gold,2019-04-03,,500,400,74,16,3
+SRV000487,CUST00346,Mobile Postpaid,Active,Sabah,4G/LTE,Nokia G 2425G A,Linux,Bronze,2024-10-10,,100,95,33,19,5
+SRV000488,CUST00850,Cloud Compute,Active,Sarawak,5G,Nokia G 2425G A,Windows,Platinum,2020-09-11,,100,511,27,19,2
+SRV000489,CUST00657,Cloud Compute,Active,Central,5G,TP Link Archer A6,iOS,Bronze,2024-11-09,,1000,544,11,2,1
+SRV000490,CUST00187,Unifi Home,Provisioning,East Coast,DSL,D Link DIR 842,iOS,Bronze,2022-11-29,,300,1598,101,12,5
+SRV000491,CUST00800,Cloud Storage,Active,Southern,4G/LTE,Huawei HG8145V5,iOS,Gold,2022-09-21,,500,1134,48,9,4
+SRV000492,CUST00438,Unifi Home,Active,Northern,Fibre,ZTE ZXHN F670L,macOS,Bronze,2022-06-27,,100,819,18,13,2
+SRV000493,CUST00047,Cloud Storage,Active,Southern,4G/LTE,Huawei HG8145V5,Linux,Bronze,2019-01-04,,300,1460,50,17,2
+SRV000494,CUST00744,Cloud Compute,Active,Southern,5G,ZTE ZXHN F670L,macOS,Silver,2023-11-21,,300,1115,13,30,3
+SRV000495,CUST00600,Cloud Storage,Active,Southern,4G/LTE,ZTE ZXHN F670L,Android,Silver,2019-12-06,,300,656,46,14,4
+SRV000496,CUST00615,Cloud Storage,Terminated,East Coast,Fibre,Huawei HG8145V5,macOS,Silver,2020-02-13,2022-11-02,100,766,9,17,2
+SRV000497,CUST00062,Cloud Storage,Active,Sarawak,5G,ZTE ZXHN F670L,macOS,Silver,2022-05-10,,500,1020,24,3,4
+SRV000498,CUST01083,IoT Connectivity,Active,Northern,5G,TP Link Archer A6,iOS,Gold,2019-01-19,,100,1341,22,17,2
+SRV000499,CUST00439,IoT Connectivity,Active,Central,Fibre,TP Link Archer A6,Android,Silver,2023-08-08,,1000,674,17,26,2
+SRV000500,CUST00339,Cloud Compute,Terminated,East Coast,5G,Huawei HG8145V5,Windows,Bronze,2023-12-26,2025-11-24,500,462,13,6,6
+SRV000501,CUST00210,Cloud Compute,Active,East Coast,Fibre,Nokia G 2425G A,Linux,Bronze,2023-09-13,,100,529,15,28,1
+SRV000502,CUST00860,Cloud Compute,Active,Northern,Fibre,TP Link Archer A6,macOS,Gold,2024-07-05,,1000,924,13,15,1
+SRV000503,CUST00942,Cloud Storage,Provisioning,East Coast,4G/LTE,ZTE ZXHN F670L,Embedded,Silver,2022-06-03,,1000,266,31,6,0
+SRV000504,CUST00693,Unifi Home,Terminated,Sarawak,Fibre,Nokia G 2425G A,Embedded,Bronze,2022-07-11,2023-10-03,1000,1815,18,23,2
+SRV000505,CUST00144,IoT Connectivity,Terminated,Central,Fibre,ZTE ZXHN F670L,Windows,Silver,2018-03-15,2020-02-19,300,540,11,12,0
+SRV000506,CUST01114,Managed Security,Provisioning,Central,4G/LTE,D Link DIR 842,Android,Silver,2024-01-08,,500,746,67,1,6
+SRV000507,CUST00054,Cloud Compute,Active,East Coast,5G,Huawei HG8145V5,macOS,Bronze,2018-03-02,,100,477,19,26,2
+SRV000508,CUST00954,Unifi Home,Terminated,Central,Fibre,TP Link Archer A6,macOS,Bronze,2020-04-08,2022-10-12,100,1424,14,20,2
+SRV000509,CUST01185,Unifi Home,Active,East Coast,Fibre,TP Link Archer A6,Android,Gold,2018-07-14,,100,1378,8,22,2
+SRV000510,CUST00456,Cloud Storage,Active,East Coast,Fibre,Nokia G 2425G A,Linux,Silver,2019-07-08,,100,1089,5,18,0
+SRV000511,CUST00638,Mobile Postpaid,Active,Northern,5G,Huawei HG8145V5,macOS,Gold,2018-10-05,,30,145,13,20,3
+SRV000512,CUST00172,Mobile Postpaid,Terminated,Sabah,5G,Huawei HG8145V5,iOS,Bronze,2023-11-25,2024-12-05,100,61,14,2,4
+SRV000513,CUST00544,Unifi Home,Provisioning,Sarawak,DSL,Huawei HG8145V5,Linux,Gold,2023-03-18,,800,1215,126,17,4
+SRV000514,CUST00715,Managed Security,Active,Southern,5G,TP Link Archer A6,macOS,Bronze,2024-04-06,,100,239,15,29,3
+SRV000515,CUST00269,Unifi Home,Active,Southern,DSL,D Link DIR 842,macOS,Platinum,2024-04-05,,100,1079,120,16,5
+SRV000516,CUST00192,Mobile Postpaid,Active,Northern,4G/LTE,ZTE ZXHN F670L,Embedded,Bronze,2023-01-06,,30,53,75,22,5
+SRV000517,CUST00472,IoT Connectivity,Suspended,Sabah,Fibre,Huawei HG8145V5,Android,Silver,2023-01-25,2024-12-12,1000,1289,9,2,1
+SRV000518,CUST00309,Cloud Compute,Active,East Coast,5G,TP Link Archer A6,macOS,Silver,2023-08-09,,100,141,28,23,3
+SRV000519,CUST00221,Cloud Storage,Suspended,Central,Fibre,TP Link Archer A6,Windows,Bronze,2018-03-26,2018-09-23,100,388,6,27,0
+SRV000520,CUST00865,Unifi Business,Active,Central,Fibre,TP Link Archer A6,Android,Platinum,2020-12-13,,100,718,13,24,1
+SRV000521,CUST00088,Unifi Home,Provisioning,Northern,Fibre,ZTE ZXHN F670L,Windows,Bronze,2021-02-24,,300,759,18,19,1
+SRV000522,CUST00540,Cloud Compute,Active,Sabah,5G,ZTE ZXHN F670L,Linux,Bronze,2024-01-04,,500,1127,11,14,6
+SRV000523,CUST00270,Cloud Storage,Active,East Coast,5G,D Link DIR 842,macOS,Silver,2023-07-06,,500,1270,30,2,3
+SRV000524,CUST00529,Cloud Compute,Active,Sabah,5G,ZTE ZXHN F670L,Windows,Silver,2020-02-26,,100,694,29,12,3
+SRV000525,CUST00908,Cloud Storage,Active,Southern,Fibre,Nokia G 2425G A,Windows,Bronze,2024-10-06,,100,1329,16,7,0
+SRV000526,CUST00197,Cloud Storage,Terminated,Southern,5G,D Link DIR 842,iOS,Silver,2022-02-07,2023-06-22,100,1061,19,22,5
+SRV000527,CUST00769,IoT Connectivity,Active,Northern,Fibre,Huawei HG8145V5,Embedded,Silver,2024-04-04,,1000,894,7,4,1
+SRV000528,CUST00793,Cloud Compute,Provisioning,Northern,4G/LTE,D Link DIR 842,Linux,Bronze,2024-10-09,,500,1322,53,5,2
+SRV000529,CUST00820,IoT Connectivity,Active,East Coast,4G/LTE,D Link DIR 842,Linux,Gold,2018-12-24,,1000,856,44,6,6
+SRV000530,CUST01020,Managed Security,Suspended,Northern,5G,ZTE ZXHN F670L,iOS,Bronze,2022-10-01,2025-04-19,1000,370,16,3,5
+SRV000531,CUST00303,Cloud Storage,Active,Central,Fibre,Huawei HG8145V5,Windows,Silver,2018-04-14,,100,101,15,24,2
+SRV000532,CUST00633,Cloud Storage,Suspended,East Coast,5G,Huawei HG8145V5,Android,Bronze,2023-10-22,2025-01-01,300,116,30,12,5
+SRV000533,CUST00467,Cloud Compute,Active,Northern,Fibre,Huawei HG8145V5,Embedded,Bronze,2018-06-11,,500,947,5,11,2
+SRV000534,CUST00471,Cloud Storage,Provisioning,Northern,Fibre,Huawei HG8145V5,iOS,Gold,2018-04-28,,100,1338,7,29,0
+SRV000535,CUST01186,Cloud Compute,Terminated,Central,4G/LTE,Huawei HG8145V5,Embedded,Bronze,2019-04-08,2021-06-21,100,675,75,1,6
+SRV000536,CUST01103,Managed Security,Active,Sarawak,5G,Huawei HG8145V5,Embedded,Gold,2024-06-17,,1000,1311,27,5,5
+SRV000537,CUST00623,Unifi Home,Provisioning,Northern,Fibre,ZTE ZXHN F670L,Linux,Gold,2019-04-15,,300,389,11,16,2
+SRV000538,CUST01159,IoT Connectivity,Active,Northern,Fibre,ZTE ZXHN F670L,Android,Gold,2022-08-20,,1000,408,14,6,1
+SRV000539,CUST00705,Managed Security,Active,East Coast,4G/LTE,D Link DIR 842,iOS,Gold,2023-07-09,,1000,1024,38,25,6
+SRV000540,CUST00711,Cloud Compute,Active,Northern,4G/LTE,TP Link Archer A6,macOS,Gold,2021-02-23,,300,500,67,25,3
+SRV000541,CUST00306,Cloud Compute,Active,Northern,4G/LTE,Huawei HG8145V5,iOS,Silver,2020-07-09,,500,339,24,29,3
+SRV000542,CUST01079,IoT Connectivity,Provisioning,Northern,4G/LTE,ZTE ZXHN F670L,Windows,Bronze,2019-11-11,,500,788,43,8,4
+SRV000543,CUST01080,Mobile Postpaid,Active,Northern,4G/LTE,Huawei HG8145V5,Android,Platinum,2020-11-07,,100,141,47,13,3
+SRV000544,CUST00091,Mobile Postpaid,Active,East Coast,4G/LTE,TP Link Archer A6,Windows,Silver,2020-09-10,,100,40,66,22,1
+SRV000545,CUST00114,Cloud Storage,Active,Central,Fibre,Huawei HG8145V5,Embedded,Gold,2024-01-22,,500,1337,11,4,1
+SRV000546,CUST00280,Managed Security,Active,Sabah,4G/LTE,ZTE ZXHN F670L,Linux,Gold,2019-10-15,,500,639,34,1,5
+SRV000547,CUST00250,Unifi Home,Suspended,East Coast,Fibre,TP Link Archer A6,Windows,Bronze,2023-06-26,2024-10-19,500,921,19,10,1
+SRV000548,CUST00420,Cloud Compute,Active,Northern,4G/LTE,D Link DIR 842,Android,Gold,2022-05-12,,500,564,34,27,1
+SRV000549,CUST00567,IoT Connectivity,Terminated,Central,Fibre,Nokia G 2425G A,Linux,Gold,2023-04-24,2023-08-21,100,151,6,24,0
+SRV000550,CUST00620,Mobile Postpaid,Active,East Coast,4G/LTE,TP Link Archer A6,Embedded,Silver,2023-08-15,,100,125,60,3,5
+SRV000551,CUST01087,IoT Connectivity,Active,Sarawak,5G,Nokia G 2425G A,Linux,Bronze,2022-10-06,,300,336,21,19,4
+SRV000552,CUST00315,Managed Security,Active,Northern,Fibre,D Link DIR 842,Linux,Platinum,2020-12-02,,300,1105,14,19,0
+SRV000553,CUST00432,Mobile Postpaid,Active,East Coast,5G,Huawei HG8145V5,iOS,Gold,2023-08-30,,100,30,24,1,2
+SRV000554,CUST00923,Mobile Postpaid,Provisioning,East Coast,4G/LTE,Nokia G 2425G A,iOS,Silver,2024-09-23,,100,99,49,16,5
+SRV000555,CUST01017,Cloud Compute,Active,Northern,Fibre,Huawei HG8145V5,Linux,Bronze,2024-09-15,,1000,125,5,22,1
+SRV000556,CUST00774,Mobile Postpaid,Active,Southern,5G,ZTE ZXHN F670L,iOS,Silver,2019-04-26,,30,50,28,27,1
+SRV000557,CUST01032,Managed Security,Suspended,Sabah,4G/LTE,Huawei HG8145V5,Linux,Gold,2020-09-11,2023-01-29,1000,373,47,9,5
+SRV000558,CUST00442,Mobile Postpaid,Active,Northern,5G,TP Link Archer A6,Embedded,Silver,2021-05-01,,100,62,11,29,3
+SRV000559,CUST00822,Managed Security,Active,Central,5G,Nokia G 2425G A,Windows,Platinum,2022-07-06,,300,514,18,21,2
+SRV000560,CUST00422,Cloud Compute,Active,Northern,4G/LTE,TP Link Archer A6,macOS,Gold,2024-02-13,,100,330,53,22,2
+SRV000561,CUST00887,Cloud Compute,Active,East Coast,5G,Huawei HG8145V5,Android,Bronze,2021-12-30,,300,1057,27,22,0
+SRV000562,CUST00971,Unifi Home,Active,Northern,DSL,Huawei HG8145V5,Linux,Bronze,2020-04-12,,100,370,132,24,2
+SRV000563,CUST01187,Cloud Compute,Terminated,Central,4G/LTE,Nokia G 2425G A,Embedded,Silver,2018-07-21,2019-07-10,300,250,59,8,3
+SRV000564,CUST01176,Cloud Compute,Terminated,Sabah,Fibre,D Link DIR 842,iOS,Platinum,2024-01-11,2025-03-20,1000,463,20,13,1
+SRV000565,CUST00876,Cloud Storage,Active,Northern,5G,Nokia G 2425G A,iOS,Bronze,2023-10-21,,1000,247,16,27,6
+SRV000566,CUST00633,Unifi Home,Active,East Coast,DSL,ZTE ZXHN F670L,macOS,Bronze,2023-12-25,,100,1321,149,26,2
+SRV000567,CUST00367,Cloud Storage,Provisioning,Central,Fibre,Huawei HG8145V5,iOS,Silver,2019-06-24,,1000,931,8,12,0
+SRV000568,CUST00068,Unifi Business,Active,Sabah,Fibre,ZTE ZXHN F670L,Windows,Silver,2024-12-21,,500,779,10,24,0
+SRV000569,CUST00846,Cloud Compute,Active,Northern,Fibre,ZTE ZXHN F670L,Windows,Platinum,2018-10-01,,100,278,5,28,2
+SRV000570,CUST01075,Cloud Storage,Active,Central,5G,TP Link Archer A6,Linux,Silver,2020-08-19,,500,1387,29,19,0
+SRV000571,CUST00702,Cloud Storage,Active,Central,4G/LTE,ZTE ZXHN F670L,Linux,Bronze,2021-11-15,,1000,1045,62,8,3
+SRV000572,CUST00926,Mobile Postpaid,Terminated,Central,4G/LTE,ZTE ZXHN F670L,Android,Gold,2020-10-18,2022-04-30,30,130,39,8,5
+SRV000573,CUST00356,Unifi Business,Active,Sarawak,DSL,Nokia G 2425G A,macOS,Silver,2023-11-11,,500,943,140,4,5
+SRV000574,CUST00746,Cloud Compute,Terminated,Southern,5G,Nokia G 2425G A,iOS,Bronze,2021-10-24,2023-05-15,100,342,13,22,2
+SRV000575,CUST00632,Unifi Home,Suspended,Northern,Fibre,D Link DIR 842,iOS,Silver,2019-08-06,2021-11-20,800,209,18,17,1
+SRV000576,CUST00833,IoT Connectivity,Active,Central,4G/LTE,Nokia G 2425G A,Linux,Gold,2020-11-24,,500,1479,58,16,1
+SRV000577,CUST00711,IoT Connectivity,Active,Northern,5G,Nokia G 2425G A,Windows,Gold,2021-03-16,,300,941,18,9,3
+SRV000578,CUST00105,Mobile Postpaid,Active,East Coast,5G,D Link DIR 842,Linux,Gold,2020-09-01,,100,109,29,13,6
+SRV000579,CUST00541,Cloud Compute,Active,East Coast,4G/LTE,D Link DIR 842,Linux,Silver,2021-08-23,,500,1006,67,3,2
+SRV000580,CUST00725,Cloud Compute,Active,Northern,5G,TP Link Archer A6,Windows,Gold,2024-04-14,,300,618,10,25,2
+SRV000581,CUST00495,Managed Security,Active,Northern,4G/LTE,ZTE ZXHN F670L,macOS,Gold,2020-05-04,,1000,744,76,8,5
+SRV000582,CUST00530,Cloud Compute,Suspended,East Coast,Fibre,D Link DIR 842,Windows,Bronze,2020-10-25,2023-03-25,1000,1175,5,12,0
+SRV000583,CUST01090,Mobile Postpaid,Active,East Coast,4G/LTE,D Link DIR 842,macOS,Bronze,2024-08-23,,30,83,46,20,3
+SRV000584,CUST00621,Unifi Home,Provisioning,Northern,Fibre,ZTE ZXHN F670L,Linux,Bronze,2018-12-27,,100,1844,13,3,1
+SRV000585,CUST00003,Cloud Storage,Active,East Coast,4G/LTE,TP Link Archer A6,Android,Bronze,2023-09-13,,300,934,43,17,1
+SRV000586,CUST01092,Cloud Storage,Active,Sarawak,5G,Huawei HG8145V5,iOS,Gold,2022-01-07,,1000,675,30,14,2
+SRV000587,CUST00808,Managed Security,Provisioning,Southern,Fibre,Huawei HG8145V5,iOS,Platinum,2021-09-11,,1000,641,8,11,2
+SRV000588,CUST00301,Unifi Business,Provisioning,Central,DSL,TP Link Archer A6,Android,Bronze,2023-02-15,,100,566,142,14,0
+SRV000589,CUST00990,Unifi Home,Provisioning,Southern,Fibre,ZTE ZXHN F670L,Linux,Bronze,2018-03-26,,500,1412,19,16,2
+SRV000590,CUST00962,Cloud Compute,Active,Northern,Fibre,ZTE ZXHN F670L,Linux,Bronze,2019-02-24,,300,758,19,28,2
+SRV000591,CUST00761,Cloud Storage,Provisioning,East Coast,5G,Nokia G 2425G A,macOS,Silver,2023-08-30,,100,804,30,22,1
+SRV000592,CUST00840,Unifi Business,Active,Central,Fibre,D Link DIR 842,macOS,Silver,2022-08-31,,800,323,20,3,2
+SRV000593,CUST01110,Unifi Business,Terminated,Sarawak,Fibre,Huawei HG8145V5,Embedded,Silver,2019-04-07,2021-12-05,300,1367,8,5,0
+SRV000594,CUST01008,Cloud Storage,Active,East Coast,4G/LTE,Nokia G 2425G A,macOS,Platinum,2018-12-10,,100,524,78,30,1
+SRV000595,CUST01021,Managed Security,Terminated,Sarawak,5G,ZTE ZXHN F670L,Windows,Platinum,2019-08-22,2022-01-25,100,1102,28,3,6
+SRV000596,CUST00092,Cloud Storage,Suspended,Sarawak,5G,ZTE ZXHN F670L,Android,Gold,2019-04-19,2019-08-28,1000,173,24,17,1
+SRV000597,CUST01102,Cloud Compute,Active,Northern,4G/LTE,TP Link Archer A6,macOS,Platinum,2023-03-26,,300,620,53,27,6
+SRV000598,CUST00720,Managed Security,Active,Northern,5G,TP Link Archer A6,Embedded,Gold,2019-12-10,,500,1370,14,16,1
+SRV000599,CUST01053,Unifi Home,Active,Central,Fibre,D Link DIR 842,macOS,Gold,2024-10-04,,300,1821,17,26,1
+SRV000600,CUST00504,Unifi Home,Active,Southern,DSL,TP Link Archer A6,Embedded,Silver,2024-08-13,,500,747,85,18,4
+SRV000601,CUST01173,Cloud Storage,Terminated,Northern,4G/LTE,Huawei HG8145V5,Android,Silver,2023-10-07,2025-10-06,100,1044,60,29,2
+SRV000602,CUST00893,Unifi Home,Suspended,East Coast,DSL,Huawei HG8145V5,Linux,Silver,2022-07-01,2023-02-03,500,525,106,27,5
+SRV000603,CUST00078,Cloud Compute,Active,Northern,4G/LTE,Nokia G 2425G A,Linux,Silver,2019-07-15,,100,1329,72,29,1
+SRV000604,CUST00504,Cloud Compute,Suspended,Southern,5G,TP Link Archer A6,Windows,Platinum,2024-08-10,2024-12-08,1000,1323,30,19,0
+SRV000605,CUST00724,Cloud Storage,Suspended,Northern,Fibre,Huawei HG8145V5,Embedded,Silver,2018-03-15,2018-07-09,100,398,16,7,0
+SRV000606,CUST01144,Cloud Compute,Active,East Coast,5G,Huawei HG8145V5,iOS,Bronze,2023-03-27,,300,179,22,30,4
+SRV000607,CUST00259,Unifi Home,Active,Central,DSL,ZTE ZXHN F670L,macOS,Bronze,2019-07-27,,500,808,147,10,5
+SRV000608,CUST00919,Mobile Postpaid,Terminated,East Coast,4G/LTE,D Link DIR 842,Linux,Silver,2020-04-16,2022-03-07,30,89,73,23,2
+SRV000609,CUST00671,Cloud Compute,Active,Central,Fibre,TP Link Archer A6,Android,Gold,2023-11-13,,300,1489,11,25,2
+SRV000610,CUST00283,Cloud Storage,Terminated,Sabah,Fibre,Nokia G 2425G A,Windows,Gold,2023-09-05,2025-05-03,500,478,16,12,2
+SRV000611,CUST00957,Managed Security,Provisioning,Sabah,4G/LTE,ZTE ZXHN F670L,Windows,Platinum,2023-06-02,,100,599,23,30,4
+SRV000612,CUST00254,IoT Connectivity,Active,Central,4G/LTE,Nokia G 2425G A,Windows,Gold,2022-04-19,,1000,893,26,22,6
+SRV000613,CUST00694,Unifi Home,Suspended,Central,DSL,Nokia G 2425G A,macOS,Bronze,2024-11-25,2027-08-18,500,1709,83,17,4
+SRV000614,CUST00279,Cloud Compute,Active,Northern,4G/LTE,TP Link Archer A6,Android,Bronze,2019-07-01,,100,1008,79,28,3
+SRV000615,CUST00740,Cloud Compute,Provisioning,Central,4G/LTE,Huawei HG8145V5,Windows,Gold,2023-08-12,,100,226,52,25,5
+SRV000616,CUST00275,Mobile Postpaid,Active,Central,4G/LTE,TP Link Archer A6,Linux,Silver,2019-12-19,,100,146,37,12,4
+SRV000617,CUST00369,Cloud Storage,Active,Central,4G/LTE,ZTE ZXHN F670L,iOS,Silver,2020-12-30,,300,690,67,19,6
+SRV000618,CUST00509,Cloud Storage,Active,Northern,4G/LTE,ZTE ZXHN F670L,Android,Bronze,2024-06-22,,500,777,77,12,4
+SRV000619,CUST00583,IoT Connectivity,Suspended,Southern,4G/LTE,D Link DIR 842,Linux,Gold,2024-06-14,2025-12-02,1000,371,32,22,4
+SRV000620,CUST00699,Cloud Storage,Provisioning,Central,5G,ZTE ZXHN F670L,iOS,Bronze,2018-04-29,,300,803,10,30,1
+SRV000621,CUST00923,Cloud Storage,Active,East Coast,4G/LTE,ZTE ZXHN F670L,Linux,Bronze,2024-08-02,,300,1105,29,22,3
+SRV000622,CUST00814,Cloud Storage,Active,Northern,Fibre,TP Link Archer A6,Windows,Platinum,2025-01-07,,300,665,8,16,2
+SRV000623,CUST00102,Unifi Home,Active,Sabah,DSL,TP Link Archer A6,macOS,Bronze,2022-11-30,,500,928,123,29,6
+SRV000624,CUST00745,Managed Security,Suspended,Northern,Fibre,D Link DIR 842,macOS,Platinum,2025-03-16,2026-01-19,300,863,20,23,1
+SRV000625,CUST00850,IoT Connectivity,Active,Sarawak,4G/LTE,TP Link Archer A6,Android,Silver,2020-10-19,,100,161,52,14,6
+SRV000626,CUST00105,Cloud Compute,Active,East Coast,5G,ZTE ZXHN F670L,Windows,Gold,2020-09-04,,1000,1245,20,25,1
+SRV000627,CUST00192,Cloud Storage,Active,Northern,Fibre,D Link DIR 842,macOS,Bronze,2023-01-01,,300,240,18,2,2
+SRV000628,CUST01180,Cloud Compute,Active,Northern,Fibre,ZTE ZXHN F670L,Android,Bronze,2019-10-18,,300,1323,7,3,0
+SRV000629,CUST00757,Mobile Postpaid,Active,Northern,5G,D Link DIR 842,Windows,Bronze,2019-10-30,,30,80,16,19,3
+SRV000630,CUST00498,Managed Security,Active,Sabah,Fibre,ZTE ZXHN F670L,Embedded,Gold,2018-10-03,,1000,1162,10,21,0
+SRV000631,CUST01147,IoT Connectivity,Active,Central,4G/LTE,TP Link Archer A6,Windows,Platinum,2021-04-01,,100,944,69,15,3
+SRV000632,CUST00828,Mobile Postpaid,Provisioning,Sabah,4G/LTE,Huawei HG8145V5,Embedded,Bronze,2021-04-05,,100,43,31,10,1
+SRV000633,CUST00829,Cloud Storage,Active,Southern,5G,Huawei HG8145V5,Embedded,Gold,2023-09-30,,500,161,18,15,5
+SRV000634,CUST01145,Cloud Compute,Provisioning,Northern,Fibre,D Link DIR 842,macOS,Gold,2024-07-29,,300,1005,15,17,0
+SRV000635,CUST01126,Managed Security,Active,East Coast,5G,TP Link Archer A6,macOS,Gold,2022-08-09,,1000,1178,24,22,0
+SRV000636,CUST00627,Cloud Storage,Active,Central,4G/LTE,Huawei HG8145V5,macOS,Gold,2024-10-21,,300,288,71,11,2
+SRV000637,CUST00896,Managed Security,Active,East Coast,Fibre,Huawei HG8145V5,macOS,Silver,2022-07-26,,1000,1294,5,28,2
+SRV000638,CUST01158,Cloud Storage,Active,Central,4G/LTE,D Link DIR 842,Linux,Bronze,2020-12-11,,100,349,62,18,1
+SRV000639,CUST00285,IoT Connectivity,Provisioning,East Coast,Fibre,Huawei HG8145V5,Embedded,Gold,2019-07-06,,300,645,17,18,1
+SRV000640,CUST00282,Mobile Postpaid,Terminated,Sabah,5G,D Link DIR 842,iOS,Bronze,2024-01-16,2025-11-07,100,33,22,22,5
+SRV000641,CUST00132,Cloud Compute,Active,Sabah,5G,TP Link Archer A6,Embedded,Gold,2023-05-02,,500,1115,26,8,0
+SRV000642,CUST00544,Cloud Compute,Active,Sarawak,5G,TP Link Archer A6,Embedded,Silver,2023-06-01,,1000,1434,21,27,6
+SRV000643,CUST00943,Cloud Storage,Active,East Coast,Fibre,ZTE ZXHN F670L,Windows,Bronze,2021-01-05,,1000,1404,20,21,1
+SRV000644,CUST00535,Cloud Compute,Terminated,Southern,5G,Huawei HG8145V5,Linux,Gold,2022-03-31,2023-10-20,100,852,23,4,2
+SRV000645,CUST00890,Cloud Compute,Active,Sabah,5G,TP Link Archer A6,iOS,Bronze,2019-02-11,,300,279,26,14,3
+SRV000646,CUST00513,Managed Security,Provisioning,Northern,5G,Huawei HG8145V5,Android,Silver,2019-10-16,,100,1270,26,12,5
+SRV000647,CUST00045,Cloud Compute,Active,Central,4G/LTE,ZTE ZXHN F670L,iOS,Bronze,2022-07-31,,500,201,54,3,5
+SRV000648,CUST00539,Mobile Postpaid,Terminated,Southern,5G,Nokia G 2425G A,macOS,Gold,2022-11-12,2024-04-18,100,72,15,28,3
+SRV000649,CUST00098,Cloud Storage,Active,East Coast,Fibre,Nokia G 2425G A,Android,Bronze,2018-09-24,,100,1105,6,2,1
+SRV000650,CUST00310,Cloud Compute,Active,East Coast,4G/LTE,TP Link Archer A6,Windows,Silver,2021-08-12,,500,1288,73,25,3
+SRV000651,CUST00742,Unifi Home,Active,Sarawak,Fibre,ZTE ZXHN F670L,Embedded,Bronze,2023-04-22,,1000,1079,8,4,1
+SRV000652,CUST00442,Cloud Compute,Terminated,Northern,4G/LTE,Huawei HG8145V5,Android,Bronze,2021-02-08,2023-02-10,1000,1081,66,29,5
+SRV000653,CUST00751,Unifi Business,Active,Sabah,Fibre,ZTE ZXHN F670L,macOS,Gold,2024-04-13,,100,1022,19,10,1
+SRV000654,CUST00412,Cloud Storage,Active,Sabah,5G,Huawei HG8145V5,iOS,Bronze,2018-07-28,,100,1348,14,15,2
+SRV000655,CUST00510,Unifi Business,Active,Central,Fibre,TP Link Archer A6,Linux,Gold,2022-05-13,,300,612,17,3,1
+SRV000656,CUST00729,Cloud Compute,Active,Central,5G,Huawei HG8145V5,Windows,Bronze,2021-09-06,,500,406,23,15,1
+SRV000657,CUST00111,Mobile Postpaid,Active,Northern,4G/LTE,ZTE ZXHN F670L,iOS,Bronze,2023-09-29,,30,21,20,29,2
+SRV000658,CUST00895,Cloud Storage,Active,East Coast,4G/LTE,ZTE ZXHN F670L,Windows,Bronze,2018-11-15,,100,464,25,23,4
+SRV000659,CUST00188,Managed Security,Active,Central,4G/LTE,Nokia G 2425G A,iOS,Gold,2019-12-20,,500,484,56,26,1
+SRV000660,CUST00474,Unifi Home,Active,Central,Fibre,Nokia G 2425G A,Windows,Silver,2020-06-30,,500,367,18,11,1
+SRV000661,CUST00115,Cloud Storage,Active,Northern,Fibre,Huawei HG8145V5,Android,Silver,2021-03-11,,100,402,13,6,1
+SRV000662,CUST00543,Managed Security,Provisioning,East Coast,5G,TP Link Archer A6,Embedded,Silver,2020-05-23,,300,170,19,3,6
+SRV000663,CUST00133,Cloud Storage,Provisioning,Sabah,4G/LTE,Nokia G 2425G A,Android,Gold,2022-12-06,,100,1342,34,7,2
+SRV000664,CUST00802,Cloud Compute,Provisioning,Sabah,Fibre,D Link DIR 842,iOS,Silver,2022-02-13,,500,1087,16,23,1
+SRV000665,CUST00397,Cloud Storage,Provisioning,Central,Fibre,ZTE ZXHN F670L,macOS,Gold,2022-07-11,,100,930,13,8,1
+SRV000666,CUST00920,Unifi Business,Active,East Coast,Fibre,D Link DIR 842,Android,Gold,2020-10-09,,800,325,8,27,0
+SRV000667,CUST00699,Mobile Postpaid,Active,Central,5G,Huawei HG8145V5,Embedded,Gold,2018-04-14,,30,134,30,27,6
+SRV000668,CUST01105,Cloud Storage,Active,Sarawak,Fibre,D Link DIR 842,Linux,Gold,2018-09-07,,100,826,8,16,2
+SRV000669,CUST00485,Mobile Postpaid,Active,Sabah,5G,ZTE ZXHN F670L,Embedded,Bronze,2018-11-16,,30,116,29,25,4
+SRV000670,CUST00388,Mobile Postpaid,Provisioning,Sabah,5G,D Link DIR 842,macOS,Bronze,2024-02-08,,100,147,10,17,4
+SRV000671,CUST00528,Cloud Storage,Active,Central,5G,TP Link Archer A6,Windows,Gold,2020-04-10,,300,854,24,1,5
+SRV000672,CUST01019,Cloud Storage,Suspended,Central,Fibre,Nokia G 2425G A,Windows,Bronze,2023-07-10,2025-01-30,500,971,9,21,2
+SRV000673,CUST00374,Cloud Storage,Active,East Coast,4G/LTE,Huawei HG8145V5,Linux,Bronze,2020-09-17,,1000,232,27,18,3
+SRV000674,CUST01050,Unifi Business,Provisioning,Central,Fibre,Nokia G 2425G A,iOS,Silver,2019-01-05,,1000,1529,7,19,1
+SRV000675,CUST01171,Unifi Home,Suspended,Sabah,Fibre,D Link DIR 842,Android,Bronze,2018-12-20,2019-08-06,800,1613,17,22,0
+SRV000676,CUST01081,Unifi Home,Active,Central,DSL,Nokia G 2425G A,Linux,Bronze,2024-10-24,,800,1807,86,3,2
+SRV000677,CUST00951,Mobile Postpaid,Provisioning,East Coast,5G,ZTE ZXHN F670L,Android,Silver,2018-05-06,,100,98,23,1,3
+SRV000678,CUST00921,Cloud Compute,Active,East Coast,4G/LTE,TP Link Archer A6,Linux,Gold,2018-09-05,,100,1314,72,6,1
+SRV000679,CUST00076,Cloud Compute,Suspended,East Coast,Fibre,Huawei HG8145V5,Windows,Bronze,2019-04-20,2021-08-13,1000,678,10,12,0
+SRV000680,CUST00100,Cloud Storage,Active,Northern,5G,D Link DIR 842,Embedded,Bronze,2024-12-30,,1000,1408,25,7,2
+SRV000681,CUST01109,Unifi Business,Active,Northern,DSL,D Link DIR 842,Embedded,Silver,2019-08-11,,800,777,143,15,4
+SRV000682,CUST00489,Cloud Compute,Suspended,Central,4G/LTE,Nokia G 2425G A,Embedded,Silver,2018-02-12,2020-03-13,500,542,54,8,2
+SRV000683,CUST00792,IoT Connectivity,Active,Central,5G,ZTE ZXHN F670L,iOS,Silver,2019-06-23,,100,1352,16,2,5
+SRV000684,CUST00779,Cloud Storage,Active,Central,4G/LTE,ZTE ZXHN F670L,iOS,Silver,2024-11-05,,100,1282,25,19,3
+SRV000685,CUST01199,IoT Connectivity,Active,Northern,5G,Huawei HG8145V5,Embedded,Bronze,2020-06-16,,100,602,27,16,4
+SRV000686,CUST00444,Unifi Business,Active,Northern,Fibre,Huawei HG8145V5,macOS,Gold,2024-03-26,,500,675,12,11,1
+SRV000687,CUST00365,Cloud Storage,Provisioning,Southern,Fibre,Huawei HG8145V5,macOS,Silver,2020-06-19,,1000,619,20,17,0
+SRV000688,CUST00233,Cloud Compute,Active,East Coast,5G,Nokia G 2425G A,Embedded,Gold,2020-02-27,,500,350,24,8,4
+SRV000689,CUST00339,Mobile Postpaid,Active,East Coast,5G,ZTE ZXHN F670L,Linux,Silver,2024-01-09,,100,105,10,26,1
+SRV000690,CUST01163,Cloud Storage,Provisioning,Northern,5G,TP Link Archer A6,Embedded,Gold,2021-11-26,,500,1087,25,24,3
+SRV000691,CUST01153,Unifi Business,Active,Central,Fibre,Huawei HG8145V5,Embedded,Silver,2021-08-02,,500,622,16,8,2
+SRV000692,CUST00157,Unifi Business,Provisioning,Northern,Fibre,ZTE ZXHN F670L,macOS,Silver,2020-10-14,,300,302,13,17,0
+SRV000693,CUST00386,Cloud Storage,Active,Central,5G,D Link DIR 842,Embedded,Bronze,2018-09-05,,300,1352,18,7,1
+SRV000694,CUST01181,Unifi Home,Active,Northern,Fibre,D Link DIR 842,Android,Gold,2018-09-25,,500,864,5,13,2
+SRV000695,CUST00558,Cloud Compute,Provisioning,Northern,4G/LTE,TP Link Archer A6,Windows,Gold,2020-11-10,,100,132,39,5,6
+SRV000696,CUST00997,Cloud Storage,Active,Central,Fibre,TP Link Archer A6,Windows,Gold,2022-04-27,,100,102,8,28,2
+SRV000697,CUST00146,IoT Connectivity,Active,East Coast,4G/LTE,Nokia G 2425G A,Linux,Gold,2020-05-24,,100,538,29,25,6
+SRV000698,CUST00503,Cloud Storage,Active,Northern,5G,Huawei HG8145V5,macOS,Silver,2019-02-08,,100,306,12,11,5
+SRV000699,CUST01023,Unifi Business,Suspended,Sabah,Fibre,TP Link Archer A6,Linux,Bronze,2019-05-28,2022-02-02,800,786,10,13,0
+SRV000700,CUST00619,Cloud Storage,Terminated,Central,5G,D Link DIR 842,iOS,Bronze,2021-11-25,2022-06-29,300,799,18,26,3
+SRV000701,CUST00348,Mobile Postpaid,Provisioning,Central,4G/LTE,ZTE ZXHN F670L,Linux,Gold,2020-01-06,,100,83,62,10,1
+SRV000702,CUST00566,Cloud Storage,Active,Sabah,Fibre,Nokia G 2425G A,Windows,Gold,2018-04-06,,1000,201,6,14,0
+SRV000703,CUST00512,IoT Connectivity,Active,Central,Fibre,ZTE ZXHN F670L,Linux,Gold,2024-08-16,,100,901,11,11,0
+SRV000704,CUST00153,Cloud Storage,Active,Central,4G/LTE,ZTE ZXHN F670L,Embedded,Silver,2018-08-08,,300,696,60,4,3
+SRV000705,CUST00693,Cloud Storage,Active,Sarawak,4G/LTE,ZTE ZXHN F670L,macOS,Bronze,2022-07-03,,100,1182,66,30,2
+SRV000706,CUST00553,Unifi Home,Active,Northern,Fibre,D Link DIR 842,Linux,Bronze,2020-10-03,,300,1260,15,20,0
+SRV000707,CUST00674,Cloud Storage,Provisioning,Northern,5G,Nokia G 2425G A,Android,Bronze,2018-04-24,,100,1465,21,24,3
+SRV000708,CUST01124,Mobile Postpaid,Active,Northern,4G/LTE,Huawei HG8145V5,Embedded,Gold,2020-07-24,,30,63,25,27,4
+SRV000709,CUST00238,Unifi Home,Provisioning,Northern,Fibre,Nokia G 2425G A,macOS,Bronze,2023-02-01,,500,425,14,1,0
+SRV000710,CUST00444,IoT Connectivity,Terminated,Northern,4G/LTE,D Link DIR 842,macOS,Gold,2024-04-08,2024-11-07,500,444,46,11,1
+SRV000711,CUST00012,Unifi Home,Suspended,Central,DSL,ZTE ZXHN F670L,Android,Bronze,2018-02-23,2018-10-26,100,1468,144,21,2
+SRV000712,CUST00630,Managed Security,Active,Central,4G/LTE,Nokia G 2425G A,macOS,Silver,2025-01-04,,500,1213,24,23,4
+SRV000713,CUST00301,Managed Security,Active,Central,4G/LTE,ZTE ZXHN F670L,iOS,Gold,2023-04-03,,500,1342,80,4,3
+SRV000714,CUST00640,Cloud Compute,Provisioning,Southern,4G/LTE,ZTE ZXHN F670L,Windows,Bronze,2021-08-12,,100,1246,61,1,0
+SRV000715,CUST00202,Cloud Compute,Active,Sabah,5G,Huawei HG8145V5,iOS,Silver,2022-07-01,,300,582,19,6,4
+SRV000716,CUST00514,Unifi Home,Provisioning,East Coast,Fibre,TP Link Archer A6,Linux,Bronze,2022-01-27,,800,1907,7,21,0
+SRV000717,CUST00324,Unifi Home,Terminated,Central,Fibre,TP Link Archer A6,iOS,Bronze,2019-05-17,2020-11-08,100,1866,19,16,1
+SRV000718,CUST00061,Cloud Storage,Provisioning,Sabah,4G/LTE,Huawei HG8145V5,Embedded,Platinum,2020-11-07,,1000,1410,65,30,3
+SRV000719,CUST00810,Cloud Storage,Active,Central,4G/LTE,D Link DIR 842,Linux,Gold,2020-08-31,,100,1019,61,11,1
+SRV000720,CUST00599,Unifi Home,Active,Sabah,DSL,ZTE ZXHN F670L,Windows,Gold,2024-03-19,,1000,1663,143,30,1
+SRV000721,CUST00581,Cloud Storage,Suspended,East Coast,Fibre,TP Link Archer A6,Windows,Bronze,2018-08-23,2019-09-13,100,994,11,19,0
+SRV000722,CUST00995,Cloud Storage,Provisioning,East Coast,4G/LTE,Huawei HG8145V5,macOS,Silver,2018-05-18,,300,549,55,22,0
+SRV000723,CUST01130,Cloud Compute,Provisioning,Northern,4G/LTE,Nokia G 2425G A,iOS,Platinum,2018-04-13,,300,1473,60,6,6
+SRV000724,CUST00941,IoT Connectivity,Provisioning,East Coast,4G/LTE,ZTE ZXHN F670L,Linux,Gold,2024-02-10,,500,469,61,29,1
+SRV000725,CUST00722,Managed Security,Provisioning,Northern,Fibre,ZTE ZXHN F670L,macOS,Gold,2018-12-20,,300,244,7,24,1
+SRV000726,CUST01185,Mobile Postpaid,Provisioning,East Coast,5G,TP Link Archer A6,iOS,Bronze,2018-07-30,,30,108,10,27,3
+SRV000727,CUST00007,Cloud Storage,Active,Central,Fibre,Nokia G 2425G A,macOS,Gold,2020-02-26,,500,1448,17,7,1
+SRV000728,CUST00935,Cloud Storage,Active,East Coast,4G/LTE,D Link DIR 842,iOS,Silver,2024-06-02,,100,766,78,19,2
+SRV000729,CUST00150,Cloud Compute,Active,East Coast,4G/LTE,TP Link Archer A6,Windows,Silver,2018-09-17,,500,1293,41,11,0
+SRV000730,CUST00402,Mobile Postpaid,Provisioning,Central,4G/LTE,Nokia G 2425G A,Android,Bronze,2022-04-02,,100,73,62,23,2
+SRV000731,CUST00225,Unifi Home,Active,Southern,Fibre,TP Link Archer A6,Windows,Bronze,2024-06-30,,800,669,17,25,1
+SRV000732,CUST00021,Cloud Storage,Provisioning,Northern,5G,ZTE ZXHN F670L,Linux,Silver,2024-07-26,,300,585,18,5,3
+SRV000733,CUST00998,Cloud Storage,Suspended,Central,Fibre,Huawei HG8145V5,Embedded,Bronze,2024-03-04,2026-09-25,100,386,7,15,0
+SRV000734,CUST01078,Mobile Postpaid,Active,Northern,4G/LTE,D Link DIR 842,Embedded,Silver,2019-12-20,,30,50,24,29,1
+SRV000735,CUST00904,Cloud Compute,Terminated,Sabah,5G,Huawei HG8145V5,Linux,Gold,2024-10-25,2025-04-05,100,726,29,27,1
+SRV000736,CUST00489,Unifi Home,Suspended,Central,DSL,Nokia G 2425G A,Linux,Bronze,2018-01-31,2018-06-25,800,1699,122,26,4
+SRV000737,CUST00532,Unifi Home,Active,Northern,DSL,Nokia G 2425G A,Android,Silver,2020-11-28,,300,1643,133,10,4
+SRV000738,CUST00763,Unifi Business,Provisioning,East Coast,DSL,Huawei HG8145V5,Android,Gold,2022-01-08,,100,1646,112,1,4
+SRV000739,CUST00179,Cloud Storage,Active,Sabah,4G/LTE,TP Link Archer A6,Linux,Bronze,2020-10-26,,1000,1191,48,21,6
+SRV000740,CUST00393,Cloud Compute,Provisioning,Sarawak,5G,Nokia G 2425G A,macOS,Gold,2020-08-21,,300,1461,14,1,2
+SRV000741,CUST00385,Cloud Compute,Provisioning,Central,5G,Huawei HG8145V5,Embedded,Bronze,2023-09-18,,300,313,11,14,2
+SRV000742,CUST00136,Unifi Business,Suspended,Southern,Fibre,D Link DIR 842,Android,Bronze,2021-10-21,2022-11-14,100,608,8,8,1
+SRV000743,CUST00751,Cloud Storage,Terminated,Sabah,5G,Nokia G 2425G A,Windows,Silver,2024-05-26,2026-10-11,300,1494,14,22,1
+SRV000744,CUST00732,Managed Security,Provisioning,Central,4G/LTE,D Link DIR 842,iOS,Gold,2018-04-25,,1000,257,65,17,6
+SRV000745,CUST01146,Cloud Storage,Provisioning,East Coast,5G,D Link DIR 842,Linux,Bronze,2018-11-27,,500,230,16,17,3
+SRV000746,CUST00952,Unifi Business,Active,Sabah,Fibre,Nokia G 2425G A,Android,Gold,2018-07-15,,300,1458,19,21,2
+SRV000747,CUST00330,Unifi Home,Active,Central,Fibre,ZTE ZXHN F670L,Windows,Bronze,2019-05-17,,500,853,15,24,2
+SRV000748,CUST00840,IoT Connectivity,Suspended,Central,Fibre,D Link DIR 842,Embedded,Silver,2022-07-21,2024-04-22,100,1121,17,25,1
+SRV000749,CUST00083,Mobile Postpaid,Active,Sarawak,5G,TP Link Archer A6,Linux,Gold,2022-03-08,,100,69,28,4,6
+SRV000750,CUST01105,Cloud Storage,Active,Sarawak,5G,Huawei HG8145V5,Android,Silver,2018-08-26,,500,1330,16,25,1
+SRV000751,CUST01196,Mobile Postpaid,Active,Central,4G/LTE,TP Link Archer A6,Android,Gold,2022-11-11,,100,127,77,15,0
+SRV000752,CUST00288,Unifi Business,Provisioning,East Coast,DSL,ZTE ZXHN F670L,Windows,Silver,2020-05-11,,500,580,87,22,2
+SRV000753,CUST00736,Cloud Compute,Provisioning,Central,Fibre,TP Link Archer A6,Windows,Bronze,2020-11-12,,1000,1157,18,15,1
+SRV000754,CUST01031,IoT Connectivity,Active,East Coast,4G/LTE,Huawei HG8145V5,Embedded,Gold,2023-04-14,,100,164,67,2,3
+SRV000755,CUST00287,Unifi Home,Terminated,Central,Fibre,Nokia G 2425G A,Windows,Bronze,2022-03-23,2022-10-26,300,804,17,4,2
+SRV000756,CUST00909,Cloud Compute,Provisioning,Northern,4G/LTE,ZTE ZXHN F670L,Windows,Bronze,2020-05-07,,500,1230,47,14,3
+SRV000757,CUST00168,Cloud Storage,Active,East Coast,5G,Huawei HG8145V5,Linux,Bronze,2018-05-04,,500,1119,11,23,2
+SRV000758,CUST01153,IoT Connectivity,Active,Central,Fibre,ZTE ZXHN F670L,Android,Platinum,2021-08-28,,1000,1054,5,8,0
+SRV000759,CUST00322,Cloud Storage,Active,Sarawak,Fibre,TP Link Archer A6,Embedded,Silver,2019-09-19,,1000,600,9,10,1
+SRV000760,CUST00867,Cloud Storage,Provisioning,Northern,5G,Nokia G 2425G A,Embedded,Bronze,2023-09-09,,100,634,17,17,0
+SRV000761,CUST00951,Cloud Storage,Active,East Coast,4G/LTE,Nokia G 2425G A,macOS,Silver,2018-04-15,,1000,1274,30,10,3
+SRV000762,CUST00046,Cloud Compute,Suspended,Sabah,Fibre,ZTE ZXHN F670L,Embedded,Bronze,2024-06-04,2026-02-07,1000,690,12,5,0
+SRV000763,CUST00172,Cloud Compute,Terminated,Sabah,4G/LTE,D Link DIR 842,Windows,Bronze,2023-11-16,2024-08-02,1000,852,58,3,6
+SRV000764,CUST00973,Unifi Home,Active,Central,Fibre,D Link DIR 842,Windows,Bronze,2018-04-03,,500,980,20,10,0
+SRV000765,CUST00678,Mobile Postpaid,Active,Northern,4G/LTE,ZTE ZXHN F670L,Embedded,Silver,2020-09-19,,30,38,72,11,2
+SRV000766,CUST00224,Unifi Home,Active,Sarawak,DSL,ZTE ZXHN F670L,Embedded,Bronze,2022-08-15,,100,1201,93,8,5
+SRV000767,CUST00824,Mobile Postpaid,Active,Central,5G,TP Link Archer A6,iOS,Bronze,2019-06-27,,100,87,15,21,6
+SRV000768,CUST00869,Cloud Storage,Provisioning,Southern,Fibre,TP Link Archer A6,iOS,Silver,2024-09-09,,300,747,18,4,0
+SRV000769,CUST00839,Unifi Home,Terminated,Southern,Fibre,Nokia G 2425G A,macOS,Silver,2023-04-12,2024-04-12,300,1046,7,18,1
+SRV000770,CUST00675,Cloud Compute,Active,Southern,5G,Nokia G 2425G A,iOS,Bronze,2024-01-04,,500,222,27,4,2
+SRV000771,CUST01189,Cloud Storage,Terminated,Sabah,Fibre,Huawei HG8145V5,iOS,Silver,2022-11-14,2024-02-26,300,812,6,23,0
+SRV000772,CUST00683,Mobile Postpaid,Active,East Coast,5G,TP Link Archer A6,Android,Gold,2023-09-15,,100,31,25,23,5
+SRV000773,CUST01042,Unifi Home,Active,Sarawak,DSL,D Link DIR 842,iOS,Bronze,2020-09-16,,300,933,103,9,5
+SRV000774,CUST00970,Cloud Storage,Active,Sarawak,5G,TP Link Archer A6,Windows,Silver,2018-02-13,,300,169,19,14,2
+SRV000775,CUST00109,Unifi Home,Active,Sarawak,Fibre,Nokia G 2425G A,macOS,Gold,2023-12-24,,500,1318,18,5,2
+SRV000776,CUST00937,Cloud Compute,Suspended,East Coast,Fibre,D Link DIR 842,Linux,Silver,2021-11-24,2023-02-17,500,1437,17,1,2
+SRV000777,CUST00207,Mobile Postpaid,Active,Northern,4G/LTE,ZTE ZXHN F670L,Linux,Bronze,2020-01-20,,100,110,66,7,4
+SRV000778,CUST00892,Unifi Home,Active,East Coast,Fibre,Nokia G 2425G A,macOS,Gold,2021-10-14,,300,1925,13,15,0
+SRV000779,CUST00902,IoT Connectivity,Active,East Coast,Fibre,TP Link Archer A6,Embedded,Platinum,2020-10-30,,1000,707,11,4,2
+SRV000780,CUST00808,Unifi Business,Active,Southern,Fibre,Huawei HG8145V5,Embedded,Gold,2021-11-13,,1000,808,12,22,2
+SRV000781,CUST01042,Cloud Compute,Terminated,Sarawak,Fibre,D Link DIR 842,macOS,Silver,2020-08-29,2022-10-30,300,975,7,26,1
+SRV000782,CUST00542,Cloud Storage,Provisioning,Sabah,5G,TP Link Archer A6,macOS,Silver,2020-02-19,,500,1034,26,29,0
+SRV000783,CUST00355,Managed Security,Provisioning,Northern,4G/LTE,ZTE ZXHN F670L,Linux,Gold,2023-07-01,,300,999,66,4,4
+SRV000784,CUST00469,Mobile Postpaid,Suspended,East Coast,4G/LTE,ZTE ZXHN F670L,iOS,Bronze,2021-02-28,2022-07-06,30,141,44,4,3
+SRV000785,CUST00837,Cloud Storage,Provisioning,Central,4G/LTE,TP Link Archer A6,Android,Silver,2018-04-22,,500,1459,43,4,0
+SRV000786,CUST00335,IoT Connectivity,Active,East Coast,4G/LTE,ZTE ZXHN F670L,Android,Platinum,2021-06-21,,100,378,65,28,6
+SRV000787,CUST00269,Mobile Postpaid,Active,Southern,4G/LTE,TP Link Archer A6,macOS,Bronze,2024-04-25,,30,133,69,30,3
+SRV000788,CUST01005,Managed Security,Provisioning,Northern,Fibre,Huawei HG8145V5,macOS,Silver,2025-02-25,,500,544,12,27,2
+SRV000789,CUST00936,Mobile Postpaid,Provisioning,Central,5G,D Link DIR 842,macOS,Platinum,2023-12-02,,100,67,12,27,2
+SRV000790,CUST00246,Unifi Business,Active,Northern,Fibre,D Link DIR 842,Linux,Gold,2022-07-03,,500,596,13,23,2
+SRV000791,CUST00790,Cloud Storage,Terminated,Sarawak,5G,Huawei HG8145V5,Linux,Bronze,2020-01-18,2021-08-17,300,328,10,12,1
+SRV000792,CUST00009,IoT Connectivity,Active,East Coast,Fibre,ZTE ZXHN F670L,macOS,Silver,2020-08-11,,500,205,20,20,0
+SRV000793,CUST00478,Cloud Storage,Active,Northern,Fibre,ZTE ZXHN F670L,iOS,Silver,2023-04-03,,500,275,14,17,1
+SRV000794,CUST00106,Cloud Compute,Provisioning,East Coast,5G,TP Link Archer A6,macOS,Gold,2023-05-31,,100,1176,14,14,4
+SRV000795,CUST00038,Unifi Home,Active,Southern,Fibre,Huawei HG8145V5,Android,Silver,2021-04-29,,800,374,10,25,0
+SRV000796,CUST01070,IoT Connectivity,Suspended,Southern,5G,TP Link Archer A6,iOS,Silver,2018-11-10,2021-01-24,500,1267,23,25,0
+SRV000797,CUST00270,Mobile Postpaid,Active,East Coast,4G/LTE,Nokia G 2425G A,macOS,Silver,2023-06-08,,100,49,49,12,3
+SRV000798,CUST00061,Cloud Compute,Active,Sabah,Fibre,Nokia G 2425G A,macOS,Gold,2020-10-09,,100,1339,14,3,1
+SRV000799,CUST00689,Unifi Home,Active,Southern,DSL,TP Link Archer A6,Android,Gold,2019-09-25,,100,1108,145,21,4
+SRV000800,CUST00867,Cloud Storage,Active,Northern,4G/LTE,D Link DIR 842,Windows,Bronze,2023-10-21,,500,110,57,11,4
+SRV000801,CUST00199,Cloud Storage,Active,East Coast,5G,Nokia G 2425G A,Linux,Silver,2022-08-03,,1000,944,29,10,5
+SRV000802,CUST00806,Mobile Postpaid,Active,Central,4G/LTE,TP Link Archer A6,Android,Silver,2023-12-09,,100,54,22,10,6
+SRV000803,CUST00463,Cloud Compute,Provisioning,Southern,5G,ZTE ZXHN F670L,Embedded,Platinum,2025-01-18,,1000,399,13,16,3
+SRV000804,CUST00535,Mobile Postpaid,Terminated,Southern,5G,Nokia G 2425G A,Windows,Bronze,2022-04-27,2023-10-28,100,28,24,18,5
+SRV000805,CUST01147,Managed Security,Active,Central,4G/LTE,TP Link Archer A6,macOS,Silver,2021-03-09,,100,276,23,13,5
+SRV000806,CUST00895,Cloud Storage,Active,East Coast,5G,TP Link Archer A6,Android,Silver,2019-01-24,,300,1437,28,15,4
+SRV000807,CUST00650,Mobile Postpaid,Active,East Coast,5G,ZTE ZXHN F670L,iOS,Bronze,2018-02-18,,30,130,18,12,5
+SRV000808,CUST01069,Mobile Postpaid,Terminated,East Coast,4G/LTE,Huawei HG8145V5,Linux,Silver,2024-03-20,2025-09-11,30,94,22,16,5
+SRV000809,CUST00412,Cloud Storage,Active,Sabah,4G/LTE,D Link DIR 842,Windows,Bronze,2018-09-09,,300,984,77,23,4
+SRV000810,CUST00286,Unifi Home,Suspended,East Coast,DSL,Huawei HG8145V5,Embedded,Platinum,2021-06-08,2022-12-30,300,901,143,4,1
+SRV000811,CUST00746,Cloud Storage,Suspended,Southern,Fibre,ZTE ZXHN F670L,iOS,Gold,2021-08-23,2021-12-18,500,1037,16,26,2
+SRV000812,CUST00236,Cloud Compute,Active,Northern,4G/LTE,TP Link Archer A6,iOS,Bronze,2020-04-12,,1000,140,20,19,4
+SRV000813,CUST00002,Cloud Compute,Terminated,Southern,4G/LTE,Huawei HG8145V5,Linux,Silver,2018-01-27,2020-04-10,300,163,32,29,2
+SRV000814,CUST00150,Mobile Postpaid,Suspended,East Coast,4G/LTE,TP Link Archer A6,Embedded,Bronze,2018-11-11,2020-07-20,100,131,66,30,4
+SRV000815,CUST00547,Cloud Storage,Suspended,Northern,5G,ZTE ZXHN F670L,Embedded,Bronze,2021-09-19,2023-02-27,100,150,25,9,3
+SRV000816,CUST00204,Cloud Compute,Provisioning,Sabah,Fibre,D Link DIR 842,Android,Platinum,2024-06-11,,100,1452,20,10,1
+SRV000817,CUST00404,Cloud Storage,Active,Central,Fibre,D Link DIR 842,iOS,Silver,2023-05-06,,1000,994,10,28,0
+SRV000818,CUST00733,Managed Security,Provisioning,East Coast,5G,ZTE ZXHN F670L,Embedded,Silver,2023-12-06,,1000,978,13,17,1
+SRV000819,CUST00595,IoT Connectivity,Provisioning,Northern,5G,ZTE ZXHN F670L,Windows,Silver,2021-06-25,,500,578,30,3,2
+SRV000820,CUST00223,IoT Connectivity,Active,Northern,5G,Huawei HG8145V5,Linux,Silver,2022-08-09,,300,268,30,6,1
+SRV000821,CUST00420,Cloud Compute,Active,Northern,4G/LTE,Nokia G 2425G A,iOS,Silver,2022-04-27,,100,129,49,23,6
+SRV000822,CUST00252,Cloud Compute,Suspended,Central,Fibre,ZTE ZXHN F670L,Windows,Gold,2022-12-25,2023-12-14,500,959,19,30,1
+SRV000823,CUST00146,Cloud Storage,Suspended,East Coast,4G/LTE,TP Link Archer A6,Android,Gold,2020-05-04,2022-05-29,1000,899,20,10,2
+SRV000824,CUST00856,Mobile Postpaid,Active,Northern,5G,D Link DIR 842,Embedded,Gold,2024-09-17,,100,132,30,13,3
+SRV000825,CUST00922,Managed Security,Terminated,East Coast,5G,D Link DIR 842,Linux,Silver,2018-05-19,2019-12-22,1000,195,27,12,1
+SRV000826,CUST00018,IoT Connectivity,Provisioning,Southern,5G,Huawei HG8145V5,macOS,Silver,2024-02-04,,500,478,12,16,2
+SRV000827,CUST00128,Cloud Storage,Active,Southern,4G/LTE,Nokia G 2425G A,Linux,Gold,2024-05-22,,1000,394,49,12,2
+SRV000828,CUST00565,Cloud Compute,Active,Central,5G,ZTE ZXHN F670L,Embedded,Gold,2019-08-04,,100,948,29,6,4
+SRV000829,CUST01099,Cloud Storage,Provisioning,Northern,Fibre,Nokia G 2425G A,Linux,Silver,2024-06-29,,100,226,17,26,1
+SRV000830,CUST00287,Cloud Compute,Active,Central,5G,Huawei HG8145V5,macOS,Bronze,2022-04-04,,100,626,17,2,1
+SRV000831,CUST00183,IoT Connectivity,Provisioning,Northern,4G/LTE,Huawei HG8145V5,iOS,Gold,2018-09-02,,100,329,71,28,4
+SRV000832,CUST00539,Unifi Home,Active,Southern,Fibre,Nokia G 2425G A,Windows,Bronze,2022-11-15,,500,960,9,23,1
+SRV000833,CUST00729,Mobile Postpaid,Active,Central,5G,TP Link Archer A6,Android,Bronze,2021-09-16,,100,84,21,15,5
+SRV000834,CUST01072,Cloud Compute,Active,Sabah,5G,Nokia G 2425G A,macOS,Silver,2022-07-15,,1000,282,17,11,2
+SRV000835,CUST00814,Managed Security,Terminated,Northern,5G,Huawei HG8145V5,Embedded,Platinum,2024-12-19,2027-03-18,500,1200,23,22,2
+SRV000836,CUST00140,Cloud Storage,Provisioning,Sarawak,Fibre,TP Link Archer A6,Embedded,Bronze,2018-02-12,,100,1328,8,25,2
+SRV000837,CUST00886,Mobile Postpaid,Active,Central,4G/LTE,Nokia G 2425G A,Windows,Silver,2022-12-01,,30,70,45,26,5
+SRV000838,CUST01100,Cloud Compute,Active,Northern,4G/LTE,TP Link Archer A6,Android,Bronze,2021-04-22,,1000,491,47,16,4
+SRV000839,CUST00100,Unifi Home,Suspended,Northern,Fibre,D Link DIR 842,Android,Silver,2024-10-31,2026-12-25,1000,840,9,27,0
+SRV000840,CUST00385,Cloud Storage,Active,Central,Fibre,ZTE ZXHN F670L,Windows,Silver,2023-10-22,,100,1398,13,29,1
+SRV000841,CUST00784,Mobile Postpaid,Suspended,Northern,4G/LTE,D Link DIR 842,Embedded,Bronze,2020-10-24,2021-04-28,100,106,47,14,1
+SRV000842,CUST00483,Mobile Postpaid,Terminated,Northern,4G/LTE,ZTE ZXHN F670L,macOS,Bronze,2018-01-25,2020-05-13,30,118,28,11,1
+SRV000843,CUST01103,Unifi Business,Terminated,Sarawak,Fibre,ZTE ZXHN F670L,Embedded,Silver,2024-05-29,2027-01-19,1000,1749,14,3,2
+SRV000844,CUST00561,Mobile Postpaid,Active,Northern,4G/LTE,Nokia G 2425G A,Windows,Bronze,2022-12-20,,30,144,37,12,0
+SRV000845,CUST00435,Mobile Postpaid,Terminated,Central,5G,Nokia G 2425G A,Embedded,Gold,2019-01-13,2020-12-25,100,26,14,9,2
+SRV000846,CUST00009,Cloud Storage,Terminated,East Coast,Fibre,ZTE ZXHN F670L,Android,Platinum,2020-08-09,2022-03-01,1000,297,10,8,2
+SRV000847,CUST00673,Mobile Postpaid,Terminated,Northern,5G,D Link DIR 842,Linux,Silver,2018-05-03,2019-12-15,100,110,20,9,3
+SRV000848,CUST00815,Unifi Business,Active,Northern,Fibre,D Link DIR 842,iOS,Silver,2018-08-22,,1000,418,14,15,0
+SRV000849,CUST00369,Managed Security,Active,Central,Fibre,TP Link Archer A6,Embedded,Silver,2020-11-30,,300,1343,13,6,1
+SRV000850,CUST00105,Mobile Postpaid,Terminated,East Coast,4G/LTE,ZTE ZXHN F670L,Embedded,Bronze,2020-07-11,2023-02-06,30,83,56,2,3
+SRV000851,CUST00323,Cloud Storage,Active,Northern,4G/LTE,Nokia G 2425G A,macOS,Silver,2023-01-02,,300,689,71,15,3
+SRV000852,CUST00387,Mobile Postpaid,Provisioning,Northern,5G,Huawei HG8145V5,macOS,Gold,2021-12-17,,30,135,13,23,4
+SRV000853,CUST00225,Mobile Postpaid,Terminated,Southern,4G/LTE,Nokia G 2425G A,iOS,Silver,2024-07-17,2025-09-02,100,42,80,10,6
+SRV000854,CUST00371,Unifi Home,Provisioning,Central,Fibre,Huawei HG8145V5,iOS,Bronze,2024-11-22,,800,1953,15,20,0
+SRV000855,CUST00094,Unifi Home,Provisioning,Northern,DSL,Huawei HG8145V5,Linux,Bronze,2023-05-16,,800,746,117,9,1
+SRV000856,CUST00329,Cloud Storage,Active,Central,5G,Huawei HG8145V5,iOS,Silver,2021-10-02,,100,1393,11,15,5
+SRV000857,CUST00308,Mobile Postpaid,Terminated,East Coast,4G/LTE,D Link DIR 842,Embedded,Silver,2024-10-17,2025-06-24,100,150,23,28,5
+SRV000858,CUST01039,Managed Security,Terminated,East Coast,5G,D Link DIR 842,Android,Bronze,2019-05-08,2020-02-14,500,546,11,1,0
+SRV000859,CUST00089,Unifi Business,Provisioning,Central,Fibre,Huawei HG8145V5,Windows,Gold,2024-02-29,,800,1113,15,10,1
+SRV000860,CUST00758,IoT Connectivity,Active,Sabah,5G,Huawei HG8145V5,macOS,Gold,2020-11-24,,100,594,19,9,6
+SRV000861,CUST00863,Mobile Postpaid,Active,Central,4G/LTE,D Link DIR 842,Windows,Silver,2020-07-06,,100,92,80,27,6
+SRV000862,CUST00134,Cloud Compute,Active,Northern,5G,Huawei HG8145V5,Windows,Bronze,2018-04-17,,1000,517,20,25,0
+SRV000863,CUST01055,Cloud Compute,Active,Sabah,4G/LTE,D Link DIR 842,Linux,Silver,2020-12-04,,500,1259,43,30,4
+SRV000864,CUST00837,Cloud Storage,Provisioning,Central,Fibre,ZTE ZXHN F670L,Embedded,Platinum,2018-04-02,,300,1016,15,5,0
+SRV000865,CUST01167,Managed Security,Provisioning,Northern,4G/LTE,TP Link Archer A6,Embedded,Silver,2023-05-05,,300,476,76,5,2
+SRV000866,CUST00190,Cloud Compute,Active,Central,5G,Nokia G 2425G A,Embedded,Bronze,2020-02-02,,1000,1413,14,8,3
+SRV000867,CUST00813,Cloud Storage,Active,Central,Fibre,TP Link Archer A6,iOS,Gold,2024-03-20,,300,217,10,20,1
+SRV000868,CUST00095,Unifi Home,Active,Sabah,Fibre,Huawei HG8145V5,macOS,Silver,2024-09-20,,100,1469,11,12,2
+SRV000869,CUST00305,Cloud Compute,Suspended,Central,4G/LTE,Huawei HG8145V5,macOS,Bronze,2023-12-08,2025-12-20,500,167,25,23,5
+SRV000870,CUST00626,Cloud Storage,Suspended,Sabah,4G/LTE,TP Link Archer A6,Android,Bronze,2021-12-30,2024-02-21,500,505,58,2,4
+SRV000871,CUST00959,IoT Connectivity,Terminated,Sabah,4G/LTE,TP Link Archer A6,Linux,Silver,2023-08-21,2025-08-18,100,203,80,15,4
+SRV000872,CUST00320,Cloud Compute,Active,Central,5G,D Link DIR 842,Linux,Silver,2024-02-03,,300,983,10,22,4
+SRV000873,CUST00634,Cloud Compute,Active,Sarawak,4G/LTE,Huawei HG8145V5,Embedded,Gold,2024-01-23,,500,786,57,6,2
+SRV000874,CUST00875,Mobile Postpaid,Active,Central,5G,D Link DIR 842,Linux,Silver,2024-07-30,,30,56,20,15,5
+SRV000875,CUST00326,Cloud Storage,Active,Sabah,5G,D Link DIR 842,macOS,Gold,2018-12-06,,300,1069,11,24,5
+SRV000876,CUST00554,Cloud Storage,Active,Central,4G/LTE,Huawei HG8145V5,Windows,Silver,2024-06-13,,1000,914,26,2,2
+SRV000877,CUST00206,Cloud Storage,Active,Sabah,4G/LTE,D Link DIR 842,Android,Gold,2024-06-23,,1000,445,52,27,4
+SRV000878,CUST00791,Cloud Storage,Terminated,East Coast,4G/LTE,Huawei HG8145V5,Windows,Platinum,2018-12-30,2019-12-15,100,603,63,30,6
+SRV000879,CUST00738,Unifi Home,Active,Central,Fibre,TP Link Archer A6,Linux,Gold,2020-05-24,,500,759,6,28,2
+SRV000880,CUST01107,Cloud Compute,Provisioning,Northern,Fibre,ZTE ZXHN F670L,macOS,Silver,2018-07-19,,100,909,11,9,1
+SRV000881,CUST00862,IoT Connectivity,Active,Central,Fibre,Huawei HG8145V5,Linux,Platinum,2024-07-21,,300,1393,5,3,2
+SRV000882,CUST00324,Mobile Postpaid,Terminated,Central,5G,ZTE ZXHN F670L,Linux,Bronze,2019-05-27,2021-10-15,100,66,10,1,5
+SRV000883,CUST00314,Mobile Postpaid,Active,Sabah,4G/LTE,Huawei HG8145V5,iOS,Bronze,2018-07-12,,30,121,60,25,5
+SRV000884,CUST00445,Unifi Home,Active,East Coast,Fibre,Nokia G 2425G A,iOS,Bronze,2021-10-19,,100,575,12,4,2
+SRV000885,CUST00874,Cloud Storage,Active,Northern,Fibre,Huawei HG8145V5,macOS,Bronze,2023-04-21,,300,300,19,16,2
+SRV000886,CUST00656,Cloud Storage,Terminated,Sabah,4G/LTE,ZTE ZXHN F670L,Android,Silver,2018-07-19,2019-02-01,100,1048,44,28,2
+SRV000887,CUST00436,Mobile Postpaid,Terminated,Northern,4G/LTE,Nokia G 2425G A,iOS,Bronze,2021-04-23,2023-10-02,100,49,43,30,0
+SRV000888,CUST00641,Cloud Compute,Provisioning,Southern,5G,D Link DIR 842,macOS,Bronze,2023-03-16,,100,1231,24,1,1
+SRV000889,CUST00989,Cloud Compute,Active,Northern,Fibre,ZTE ZXHN F670L,Windows,Bronze,2019-02-25,,300,1445,5,28,2
+SRV000890,CUST00414,Cloud Storage,Active,Southern,4G/LTE,ZTE ZXHN F670L,iOS,Gold,2019-03-10,,100,879,62,22,0
+SRV000891,CUST00052,Cloud Storage,Suspended,Southern,4G/LTE,Huawei HG8145V5,iOS,Silver,2018-01-25,2019-11-05,300,384,63,24,6
+SRV000892,CUST00718,Mobile Postpaid,Provisioning,Sabah,4G/LTE,Huawei HG8145V5,Windows,Bronze,2023-08-07,,30,42,34,4,0
+SRV000893,CUST00895,Cloud Storage,Active,East Coast,4G/LTE,TP Link Archer A6,iOS,Silver,2018-12-03,,300,891,51,22,0
+SRV000894,CUST00208,Unifi Business,Active,Northern,Fibre,ZTE ZXHN F670L,Linux,Platinum,2025-01-02,,1000,1042,9,20,0
+SRV000895,CUST00368,Cloud Compute,Active,Central,Fibre,Nokia G 2425G A,Linux,Gold,2024-03-02,,1000,1006,12,25,0
+SRV000896,CUST00350,Mobile Postpaid,Active,Northern,4G/LTE,ZTE ZXHN F670L,Linux,Silver,2022-05-29,,30,25,38,22,0
+SRV000897,CUST00740,Mobile Postpaid,Active,Central,4G/LTE,ZTE ZXHN F670L,Android,Silver,2023-06-11,,100,102,70,11,0
+SRV000898,CUST01081,Cloud Compute,Active,Central,Fibre,Nokia G 2425G A,Windows,Bronze,2024-10-24,,1000,227,12,26,1
+SRV000899,CUST01033,Cloud Storage,Active,Central,4G/LTE,D Link DIR 842,Android,Gold,2023-07-21,,300,148,61,15,3
+SRV000900,CUST00559,Cloud Compute,Suspended,Northern,5G,Nokia G 2425G A,iOS,Bronze,2020-09-16,2021-03-11,1000,434,24,6,3
+SRV000901,CUST00907,Cloud Compute,Terminated,Northern,Fibre,Nokia G 2425G A,iOS,Gold,2024-04-16,2026-11-29,300,367,5,12,0
+SRV000902,CUST00185,Mobile Postpaid,Active,Central,5G,TP Link Archer A6,Android,Bronze,2023-06-26,,100,27,12,29,4
+SRV000903,CUST00081,Cloud Compute,Active,Central,5G,ZTE ZXHN F670L,Linux,Bronze,2021-09-23,,1000,1406,18,28,3
+SRV000904,CUST00160,Unifi Home,Active,Northern,Fibre,TP Link Archer A6,macOS,Bronze,2019-01-11,,1000,1092,17,7,2
+SRV000905,CUST00184,Mobile Postpaid,Suspended,Southern,4G/LTE,ZTE ZXHN F670L,Linux,Silver,2019-03-15,2019-07-08,100,96,54,22,0
+SRV000906,CUST00505,Unifi Home,Active,Northern,DSL,ZTE ZXHN F670L,Windows,Gold,2022-08-21,,800,1223,131,15,3
+SRV000907,CUST00853,Unifi Business,Active,Central,Fibre,TP Link Archer A6,macOS,Silver,2020-09-06,,100,1191,6,19,0
+SRV000908,CUST00194,Managed Security,Active,Central,5G,ZTE ZXHN F670L,Linux,Gold,2023-01-15,,100,364,14,22,1
+SRV000909,CUST01137,Unifi Home,Active,Northern,DSL,Huawei HG8145V5,Windows,Bronze,2020-05-16,,800,1142,97,11,6
+SRV000910,CUST00389,Mobile Postpaid,Active,East Coast,4G/LTE,Nokia G 2425G A,Embedded,Silver,2022-11-29,,100,141,70,8,2
+SRV000911,CUST01029,Cloud Storage,Active,East Coast,5G,Huawei HG8145V5,macOS,Silver,2021-05-01,,300,1387,20,23,3
+SRV000912,CUST00033,Cloud Compute,Provisioning,Southern,5G,ZTE ZXHN F670L,macOS,Silver,2021-10-13,,1000,1463,23,7,5
+SRV000913,CUST01083,Cloud Storage,Provisioning,Northern,5G,Nokia G 2425G A,Windows,Silver,2019-03-01,,1000,608,28,18,1
+SRV000914,CUST00654,Managed Security,Provisioning,East Coast,5G,Huawei HG8145V5,Embedded,Silver,2020-04-02,,1000,1454,24,13,1
+SRV000915,CUST00319,Managed Security,Active,Northern,Fibre,Huawei HG8145V5,Windows,Gold,2022-06-23,,300,215,8,14,1
+SRV000916,CUST00399,Cloud Compute,Active,Southern,Fibre,ZTE ZXHN F670L,Windows,Gold,2018-06-22,,100,866,17,23,0
+SRV000917,CUST00524,Cloud Storage,Active,Northern,5G,Huawei HG8145V5,Linux,Silver,2020-04-09,,1000,472,16,7,2
+SRV000918,CUST00941,Unifi Business,Active,East Coast,Fibre,TP Link Archer A6,Embedded,Silver,2024-04-28,,500,616,13,28,1
+SRV000919,CUST00302,Unifi Business,Active,Northern,Fibre,TP Link Archer A6,macOS,Silver,2021-08-05,,500,1179,14,6,0
+SRV000920,CUST01136,Cloud Compute,Active,Southern,4G/LTE,TP Link Archer A6,Linux,Bronze,2020-05-01,,500,252,30,20,0
+SRV000921,CUST00252,Managed Security,Active,Central,5G,Nokia G 2425G A,iOS,Platinum,2023-01-13,,1000,690,15,19,4
+SRV000922,CUST01027,Cloud Storage,Active,Central,5G,Huawei HG8145V5,Windows,Bronze,2021-05-07,,1000,867,30,19,6
+SRV000923,CUST00243,Cloud Compute,Active,East Coast,Fibre,ZTE ZXHN F670L,Linux,Bronze,2020-08-11,,500,854,7,26,2
+SRV000924,CUST00452,Cloud Compute,Active,East Coast,4G/LTE,Huawei HG8145V5,Embedded,Gold,2019-01-26,,500,1053,72,29,4
+SRV000925,CUST00352,Cloud Compute,Active,Southern,Fibre,ZTE ZXHN F670L,Android,Silver,2019-11-07,,300,614,17,10,0
+SRV000926,CUST00980,Cloud Storage,Terminated,East Coast,5G,Huawei HG8145V5,Embedded,Bronze,2020-02-02,2020-07-13,500,1394,23,1,3
+SRV000927,CUST00862,IoT Connectivity,Active,Central,4G/LTE,ZTE ZXHN F670L,Linux,Gold,2024-07-20,,1000,596,67,15,2
+SRV000928,CUST00210,Mobile Postpaid,Provisioning,East Coast,5G,Nokia G 2425G A,Linux,Silver,2023-10-06,,30,118,20,1,3
+SRV000929,CUST00159,Cloud Compute,Active,Sabah,5G,Nokia G 2425G A,Android,Bronze,2022-02-22,,500,104,14,24,1
+SRV000930,CUST00167,Cloud Storage,Active,Southern,5G,ZTE ZXHN F670L,iOS,Gold,2021-02-13,,300,1242,29,18,3
+SRV000931,CUST01048,Cloud Compute,Active,Southern,Fibre,Huawei HG8145V5,Android,Gold,2021-09-05,,500,1363,14,5,1
+SRV000932,CUST00076,Cloud Storage,Active,East Coast,5G,Nokia G 2425G A,macOS,Gold,2019-04-05,,500,435,11,30,0
+SRV000933,CUST00139,Cloud Storage,Active,East Coast,5G,Huawei HG8145V5,Windows,Silver,2020-08-17,,1000,556,25,6,1
+SRV000934,CUST01093,Managed Security,Active,Northern,5G,Nokia G 2425G A,Windows,Silver,2019-04-06,,500,1326,29,9,3
+SRV000935,CUST00663,Managed Security,Provisioning,Northern,Fibre,D Link DIR 842,Embedded,Gold,2024-06-08,,300,1314,12,1,1
+SRV000936,CUST00644,Cloud Storage,Active,Sarawak,5G,Nokia G 2425G A,Embedded,Silver,2020-07-29,,1000,1008,23,1,3
+SRV000937,CUST00639,Unifi Home,Active,Central,Fibre,Nokia G 2425G A,Windows,Silver,2020-03-15,,100,848,5,25,1
+SRV000938,CUST00471,IoT Connectivity,Active,Northern,Fibre,TP Link Archer A6,Linux,Gold,2018-04-30,,500,1229,18,20,2
+SRV000939,CUST00785,Cloud Storage,Provisioning,Central,4G/LTE,D Link DIR 842,iOS,Bronze,2019-07-11,,1000,904,21,30,3
+SRV000940,CUST00669,Unifi Home,Provisioning,Northern,Fibre,ZTE ZXHN F670L,macOS,Bronze,2022-08-12,,300,1558,9,13,1
+SRV000941,CUST00586,Unifi Business,Active,Northern,DSL,Huawei HG8145V5,Windows,Silver,2021-11-23,,100,1227,124,26,4
+SRV000942,CUST00480,Cloud Storage,Active,Northern,Fibre,TP Link Archer A6,iOS,Gold,2023-05-12,,300,1063,19,25,2
+SRV000943,CUST00678,Unifi Home,Suspended,Northern,DSL,D Link DIR 842,Embedded,Gold,2020-10-04,2022-04-16,300,1195,112,18,6
+SRV000944,CUST00723,Mobile Postpaid,Active,East Coast,5G,Huawei HG8145V5,Windows,Gold,2018-07-31,,100,127,24,26,4
+SRV000945,CUST00106,Unifi Business,Provisioning,East Coast,DSL,Huawei HG8145V5,iOS,Gold,2023-05-17,,300,1472,115,19,5
+SRV000946,CUST00877,Cloud Compute,Suspended,East Coast,Fibre,Nokia G 2425G A,Linux,Bronze,2021-06-28,2024-03-08,100,391,6,27,0
+SRV000947,CUST01059,Cloud Compute,Active,Northern,5G,ZTE ZXHN F670L,Android,Silver,2023-10-31,,500,1268,12,5,2
+SRV000948,CUST00294,Managed Security,Active,Southern,5G,D Link DIR 842,Windows,Silver,2019-09-02,,500,241,16,22,4
+SRV000949,CUST00988,Cloud Storage,Provisioning,Northern,5G,Huawei HG8145V5,macOS,Bronze,2020-10-21,,500,367,23,24,1
+SRV000950,CUST00045,Cloud Compute,Active,Central,5G,Huawei HG8145V5,Android,Bronze,2022-06-22,,300,639,23,3,0
+SRV000951,CUST01080,Cloud Storage,Active,Northern,Fibre,D Link DIR 842,iOS,Silver,2020-12-04,,1000,815,11,22,0
+SRV000952,CUST01040,Unifi Home,Active,Sabah,DSL,Nokia G 2425G A,Android,Bronze,2021-05-21,,100,702,105,27,5
+SRV000953,CUST00474,Unifi Home,Active,Central,Fibre,TP Link Archer A6,Android,Silver,2020-05-10,,300,1059,18,2,2
+SRV000954,CUST00371,Unifi Home,Active,Central,DSL,ZTE ZXHN F670L,iOS,Bronze,2024-11-02,,1000,298,100,22,0
+SRV000955,CUST00065,Mobile Postpaid,Terminated,Central,4G/LTE,D Link DIR 842,Linux,Gold,2019-12-11,2021-06-18,30,126,41,25,3
+SRV000956,CUST00774,Cloud Compute,Active,Southern,5G,TP Link Archer A6,macOS,Gold,2019-03-01,,500,1132,13,20,2
+SRV000957,CUST00513,Cloud Compute,Active,Northern,4G/LTE,ZTE ZXHN F670L,Android,Platinum,2019-10-23,,1000,1378,33,19,2
+SRV000958,CUST00761,Cloud Compute,Active,East Coast,Fibre,Nokia G 2425G A,macOS,Gold,2023-08-04,,300,610,11,21,0
+SRV000959,CUST00422,Cloud Compute,Provisioning,Northern,Fibre,TP Link Archer A6,Embedded,Silver,2024-01-16,,100,1051,5,5,1
+SRV000960,CUST00513,Unifi Business,Active,Northern,DSL,D Link DIR 842,Android,Silver,2019-11-11,,100,855,95,24,6
+SRV000961,CUST00609,Cloud Storage,Suspended,Northern,5G,D Link DIR 842,iOS,Silver,2019-08-14,2020-08-30,300,622,14,15,5
+SRV000962,CUST01186,Cloud Storage,Active,Central,Fibre,Nokia G 2425G A,Windows,Bronze,2019-05-15,,500,1078,10,12,0
+SRV000963,CUST00069,Mobile Postpaid,Active,Central,4G/LTE,Nokia G 2425G A,macOS,Bronze,2024-12-13,,30,61,43,18,1
+SRV000964,CUST01100,Cloud Compute,Active,Northern,4G/LTE,Nokia G 2425G A,Android,Silver,2021-04-22,,500,1335,42,3,3
+SRV000965,CUST00684,Unifi Home,Provisioning,East Coast,DSL,TP Link Archer A6,Windows,Gold,2021-04-12,,500,811,135,9,6
+SRV000966,CUST00659,Cloud Compute,Active,Central,4G/LTE,ZTE ZXHN F670L,Android,Silver,2023-06-11,,300,720,75,5,6
+SRV000967,CUST01078,Cloud Storage,Active,Northern,5G,TP Link Archer A6,Windows,Bronze,2019-11-11,,100,1128,28,16,6
+SRV000968,CUST01000,Cloud Compute,Provisioning,Southern,Fibre,TP Link Archer A6,Linux,Bronze,2022-06-21,,300,967,20,5,2
+SRV000969,CUST00704,Unifi Business,Provisioning,Central,DSL,ZTE ZXHN F670L,Android,Gold,2020-06-03,,100,1145,141,29,5
+SRV000970,CUST00067,Managed Security,Active,Central,4G/LTE,D Link DIR 842,Android,Gold,2020-08-30,,1000,300,34,22,2
+SRV000971,CUST00026,Managed Security,Active,Southern,Fibre,ZTE ZXHN F670L,Linux,Gold,2022-01-22,,1000,762,10,16,1
+SRV000972,CUST00592,Mobile Postpaid,Provisioning,Sabah,5G,Huawei HG8145V5,macOS,Silver,2024-10-15,,100,43,21,22,0
+SRV000973,CUST00867,Cloud Storage,Active,Northern,4G/LTE,ZTE ZXHN F670L,Windows,Bronze,2023-10-11,,100,765,43,27,3
+SRV000974,CUST00853,Unifi Business,Suspended,Central,Fibre,Nokia G 2425G A,Windows,Platinum,2020-11-14,2021-10-15,800,1728,12,13,1
+SRV000975,CUST00835,Unifi Home,Active,Northern,DSL,TP Link Archer A6,Android,Silver,2021-08-27,,100,648,106,19,2
+SRV000976,CUST00851,Mobile Postpaid,Active,Central,4G/LTE,TP Link Archer A6,Android,Silver,2023-12-08,,100,123,24,19,1
+SRV000977,CUST00167,Mobile Postpaid,Active,Southern,4G/LTE,Nokia G 2425G A,Linux,Gold,2021-01-22,,100,144,55,10,4
+SRV000978,CUST00987,Cloud Storage,Provisioning,Central,Fibre,Nokia G 2425G A,Linux,Gold,2022-11-15,,500,431,20,21,0
+SRV000979,CUST00533,Cloud Compute,Active,Northern,Fibre,Huawei HG8145V5,Windows,Gold,2020-10-23,,1000,612,9,8,0
+SRV000980,CUST00247,Mobile Postpaid,Active,East Coast,4G/LTE,Nokia G 2425G A,Embedded,Silver,2020-10-02,,100,119,33,4,6
+SRV000981,CUST00186,Cloud Storage,Active,Central,4G/LTE,ZTE ZXHN F670L,macOS,Bronze,2024-12-11,,300,895,20,14,6
+SRV000982,CUST00308,Mobile Postpaid,Active,East Coast,4G/LTE,Huawei HG8145V5,Windows,Bronze,2024-10-03,,100,145,49,12,3
+SRV000983,CUST00593,Mobile Postpaid,Provisioning,Sabah,4G/LTE,ZTE ZXHN F670L,Android,Silver,2019-09-20,,30,75,74,24,1
+SRV000984,CUST00961,Mobile Postpaid,Active,Northern,5G,TP Link Archer A6,macOS,Bronze,2019-01-31,,100,117,16,24,6
+SRV000985,CUST00666,Mobile Postpaid,Provisioning,Northern,5G,TP Link Archer A6,Linux,Bronze,2019-06-21,,30,23,17,27,4
+SRV000986,CUST00007,Cloud Storage,Suspended,Central,4G/LTE,Nokia G 2425G A,Windows,Silver,2020-03-11,2020-10-29,100,1251,41,7,5
+SRV000987,CUST00132,Unifi Business,Active,Sabah,DSL,Nokia G 2425G A,Android,Silver,2023-05-13,,100,1857,106,21,3
+SRV000988,CUST00869,Cloud Storage,Active,Southern,5G,Nokia G 2425G A,Windows,Bronze,2024-08-19,,100,1431,17,6,3
+SRV000989,CUST00669,Cloud Compute,Active,Northern,Fibre,Huawei HG8145V5,Embedded,Bronze,2022-06-30,,300,1467,13,1,0
+SRV000990,CUST01005,Cloud Storage,Active,Northern,4G/LTE,Huawei HG8145V5,Embedded,Gold,2025-02-20,,300,418,65,9,5
+SRV000991,CUST00703,Cloud Compute,Suspended,Northern,5G,TP Link Archer A6,Linux,Silver,2021-07-20,2023-06-06,500,197,17,2,2
+SRV000992,CUST00825,Cloud Storage,Active,Northern,5G,ZTE ZXHN F670L,iOS,Silver,2019-08-31,,500,410,19,28,6
+SRV000993,CUST00599,Unifi Home,Active,Sabah,Fibre,Nokia G 2425G A,macOS,Bronze,2024-05-20,,300,208,7,11,0
+SRV000994,CUST00567,IoT Connectivity,Active,Central,5G,D Link DIR 842,Windows,Gold,2023-03-27,,1000,273,23,28,2
+SRV000995,CUST00903,Managed Security,Suspended,Central,Fibre,Nokia G 2425G A,iOS,Platinum,2021-10-17,2024-04-18,1000,322,15,22,1
+SRV000996,CUST01155,Unifi Business,Suspended,East Coast,DSL,Nokia G 2425G A,Windows,Gold,2021-12-11,2023-10-26,500,588,112,24,6
+SRV000997,CUST00656,Cloud Storage,Active,Sabah,5G,D Link DIR 842,Android,Silver,2018-05-22,,1000,802,30,11,0
+SRV000998,CUST00070,Unifi Home,Provisioning,East Coast,Fibre,D Link DIR 842,Embedded,Bronze,2022-02-06,,300,626,16,30,2
+SRV000999,CUST00386,Cloud Storage,Suspended,Central,Fibre,Nokia G 2425G A,Windows,Bronze,2018-10-03,2020-04-15,100,950,17,4,2
+SRV001000,CUST00671,Cloud Compute,Active,Central,4G/LTE,Nokia G 2425G A,Linux,Gold,2023-11-07,,300,101,62,5,0
+SRV001001,CUST00458,Cloud Compute,Active,Sabah,4G/LTE,ZTE ZXHN F670L,Android,Silver,2019-04-21,,1000,911,74,16,3
+SRV001002,CUST00451,Managed Security,Active,Central,Fibre,Huawei HG8145V5,Embedded,Silver,2021-04-27,,500,1130,12,29,1
+SRV001003,CUST00741,Cloud Storage,Active,Central,5G,ZTE ZXHN F670L,macOS,Silver,2019-10-23,,500,930,20,16,6
+SRV001004,CUST00588,Cloud Compute,Active,Northern,5G,D Link DIR 842,Android,Silver,2023-10-17,,1000,512,29,8,0
+SRV001005,CUST00804,Cloud Compute,Provisioning,East Coast,Fibre,Nokia G 2425G A,Embedded,Platinum,2020-01-28,,1000,1225,20,24,0
+SRV001006,CUST00103,Cloud Storage,Active,East Coast,4G/LTE,D Link DIR 842,macOS,Silver,2019-04-13,,500,534,26,5,4
+SRV001007,CUST00361,Cloud Storage,Suspended,Northern,5G,Huawei HG8145V5,Windows,Bronze,2023-11-11,2026-04-15,100,166,28,11,4
+SRV001008,CUST00106,Cloud Storage,Active,East Coast,Fibre,TP Link Archer A6,Linux,Silver,2023-04-12,,1000,126,6,1,0
+SRV001009,CUST01188,Unifi Business,Terminated,Central,DSL,D Link DIR 842,iOS,Gold,2022-08-24,2023-08-12,800,1103,109,21,2
+SRV001010,CUST01017,Cloud Compute,Active,Northern,5G,Nokia G 2425G A,iOS,Gold,2024-10-21,,100,1235,29,9,0
+SRV001011,CUST00432,Unifi Home,Active,East Coast,Fibre,Nokia G 2425G A,Linux,Bronze,2023-09-25,,300,493,8,7,0
+SRV001012,CUST00718,Cloud Compute,Active,Sabah,4G/LTE,Nokia G 2425G A,Embedded,Bronze,2023-10-31,,300,834,60,3,0
+SRV001013,CUST00178,IoT Connectivity,Provisioning,Central,Fibre,TP Link Archer A6,macOS,Silver,2023-09-29,,500,440,14,3,0
+SRV001014,CUST00643,Cloud Storage,Active,Northern,4G/LTE,Nokia G 2425G A,Android,Silver,2021-05-22,,300,605,55,18,5
+SRV001015,CUST00917,Cloud Storage,Terminated,Central,5G,D Link DIR 842,Android,Platinum,2018-04-07,2020-11-03,300,1172,28,11,6
+SRV001016,CUST00146,Cloud Compute,Provisioning,East Coast,5G,ZTE ZXHN F670L,Embedded,Silver,2020-05-23,,1000,1226,16,18,3
+SRV001017,CUST00588,Cloud Storage,Provisioning,Northern,4G/LTE,Huawei HG8145V5,Android,Gold,2023-11-01,,300,934,35,6,5
+SRV001018,CUST01165,Cloud Compute,Active,Sarawak,4G/LTE,D Link DIR 842,Embedded,Bronze,2021-10-05,,1000,596,52,6,0
+SRV001019,CUST00967,Unifi Home,Active,Northern,Fibre,ZTE ZXHN F670L,macOS,Bronze,2022-12-23,,300,1889,8,3,1
+SRV001020,CUST01044,Managed Security,Active,Central,5G,D Link DIR 842,Linux,Gold,2018-09-28,,100,1314,14,23,6
+SRV001021,CUST01145,IoT Connectivity,Active,Northern,Fibre,Huawei HG8145V5,Android,Platinum,2024-08-13,,1000,754,19,9,0
+SRV001022,CUST00733,IoT Connectivity,Active,East Coast,Fibre,Huawei HG8145V5,Embedded,Gold,2023-11-15,,1000,126,17,15,1
+SRV001023,CUST01086,Managed Security,Active,Southern,4G/LTE,Huawei HG8145V5,Windows,Gold,2020-07-26,,300,874,40,11,6
+SRV001024,CUST00954,Unifi Home,Active,Central,Fibre,Nokia G 2425G A,Linux,Bronze,2020-02-18,,500,394,14,11,0
+SRV001025,CUST00927,Cloud Storage,Provisioning,East Coast,5G,D Link DIR 842,Embedded,Silver,2024-09-03,,300,761,14,24,3
+SRV001026,CUST01175,Unifi Business,Provisioning,Central,DSL,TP Link Archer A6,Android,Gold,2021-04-06,,100,844,135,16,1
+SRV001027,CUST00476,IoT Connectivity,Suspended,Central,Fibre,TP Link Archer A6,Linux,Silver,2020-10-04,2022-05-23,100,1429,16,2,2
+SRV001028,CUST00848,IoT Connectivity,Active,Sabah,4G/LTE,Nokia G 2425G A,iOS,Gold,2024-04-08,,100,1293,34,9,3
+SRV001029,CUST00663,Unifi Business,Active,Northern,Fibre,Nokia G 2425G A,Linux,Bronze,2024-06-24,,500,1728,16,13,0
+SRV001030,CUST00494,Mobile Postpaid,Provisioning,Sabah,5G,Huawei HG8145V5,Windows,Silver,2023-11-29,,30,91,20,15,0
+SRV001031,CUST00695,Unifi Home,Active,East Coast,DSL,TP Link Archer A6,Embedded,Bronze,2020-08-12,,300,1024,104,18,4
+SRV001032,CUST00016,Cloud Compute,Suspended,East Coast,5G,Huawei HG8145V5,Linux,Bronze,2019-05-11,2021-06-20,1000,429,26,30,5
+SRV001033,CUST00774,Cloud Storage,Terminated,Southern,5G,D Link DIR 842,Linux,Silver,2019-02-26,2020-01-02,1000,150,16,22,4
+SRV001034,CUST00706,Cloud Storage,Active,Northern,5G,Huawei HG8145V5,Linux,Gold,2020-10-20,,300,351,29,5,1
+SRV001035,CUST01172,Cloud Storage,Active,Sarawak,4G/LTE,Huawei HG8145V5,Embedded,Silver,2019-07-15,,100,902,31,12,1
+SRV001036,CUST01188,Cloud Storage,Suspended,Central,Fibre,Nokia G 2425G A,Windows,Silver,2022-08-31,2023-09-09,100,1204,10,11,2
+SRV001037,CUST01086,Cloud Compute,Active,Southern,Fibre,ZTE ZXHN F670L,iOS,Silver,2020-06-24,,100,515,10,17,0
+SRV001038,CUST00883,Managed Security,Active,East Coast,4G/LTE,TP Link Archer A6,macOS,Bronze,2022-02-09,,1000,837,48,4,3
+SRV001039,CUST01032,IoT Connectivity,Provisioning,Sabah,4G/LTE,Huawei HG8145V5,Android,Silver,2020-09-24,,100,1174,46,6,6
+SRV001040,CUST01106,Managed Security,Terminated,Southern,5G,D Link DIR 842,Windows,Platinum,2024-03-04,2025-04-03,1000,891,11,22,5
+SRV001041,CUST01073,IoT Connectivity,Active,Sabah,Fibre,Nokia G 2425G A,iOS,Gold,2018-05-16,,1000,462,14,13,1
+SRV001042,CUST00438,Cloud Storage,Active,Northern,5G,Huawei HG8145V5,iOS,Bronze,2022-06-20,,500,893,11,4,3
+SRV001043,CUST00323,Cloud Storage,Terminated,Northern,Fibre,Nokia G 2425G A,Android,Bronze,2022-12-17,2025-03-03,1000,738,6,17,1
+SRV001044,CUST01024,Cloud Storage,Active,Northern,4G/LTE,ZTE ZXHN F670L,Linux,Gold,2020-06-01,,500,1435,65,8,6
+SRV001045,CUST00071,Mobile Postpaid,Terminated,Central,5G,ZTE ZXHN F670L,Linux,Bronze,2023-05-13,2024-10-25,30,56,26,9,2
+SRV001046,CUST00652,Cloud Compute,Active,Central,Fibre,Nokia G 2425G A,Embedded,Bronze,2022-12-18,,1000,411,10,29,2
+SRV001047,CUST00721,Unifi Home,Provisioning,Sabah,Fibre,ZTE ZXHN F670L,macOS,Bronze,2024-09-02,,100,274,17,24,1
+SRV001048,CUST00090,Unifi Home,Active,Central,Fibre,ZTE ZXHN F670L,Windows,Bronze,2024-02-13,,100,1105,13,20,2
+SRV001049,CUST00688,Mobile Postpaid,Active,East Coast,5G,D Link DIR 842,iOS,Gold,2022-06-17,,30,26,23,13,5
+SRV001050,CUST01007,IoT Connectivity,Active,Northern,5G,D Link DIR 842,iOS,Gold,2023-05-03,,100,981,21,2,6
+SRV001051,CUST00364,Cloud Storage,Active,East Coast,Fibre,Nokia G 2425G A,macOS,Silver,2020-09-10,,500,128,19,3,0
+SRV001052,CUST00032,Managed Security,Provisioning,Central,4G/LTE,Nokia G 2425G A,Windows,Bronze,2018-03-16,,100,808,60,30,5
+SRV001053,CUST00063,Cloud Storage,Active,Sarawak,Fibre,TP Link Archer A6,macOS,Bronze,2022-12-11,,300,349,20,25,0
+SRV001054,CUST00522,Cloud Storage,Active,East Coast,5G,TP Link Archer A6,Windows,Silver,2022-04-20,,300,1252,27,23,1
+SRV001055,CUST00600,IoT Connectivity,Active,Southern,Fibre,Huawei HG8145V5,macOS,Platinum,2019-12-14,,100,830,10,2,2
+SRV001056,CUST00726,Mobile Postpaid,Active,Southern,4G/LTE,D Link DIR 842,macOS,Bronze,2018-09-25,,100,130,30,11,0
+SRV001057,CUST00671,Unifi Business,Active,Central,Fibre,Huawei HG8145V5,Windows,Gold,2023-11-27,,100,674,14,8,0
+SRV001058,CUST00506,Cloud Compute,Active,East Coast,4G/LTE,Huawei HG8145V5,Linux,Silver,2019-04-29,,300,590,55,8,4
+SRV001059,CUST00577,Cloud Compute,Active,Central,4G/LTE,Huawei HG8145V5,Linux,Silver,2024-04-25,,500,531,58,19,4
+SRV001060,CUST00545,Mobile Postpaid,Suspended,Central,4G/LTE,Nokia G 2425G A,Android,Bronze,2020-08-08,2022-04-25,100,85,72,4,2
+SRV001061,CUST01140,Cloud Storage,Provisioning,Sabah,Fibre,Nokia G 2425G A,Embedded,Bronze,2020-04-08,,100,781,6,25,1
+SRV001062,CUST01047,Managed Security,Provisioning,Sarawak,5G,Nokia G 2425G A,Android,Gold,2018-09-23,,300,532,24,16,1
+SRV001063,CUST00215,Unifi Home,Active,Southern,Fibre,TP Link Archer A6,Windows,Bronze,2021-07-08,,300,1363,8,23,0
+SRV001064,CUST00966,Unifi Business,Active,Southern,Fibre,ZTE ZXHN F670L,Android,Silver,2022-03-05,,500,1007,13,30,2
+SRV001065,CUST00812,Cloud Storage,Provisioning,East Coast,5G,Huawei HG8145V5,Linux,Silver,2018-03-08,,1000,929,22,1,3
+SRV001066,CUST00277,Mobile Postpaid,Active,Central,5G,TP Link Archer A6,Linux,Bronze,2018-09-24,,30,47,27,1,1
+SRV001067,CUST00894,IoT Connectivity,Active,Central,4G/LTE,Huawei HG8145V5,Windows,Gold,2024-03-22,,500,109,39,7,4
+SRV001068,CUST00506,Cloud Storage,Active,East Coast,Fibre,Huawei HG8145V5,Linux,Gold,2019-06-08,,500,1089,19,12,0
+SRV001069,CUST00882,Managed Security,Active,Northern,4G/LTE,ZTE ZXHN F670L,iOS,Gold,2019-01-19,,1000,502,45,16,4
+SRV001070,CUST00143,Cloud Storage,Active,Southern,5G,Nokia G 2425G A,Android,Bronze,2022-08-12,,1000,889,18,6,4
+SRV001071,CUST01056,Cloud Compute,Provisioning,Northern,Fibre,ZTE ZXHN F670L,iOS,Platinum,2023-11-25,,300,1327,16,5,2
+SRV001072,CUST00814,Unifi Business,Active,Northern,Fibre,TP Link Archer A6,iOS,Silver,2024-12-21,,800,684,14,23,0
+SRV001073,CUST00191,Unifi Home,Active,Northern,DSL,D Link DIR 842,Embedded,Bronze,2020-12-02,,500,1689,142,7,5
+SRV001074,CUST00921,Managed Security,Active,East Coast,4G/LTE,Nokia G 2425G A,Android,Gold,2018-08-17,,1000,1193,24,20,2
+SRV001075,CUST00747,Managed Security,Terminated,Sarawak,5G,Nokia G 2425G A,Linux,Platinum,2023-04-01,2025-03-15,1000,292,11,22,1
+SRV001076,CUST00514,Unifi Home,Active,East Coast,Fibre,D Link DIR 842,macOS,Gold,2022-02-20,,100,304,5,10,0
+SRV001077,CUST01018,Cloud Storage,Active,Sabah,4G/LTE,TP Link Archer A6,iOS,Bronze,2019-09-01,,100,1129,62,26,4
+SRV001078,CUST00935,Cloud Storage,Suspended,East Coast,4G/LTE,D Link DIR 842,macOS,Silver,2024-06-21,2025-08-12,1000,470,34,14,1
+SRV001079,CUST00632,Unifi Home,Active,Northern,Fibre,TP Link Archer A6,Linux,Platinum,2019-09-05,,800,426,9,13,1
+SRV001080,CUST00978,Cloud Compute,Active,Central,Fibre,Nokia G 2425G A,iOS,Gold,2019-06-04,,100,440,20,25,2
+SRV001081,CUST01094,Cloud Compute,Terminated,Southern,Fibre,TP Link Archer A6,macOS,Platinum,2024-01-01,2024-06-04,1000,152,14,4,2
+SRV001082,CUST00713,Cloud Compute,Suspended,East Coast,Fibre,D Link DIR 842,Embedded,Bronze,2022-05-09,2024-10-28,500,539,19,29,1
+SRV001083,CUST00417,Unifi Home,Active,Southern,Fibre,D Link DIR 842,Linux,Bronze,2022-04-08,,800,1738,13,9,2
+SRV001084,CUST00196,Cloud Storage,Provisioning,Northern,Fibre,ZTE ZXHN F670L,Android,Gold,2025-01-22,,100,1010,16,14,0
+SRV001085,CUST00306,Mobile Postpaid,Provisioning,Northern,5G,ZTE ZXHN F670L,Embedded,Bronze,2020-06-19,,100,144,15,19,3
+SRV001086,CUST01074,Mobile Postpaid,Active,Southern,4G/LTE,TP Link Archer A6,iOS,Bronze,2023-10-28,,100,86,57,23,3
+SRV001087,CUST01180,Mobile Postpaid,Suspended,Northern,4G/LTE,ZTE ZXHN F670L,Embedded,Gold,2019-10-09,2021-12-13,30,125,46,21,6
+SRV001088,CUST00659,Cloud Storage,Active,Central,5G,Nokia G 2425G A,Linux,Gold,2023-07-23,,300,1465,25,30,0
+SRV001089,CUST00123,Cloud Storage,Active,Northern,4G/LTE,Huawei HG8145V5,Windows,Gold,2021-02-25,,100,980,64,26,3
+SRV001090,CUST00942,Unifi Home,Active,East Coast,Fibre,D Link DIR 842,Android,Silver,2022-06-06,,800,792,12,23,0
+SRV001091,CUST00527,Unifi Home,Terminated,Northern,Fibre,D Link DIR 842,Android,Bronze,2021-08-21,2022-06-12,100,1037,17,28,1
+SRV001092,CUST00953,Cloud Compute,Active,Southern,Fibre,D Link DIR 842,Android,Platinum,2019-05-29,,1000,310,19,14,0
+SRV001093,CUST00668,Unifi Home,Active,East Coast,DSL,TP Link Archer A6,iOS,Platinum,2019-07-02,,300,1366,83,23,2
+SRV001094,CUST00432,Unifi Home,Active,East Coast,DSL,D Link DIR 842,Linux,Bronze,2023-08-10,,800,270,98,24,2
+SRV001095,CUST00639,Mobile Postpaid,Terminated,Central,4G/LTE,Huawei HG8145V5,macOS,Bronze,2020-03-12,2021-04-22,100,89,76,16,1
+SRV001096,CUST00688,Cloud Storage,Active,East Coast,5G,D Link DIR 842,Linux,Platinum,2022-07-17,,300,1438,11,22,1
+SRV001097,CUST00893,Unifi Home,Active,East Coast,DSL,TP Link Archer A6,Embedded,Silver,2022-08-08,,100,1558,103,13,0
+SRV001098,CUST00487,Cloud Compute,Active,East Coast,4G/LTE,D Link DIR 842,iOS,Bronze,2022-05-30,,300,1476,23,27,6
+SRV001099,CUST00885,Cloud Storage,Active,Central,5G,TP Link Archer A6,Windows,Silver,2019-03-16,,300,1400,15,9,1
+SRV001100,CUST00234,Managed Security,Terminated,Sarawak,5G,Huawei HG8145V5,Windows,Silver,2019-07-31,2021-03-24,1000,250,24,18,5
+SRV001101,CUST00025,Cloud Compute,Active,Northern,Fibre,Huawei HG8145V5,macOS,Bronze,2021-03-07,,1000,559,10,4,0
+SRV001102,CUST00775,Managed Security,Suspended,Central,4G/LTE,Nokia G 2425G A,Linux,Silver,2023-09-07,2026-04-06,500,373,46,4,2
+SRV001103,CUST00245,Unifi Business,Active,Central,DSL,TP Link Archer A6,Embedded,Silver,2018-03-19,,100,945,100,20,2
+SRV001104,CUST00074,Cloud Storage,Active,Southern,5G,TP Link Archer A6,Android,Bronze,2020-07-07,,500,1479,28,19,6
+SRV001105,CUST01119,Cloud Storage,Provisioning,Northern,5G,Nokia G 2425G A,Linux,Silver,2024-03-23,,300,742,23,1,0
+SRV001106,CUST00785,Mobile Postpaid,Active,Central,4G/LTE,ZTE ZXHN F670L,Windows,Bronze,2019-06-30,,100,112,24,28,4
+SRV001107,CUST00412,Cloud Storage,Suspended,Sabah,5G,Nokia G 2425G A,Windows,Bronze,2018-07-19,2020-01-25,300,647,18,26,6
+SRV001108,CUST00685,Unifi Home,Provisioning,Northern,Fibre,D Link DIR 842,Linux,Silver,2021-04-10,,300,750,18,25,0
+SRV001109,CUST00813,Cloud Compute,Provisioning,Central,Fibre,TP Link Archer A6,iOS,Gold,2024-04-05,,500,608,9,26,0
+SRV001110,CUST00262,Cloud Storage,Terminated,Central,5G,ZTE ZXHN F670L,Embedded,Gold,2020-05-13,2020-08-13,100,652,26,23,0
+SRV001111,CUST00344,Cloud Storage,Active,Sarawak,4G/LTE,Nokia G 2425G A,Windows,Bronze,2024-05-15,,500,604,48,25,6
+SRV001112,CUST00619,IoT Connectivity,Provisioning,Central,4G/LTE,ZTE ZXHN F670L,iOS,Gold,2022-01-07,,100,1098,68,30,4
+SRV001113,CUST00512,Unifi Business,Provisioning,Central,Fibre,ZTE ZXHN F670L,Windows,Gold,2024-09-15,,1000,1987,5,11,2
+SRV001114,CUST01041,Unifi Home,Active,Northern,Fibre,Huawei HG8145V5,iOS,Bronze,2023-01-08,,500,268,8,23,2
+SRV001115,CUST00099,Cloud Storage,Active,Central,4G/LTE,Huawei HG8145V5,Windows,Platinum,2021-02-09,,1000,1311,57,2,5
+SRV001116,CUST00378,Unifi Home,Provisioning,Southern,DSL,ZTE ZXHN F670L,Linux,Silver,2018-12-03,,500,1056,82,29,1
+SRV001117,CUST00154,Mobile Postpaid,Terminated,Southern,4G/LTE,D Link DIR 842,Linux,Gold,2021-12-19,2022-08-13,30,58,65,22,5
+SRV001118,CUST00711,IoT Connectivity,Active,Northern,Fibre,D Link DIR 842,iOS,Bronze,2021-01-20,,500,1297,15,20,0
+SRV001119,CUST00353,Cloud Storage,Active,East Coast,4G/LTE,Huawei HG8145V5,Android,Bronze,2020-02-02,,500,986,43,14,5
+SRV001120,CUST00725,Managed Security,Provisioning,Northern,Fibre,D Link DIR 842,Linux,Silver,2024-03-29,,100,532,5,10,2
+SRV001121,CUST00708,Unifi Home,Active,Northern,DSL,Nokia G 2425G A,Embedded,Silver,2023-03-05,,100,1014,114,12,0
+SRV001122,CUST01083,Managed Security,Active,Northern,4G/LTE,Nokia G 2425G A,Windows,Silver,2018-12-21,,300,563,21,16,1
+SRV001123,CUST00556,Cloud Storage,Active,Northern,Fibre,Huawei HG8145V5,Linux,Bronze,2019-07-19,,500,843,20,9,1
+SRV001124,CUST01115,Cloud Storage,Active,Sarawak,4G/LTE,ZTE ZXHN F670L,Embedded,Bronze,2021-03-27,,300,1280,35,10,0
+SRV001125,CUST01062,Mobile Postpaid,Active,Sabah,4G/LTE,Huawei HG8145V5,Embedded,Silver,2020-07-13,,100,150,27,19,1
+SRV001126,CUST00032,Managed Security,Active,Central,5G,D Link DIR 842,macOS,Silver,2018-04-01,,1000,390,24,14,5
+SRV001127,CUST00335,Cloud Compute,Active,East Coast,4G/LTE,Huawei HG8145V5,Android,Gold,2021-07-07,,500,572,77,9,0
+SRV001128,CUST01091,Mobile Postpaid,Active,Northern,4G/LTE,TP Link Archer A6,Embedded,Platinum,2022-04-23,,30,61,77,26,6
+SRV001129,CUST00275,Unifi Home,Active,Central,Fibre,ZTE ZXHN F670L,Embedded,Platinum,2019-12-15,,300,1355,14,12,0
+SRV001130,CUST00274,Managed Security,Provisioning,East Coast,4G/LTE,TP Link Archer A6,Windows,Silver,2019-09-23,,300,668,26,29,6
+SRV001131,CUST00578,Cloud Compute,Active,Southern,Fibre,Huawei HG8145V5,iOS,Platinum,2021-11-25,,100,1182,18,27,2
+SRV001132,CUST00875,Cloud Storage,Suspended,Central,4G/LTE,ZTE ZXHN F670L,Linux,Bronze,2024-09-12,2027-01-12,500,1063,50,21,5
+SRV001133,CUST00279,Unifi Home,Provisioning,Northern,Fibre,ZTE ZXHN F670L,Windows,Bronze,2019-06-18,,1000,712,12,24,1
+SRV001134,CUST01143,Mobile Postpaid,Active,Northern,5G,Nokia G 2425G A,Linux,Bronze,2019-03-19,,100,76,16,28,5
+SRV001135,CUST00579,Mobile Postpaid,Active,Central,5G,Nokia G 2425G A,iOS,Gold,2021-11-17,,30,87,14,12,6
+SRV001136,CUST01009,Cloud Storage,Active,Central,Fibre,D Link DIR 842,Linux,Bronze,2020-12-01,,500,198,10,4,2
+SRV001137,CUST01068,Cloud Compute,Active,Northern,Fibre,TP Link Archer A6,macOS,Bronze,2018-12-25,,300,875,11,17,0
+SRV001138,CUST01193,Cloud Storage,Provisioning,Sabah,4G/LTE,D Link DIR 842,macOS,Gold,2022-04-22,,300,132,68,24,6
+SRV001139,CUST00585,Managed Security,Active,Central,4G/LTE,Nokia G 2425G A,macOS,Silver,2022-09-06,,500,1015,68,16,0
+SRV001140,CUST00786,IoT Connectivity,Provisioning,Central,4G/LTE,Huawei HG8145V5,Embedded,Gold,2019-10-03,,500,594,28,21,5
+SRV001141,CUST00112,Mobile Postpaid,Terminated,East Coast,4G/LTE,TP Link Archer A6,Linux,Bronze,2024-02-12,2026-05-11,100,94,46,24,3
+SRV001142,CUST00927,IoT Connectivity,Provisioning,East Coast,Fibre,Nokia G 2425G A,macOS,Gold,2024-09-20,,300,948,7,28,0
+SRV001143,CUST01176,Cloud Storage,Active,Sabah,5G,TP Link Archer A6,macOS,Silver,2023-11-30,,100,1247,20,24,3
+SRV001144,CUST00355,Cloud Compute,Terminated,Northern,5G,ZTE ZXHN F670L,Android,Gold,2023-07-23,2024-05-26,1000,1098,28,14,1
+SRV001145,CUST00822,Cloud Compute,Active,Central,4G/LTE,D Link DIR 842,Windows,Silver,2022-09-04,,1000,1490,49,19,0
+SRV001146,CUST00981,Mobile Postpaid,Suspended,East Coast,5G,ZTE ZXHN F670L,Android,Silver,2019-07-30,2020-03-02,30,27,13,24,2
+SRV001147,CUST00365,Cloud Storage,Provisioning,Southern,4G/LTE,ZTE ZXHN F670L,Linux,Bronze,2020-04-20,,500,1100,40,19,2
+SRV001148,CUST00221,Cloud Compute,Suspended,Central,Fibre,Nokia G 2425G A,Embedded,Bronze,2018-03-18,2020-03-24,100,1459,5,1,2
+SRV001149,CUST00544,Cloud Compute,Active,Sarawak,5G,Huawei HG8145V5,Windows,Bronze,2023-03-31,,1000,1479,30,10,5
+SRV001150,CUST00808,Managed Security,Active,Southern,4G/LTE,Huawei HG8145V5,macOS,Silver,2021-10-22,,300,191,80,12,0
+SRV001151,CUST00936,Unifi Home,Active,Central,Fibre,TP Link Archer A6,Android,Bronze,2023-10-13,,500,621,12,11,0
+SRV001152,CUST00885,Cloud Storage,Active,Central,5G,D Link DIR 842,Linux,Bronze,2019-03-07,,300,894,20,18,6
+SRV001153,CUST00988,Cloud Compute,Active,Northern,4G/LTE,ZTE ZXHN F670L,Android,Bronze,2021-01-02,,1000,1327,25,9,0
+SRV001154,CUST00964,Managed Security,Active,Central,4G/LTE,Huawei HG8145V5,macOS,Bronze,2018-03-31,,100,1452,56,20,0
+SRV001155,CUST00986,Cloud Compute,Terminated,Sabah,5G,D Link DIR 842,macOS,Silver,2023-04-03,2024-04-06,1000,410,12,15,0
+SRV001156,CUST00349,Cloud Compute,Provisioning,Northern,5G,D Link DIR 842,Linux,Silver,2024-03-07,,100,546,14,12,6
+SRV001157,CUST00404,Cloud Storage,Terminated,Central,4G/LTE,TP Link Archer A6,Embedded,Bronze,2023-03-24,2024-05-20,1000,877,51,7,2
+SRV001158,CUST00022,Cloud Storage,Terminated,Central,Fibre,ZTE ZXHN F670L,Embedded,Bronze,2025-01-14,2027-03-20,300,1436,14,26,1
+SRV001159,CUST00791,Cloud Compute,Terminated,East Coast,5G,ZTE ZXHN F670L,iOS,Silver,2018-10-25,2019-10-16,300,1444,22,22,1
+SRV001160,CUST00220,Cloud Storage,Active,Central,5G,TP Link Archer A6,Linux,Silver,2022-08-25,,300,1288,11,19,2
+SRV001161,CUST00131,Cloud Compute,Active,East Coast,5G,Huawei HG8145V5,Android,Bronze,2018-10-09,,300,898,14,23,0
+SRV001162,CUST00111,Cloud Compute,Provisioning,Northern,5G,TP Link Archer A6,Android,Bronze,2023-10-18,,100,715,26,4,0
+SRV001163,CUST00419,Cloud Storage,Provisioning,East Coast,Fibre,D Link DIR 842,Embedded,Gold,2021-04-12,,300,1337,18,12,0
+SRV001164,CUST00989,Cloud Compute,Provisioning,Northern,4G/LTE,TP Link Archer A6,macOS,Gold,2019-01-27,,1000,1043,50,23,0
+SRV001165,CUST00686,Cloud Storage,Active,East Coast,4G/LTE,Nokia G 2425G A,Embedded,Gold,2020-02-04,,100,473,64,19,4
+SRV001166,CUST00787,Unifi Home,Active,Northern,DSL,Huawei HG8145V5,Linux,Bronze,2025-01-11,,300,1375,111,7,6
+SRV001167,CUST00215,Mobile Postpaid,Terminated,Southern,4G/LTE,Nokia G 2425G A,macOS,Bronze,2021-05-14,2022-10-16,30,60,24,8,3
+SRV001168,CUST01117,Cloud Compute,Active,Central,5G,D Link DIR 842,Android,Silver,2019-09-05,,100,1177,18,6,5
+SRV001169,CUST00767,Unifi Home,Provisioning,Northern,Fibre,D Link DIR 842,Android,Bronze,2024-03-10,,500,888,10,5,0
+SRV001170,CUST00755,Cloud Compute,Suspended,East Coast,4G/LTE,Nokia G 2425G A,Windows,Silver,2022-05-18,2022-09-11,1000,499,20,26,5
+SRV001171,CUST00310,Cloud Compute,Active,East Coast,4G/LTE,Huawei HG8145V5,macOS,Platinum,2021-06-20,,500,394,54,28,3
+SRV001172,CUST01080,Cloud Storage,Active,Northern,4G/LTE,Huawei HG8145V5,Windows,Gold,2020-11-27,,1000,715,51,6,3
+SRV001173,CUST01078,Cloud Compute,Suspended,Northern,5G,TP Link Archer A6,Linux,Bronze,2019-12-26,2021-02-16,100,1031,14,29,4
+SRV001174,CUST00503,Unifi Business,Provisioning,Northern,DSL,ZTE ZXHN F670L,macOS,Platinum,2019-03-03,,100,1277,149,2,4
+SRV001175,CUST00984,Cloud Compute,Active,Sabah,5G,TP Link Archer A6,Android,Silver,2023-09-24,,100,1432,10,11,4
+SRV001176,CUST00022,Unifi Home,Active,Central,DSL,Nokia G 2425G A,Embedded,Gold,2025-01-10,,1000,1207,113,9,3
+SRV001177,CUST00892,Unifi Home,Active,East Coast,Fibre,Nokia G 2425G A,Linux,Bronze,2021-11-04,,500,995,15,8,0
+SRV001178,CUST00480,Cloud Storage,Suspended,Northern,5G,TP Link Archer A6,Embedded,Gold,2023-03-20,2024-01-07,1000,1282,14,5,6
+SRV001179,CUST00882,Cloud Compute,Active,Northern,4G/LTE,ZTE ZXHN F670L,Windows,Bronze,2019-02-03,,1000,694,33,18,5
+SRV001180,CUST01022,Mobile Postpaid,Active,Central,4G/LTE,ZTE ZXHN F670L,Windows,Platinum,2021-11-02,,100,22,40,30,5
+SRV001181,CUST00008,Cloud Compute,Active,Central,5G,ZTE ZXHN F670L,macOS,Bronze,2023-10-02,,1000,435,29,3,2
+SRV001182,CUST00728,IoT Connectivity,Active,Northern,Fibre,D Link DIR 842,Linux,Bronze,2019-06-03,,500,1289,8,20,2
+SRV001183,CUST00191,Cloud Storage,Provisioning,Northern,5G,Huawei HG8145V5,Linux,Bronze,2020-11-16,,1000,1422,26,17,2
+SRV001184,CUST01074,Cloud Storage,Suspended,Southern,4G/LTE,Nokia G 2425G A,Embedded,Silver,2023-12-24,2026-09-02,500,1027,27,8,0
+SRV001185,CUST01097,Cloud Storage,Terminated,East Coast,5G,Nokia G 2425G A,Linux,Bronze,2019-02-19,2020-01-23,500,470,20,16,2
+SRV001186,CUST00978,Managed Security,Active,Central,Fibre,D Link DIR 842,Embedded,Silver,2019-04-08,,300,1139,13,17,1
+SRV001187,CUST00911,Cloud Storage,Active,Northern,Fibre,Nokia G 2425G A,Android,Platinum,2021-09-20,,1000,780,16,16,2
+SRV001188,CUST01102,Mobile Postpaid,Active,Northern,5G,Nokia G 2425G A,Android,Silver,2023-03-28,,30,102,28,1,2
+SRV001189,CUST00588,Cloud Storage,Provisioning,Northern,5G,Huawei HG8145V5,Linux,Silver,2023-10-13,,500,166,20,24,4
+SRV001190,CUST00138,IoT Connectivity,Active,Southern,5G,Huawei HG8145V5,Windows,Silver,2021-08-07,,1000,311,14,7,4
+SRV001191,CUST00480,Cloud Compute,Terminated,Northern,Fibre,D Link DIR 842,Windows,Silver,2023-04-07,2025-12-20,300,854,20,11,2
+SRV001192,CUST01110,Unifi Business,Active,Sarawak,DSL,Huawei HG8145V5,macOS,Silver,2019-06-24,,100,1417,131,30,0
+SRV001193,CUST01076,Cloud Storage,Active,Northern,4G/LTE,TP Link Archer A6,Embedded,Bronze,2020-06-12,,300,1075,32,15,6
+SRV001194,CUST00871,Mobile Postpaid,Active,Central,4G/LTE,D Link DIR 842,iOS,Silver,2023-01-16,,30,131,74,13,3
+SRV001195,CUST00056,IoT Connectivity,Active,Northern,4G/LTE,D Link DIR 842,macOS,Gold,2022-12-25,,100,213,63,21,2
+SRV001196,CUST00569,Cloud Compute,Provisioning,East Coast,5G,Huawei HG8145V5,macOS,Bronze,2024-12-22,,100,267,10,30,3
+SRV001197,CUST00474,Mobile Postpaid,Provisioning,Central,5G,D Link DIR 842,Windows,Bronze,2020-06-07,,30,108,19,13,1
+SRV001198,CUST00033,Cloud Storage,Active,Southern,4G/LTE,ZTE ZXHN F670L,Embedded,Silver,2021-10-12,,100,238,49,15,2
+SRV001199,CUST00417,Cloud Storage,Active,Southern,4G/LTE,TP Link Archer A6,macOS,Bronze,2022-06-07,,1000,1473,22,17,5
+SRV001200,CUST01026,Cloud Compute,Active,East Coast,5G,TP Link Archer A6,iOS,Silver,2018-10-16,,500,500,22,11,4
+SRV001201,CUST00978,Cloud Compute,Active,Central,Fibre,Nokia G 2425G A,Windows,Bronze,2019-05-18,,100,815,7,26,0
+SRV001202,CUST00094,Cloud Storage,Active,Northern,5G,Huawei HG8145V5,Android,Silver,2023-06-26,,100,750,22,18,1
+SRV001203,CUST01133,Managed Security,Provisioning,Central,Fibre,D Link DIR 842,macOS,Platinum,2024-11-03,,1000,1265,9,4,1
+SRV001204,CUST01175,Cloud Compute,Active,Central,Fibre,D Link DIR 842,Android,Silver,2021-03-24,,1000,493,6,27,2
+SRV001205,CUST00762,Mobile Postpaid,Active,Central,4G/LTE,Nokia G 2425G A,iOS,Platinum,2023-05-05,,30,128,48,6,1
+SRV001206,CUST01098,Cloud Storage,Active,Central,4G/LTE,D Link DIR 842,Android,Gold,2020-08-18,,1000,860,79,12,4
+SRV001207,CUST00729,Cloud Storage,Provisioning,Central,4G/LTE,TP Link Archer A6,Windows,Bronze,2021-07-26,,500,1408,62,29,3
+SRV001208,CUST00986,Mobile Postpaid,Active,Sabah,5G,TP Link Archer A6,Android,Bronze,2023-04-06,,30,26,30,18,2
+SRV001209,CUST00667,Cloud Storage,Active,Sabah,5G,D Link DIR 842,macOS,Bronze,2021-06-27,,1000,1388,14,2,4
+SRV001210,CUST00044,Cloud Compute,Active,Sabah,Fibre,ZTE ZXHN F670L,Windows,Bronze,2023-05-22,,1000,720,12,4,1
+SRV001211,CUST00777,Unifi Home,Active,Northern,Fibre,ZTE ZXHN F670L,Android,Bronze,2019-07-02,,800,1094,7,8,2
+SRV001212,CUST00583,Unifi Business,Provisioning,Southern,Fibre,TP Link Archer A6,Android,Bronze,2024-07-10,,500,1330,14,2,2
+SRV001213,CUST01135,Mobile Postpaid,Active,Central,4G/LTE,ZTE ZXHN F670L,Linux,Gold,2022-12-01,,30,118,39,20,6
+SRV001214,CUST00631,Mobile Postpaid,Active,East Coast,4G/LTE,Nokia G 2425G A,Android,Gold,2024-06-20,,100,74,55,7,3
+SRV001215,CUST00600,Managed Security,Active,Southern,Fibre,TP Link Archer A6,Windows,Silver,2019-12-09,,100,1092,6,17,2
+SRV001216,CUST00453,Cloud Compute,Active,Northern,5G,Huawei HG8145V5,Windows,Silver,2018-06-10,,1000,922,17,22,4
+SRV001217,CUST00073,Unifi Home,Provisioning,Central,Fibre,Huawei HG8145V5,macOS,Gold,2021-06-21,,1000,237,13,23,2
+SRV001218,CUST01127,IoT Connectivity,Provisioning,East Coast,5G,D Link DIR 842,Embedded,Silver,2024-04-26,,100,717,10,22,4
+SRV001219,CUST00772,Unifi Home,Provisioning,Northern,Fibre,Nokia G 2425G A,macOS,Gold,2019-12-31,,100,1219,5,19,2
+SRV001220,CUST00237,Cloud Storage,Terminated,Northern,4G/LTE,Nokia G 2425G A,Android,Bronze,2024-10-18,2025-09-08,500,877,58,4,5
+SRV001221,CUST00370,IoT Connectivity,Active,Northern,Fibre,ZTE ZXHN F670L,Linux,Silver,2024-06-09,,1000,888,9,12,1
+SRV001222,CUST00475,Unifi Business,Active,Central,Fibre,D Link DIR 842,Android,Silver,2020-05-04,,1000,1225,19,13,0
+SRV001223,CUST00332,Cloud Compute,Terminated,Central,4G/LTE,Nokia G 2425G A,Windows,Bronze,2024-01-30,2024-06-06,100,1392,56,21,4
+SRV001224,CUST00925,Unifi Business,Active,Central,Fibre,Huawei HG8145V5,Android,Gold,2023-11-13,,100,1068,6,29,1
+SRV001225,CUST00354,Managed Security,Terminated,Central,Fibre,TP Link Archer A6,Windows,Silver,2021-12-27,2023-03-02,100,642,13,25,0
+SRV001226,CUST00758,Cloud Compute,Active,Sabah,5G,TP Link Archer A6,Embedded,Gold,2020-12-16,,300,1327,23,24,4
+SRV001227,CUST00586,Cloud Storage,Active,Northern,4G/LTE,Nokia G 2425G A,Android,Gold,2021-12-15,,100,620,58,17,3
+SRV001228,CUST00878,Mobile Postpaid,Active,Sabah,5G,Nokia G 2425G A,iOS,Bronze,2023-11-07,,100,103,15,10,1
+SRV001229,CUST00974,Managed Security,Active,East Coast,5G,TP Link Archer A6,Embedded,Gold,2019-10-26,,1000,635,18,1,6
+SRV001230,CUST00349,Cloud Storage,Provisioning,Northern,Fibre,TP Link Archer A6,iOS,Bronze,2024-03-17,,500,799,17,3,2
+SRV001231,CUST00405,Mobile Postpaid,Suspended,Central,4G/LTE,Huawei HG8145V5,Android,Bronze,2024-06-23,2025-01-24,100,108,24,27,0
+SRV001232,CUST01179,Cloud Storage,Active,Sabah,Fibre,TP Link Archer A6,iOS,Gold,2018-07-03,,100,853,17,29,2
+SRV001233,CUST01031,Unifi Business,Active,East Coast,Fibre,Nokia G 2425G A,iOS,Gold,2023-05-23,,300,1164,7,5,1
+SRV001234,CUST00386,Mobile Postpaid,Active,Central,5G,Nokia G 2425G A,iOS,Bronze,2018-07-27,,30,58,23,16,1
+SRV001235,CUST00925,Cloud Compute,Active,Central,5G,Huawei HG8145V5,Linux,Silver,2023-11-04,,1000,696,23,29,4
+SRV001236,CUST00688,Unifi Home,Active,East Coast,DSL,D Link DIR 842,macOS,Platinum,2022-08-02,,800,1741,117,19,5
+SRV001237,CUST00310,IoT Connectivity,Active,East Coast,4G/LTE,Nokia G 2425G A,iOS,Gold,2021-06-15,,1000,1101,42,21,3
+SRV001238,CUST00322,Managed Security,Active,Sarawak,5G,Nokia G 2425G A,Android,Platinum,2019-10-28,,300,928,30,14,3
+SRV001239,CUST01027,Mobile Postpaid,Provisioning,Central,5G,Huawei HG8145V5,Android,Bronze,2021-03-15,,30,143,24,20,0
+SRV001240,CUST00700,Mobile Postpaid,Active,Sarawak,5G,Nokia G 2425G A,Embedded,Silver,2018-12-25,,30,46,30,11,6
+SRV001241,CUST00197,Unifi Home,Active,Southern,Fibre,Nokia G 2425G A,Android,Bronze,2022-01-12,,300,1301,6,28,0
+SRV001242,CUST00455,Cloud Compute,Terminated,Sabah,Fibre,ZTE ZXHN F670L,Windows,Bronze,2022-04-12,2023-03-14,1000,1214,8,12,1
+SRV001243,CUST00504,Cloud Compute,Suspended,Southern,5G,Nokia G 2425G A,Android,Bronze,2024-08-27,2027-01-27,1000,125,26,14,6
+SRV001244,CUST00376,Mobile Postpaid,Provisioning,East Coast,4G/LTE,ZTE ZXHN F670L,Windows,Bronze,2020-01-06,,100,64,71,5,2
+SRV001245,CUST01013,IoT Connectivity,Active,Northern,Fibre,Huawei HG8145V5,Windows,Silver,2018-09-24,,300,972,8,26,0
+SRV001246,CUST00691,Unifi Home,Terminated,East Coast,Fibre,ZTE ZXHN F670L,macOS,Bronze,2021-09-13,2022-11-07,800,1929,20,30,2
+SRV001247,CUST00037,Cloud Storage,Active,Northern,4G/LTE,Nokia G 2425G A,Android,Bronze,2024-12-14,,1000,1415,42,6,6
+SRV001248,CUST00866,Cloud Storage,Active,Northern,5G,ZTE ZXHN F670L,macOS,Bronze,2021-04-06,,100,901,27,30,6
+SRV001249,CUST00336,Unifi Home,Active,Northern,Fibre,Huawei HG8145V5,Linux,Platinum,2024-09-26,,1000,1604,19,3,1
+SRV001250,CUST00405,Unifi Home,Active,Central,Fibre,Huawei HG8145V5,Android,Gold,2024-07-04,,800,562,17,26,0
+SRV001251,CUST00988,Unifi Home,Active,Northern,DSL,TP Link Archer A6,Linux,Bronze,2020-11-22,,800,1477,146,23,4
+SRV001252,CUST01085,IoT Connectivity,Active,Sarawak,Fibre,Huawei HG8145V5,Linux,Silver,2019-06-04,,500,456,9,20,0
+SRV001253,CUST00355,Cloud Compute,Active,Northern,4G/LTE,Huawei HG8145V5,Windows,Silver,2023-06-09,,500,1313,62,28,5
+SRV001254,CUST00510,IoT Connectivity,Provisioning,Central,5G,D Link DIR 842,Windows,Silver,2022-07-12,,100,1136,27,13,6
+SRV001255,CUST00638,Cloud Compute,Active,Northern,5G,Nokia G 2425G A,Android,Bronze,2018-11-08,,300,652,23,7,3
+SRV001256,CUST00842,Mobile Postpaid,Active,East Coast,4G/LTE,TP Link Archer A6,Embedded,Silver,2020-02-17,,30,91,73,30,2
+SRV001257,CUST01115,Mobile Postpaid,Active,Sarawak,4G/LTE,ZTE ZXHN F670L,Android,Gold,2021-03-26,,100,28,59,19,0
+SRV001258,CUST00386,Unifi Home,Active,Central,Fibre,ZTE ZXHN F670L,iOS,Silver,2018-09-27,,1000,204,14,7,0
+SRV001259,CUST00485,Unifi Home,Suspended,Sabah,Fibre,D Link DIR 842,macOS,Bronze,2018-10-03,2019-04-29,100,370,14,13,0
+SRV001260,CUST00186,Mobile Postpaid,Terminated,Central,5G,TP Link Archer A6,iOS,Bronze,2024-12-22,2025-09-08,30,118,11,22,4
+SRV001261,CUST00425,Unifi Home,Terminated,Sabah,DSL,Huawei HG8145V5,Linux,Bronze,2020-07-01,2021-05-23,100,976,92,10,0
+SRV001262,CUST01126,Cloud Compute,Active,East Coast,Fibre,ZTE ZXHN F670L,Linux,Bronze,2022-08-27,,100,1333,14,11,1
+SRV001263,CUST00513,Unifi Business,Active,Northern,Fibre,Nokia G 2425G A,Windows,Bronze,2019-10-15,,1000,1653,5,1,1
+SRV001264,CUST00846,Cloud Storage,Provisioning,Northern,Fibre,TP Link Archer A6,iOS,Gold,2018-08-13,,500,1324,16,3,1
+SRV001265,CUST00886,Mobile Postpaid,Active,Central,4G/LTE,ZTE ZXHN F670L,iOS,Silver,2022-10-12,,30,67,71,30,4
+SRV001266,CUST00771,Managed Security,Terminated,Sabah,Fibre,D Link DIR 842,Linux,Silver,2022-05-18,2022-09-07,300,703,10,7,1
+SRV001267,CUST00913,Managed Security,Active,Sabah,Fibre,TP Link Archer A6,macOS,Bronze,2021-02-20,,100,1120,15,7,0
+SRV001268,CUST00264,Cloud Storage,Suspended,Central,4G/LTE,Nokia G 2425G A,Linux,Silver,2023-03-31,2025-08-23,500,434,45,4,2
+SRV001269,CUST01080,Cloud Storage,Terminated,Northern,4G/LTE,Nokia G 2425G A,Embedded,Gold,2020-11-18,2022-10-18,100,921,72,24,4
+SRV001270,CUST00511,Unifi Business,Active,Sarawak,Fibre,ZTE ZXHN F670L,Android,Bronze,2021-08-31,,500,437,10,10,2
+SRV001271,CUST01026,Cloud Compute,Terminated,East Coast,5G,D Link DIR 842,Linux,Bronze,2019-01-10,2019-11-04,1000,252,25,29,6
+SRV001272,CUST00541,Unifi Home,Active,East Coast,DSL,D Link DIR 842,Linux,Silver,2021-07-19,,500,1540,86,18,2
+SRV001273,CUST00975,Unifi Home,Active,Northern,Fibre,ZTE ZXHN F670L,Embedded,Platinum,2022-08-04,,800,1025,7,15,0
+SRV001274,CUST00793,Unifi Business,Active,Northern,DSL,ZTE ZXHN F670L,Android,Gold,2024-11-11,,300,1290,108,28,0
+SRV001275,CUST01070,Unifi Business,Active,Southern,Fibre,Huawei HG8145V5,Windows,Silver,2018-10-07,,500,1917,18,9,0
+SRV001276,CUST00063,Unifi Home,Active,Sarawak,Fibre,TP Link Archer A6,Windows,Gold,2023-01-03,,100,1653,19,18,0
+SRV001277,CUST00596,Unifi Home,Active,Northern,DSL,Huawei HG8145V5,Windows,Silver,2019-12-29,,500,1553,88,27,0
+SRV001278,CUST00520,Cloud Storage,Active,Southern,5G,D Link DIR 842,Linux,Bronze,2021-09-06,,300,359,17,27,0
+SRV001279,CUST00872,Cloud Compute,Active,Central,Fibre,ZTE ZXHN F670L,Linux,Gold,2022-10-30,,1000,212,12,17,2
+SRV001280,CUST00713,Unifi Home,Active,East Coast,Fibre,Huawei HG8145V5,iOS,Bronze,2022-05-07,,800,1000,15,5,0
+SRV001281,CUST01015,Cloud Compute,Active,Sabah,5G,Huawei HG8145V5,iOS,Bronze,2024-07-21,,500,1288,20,1,3
+SRV001282,CUST00070,Cloud Compute,Active,East Coast,5G,ZTE ZXHN F670L,Android,Silver,2022-02-09,,1000,1437,13,30,1
+SRV001283,CUST00596,Cloud Storage,Provisioning,Northern,Fibre,ZTE ZXHN F670L,Embedded,Bronze,2020-02-08,,100,1408,20,18,1
+SRV001284,CUST01181,Cloud Compute,Active,Northern,5G,ZTE ZXHN F670L,Android,Silver,2018-09-24,,300,128,18,4,5
+SRV001285,CUST00661,Cloud Storage,Active,Northern,5G,TP Link Archer A6,Linux,Silver,2024-06-19,,300,860,30,27,5
+SRV001286,CUST00961,Mobile Postpaid,Active,Northern,4G/LTE,ZTE ZXHN F670L,Android,Silver,2019-02-08,,100,59,73,12,6
+SRV001287,CUST00495,Unifi Business,Provisioning,Northern,DSL,D Link DIR 842,Windows,Bronze,2020-02-08,,1000,638,140,1,0
+SRV001288,CUST00237,Cloud Compute,Active,Northern,4G/LTE,Nokia G 2425G A,Embedded,Bronze,2025-01-06,,100,1370,42,6,4
+SRV001289,CUST00044,Cloud Storage,Provisioning,Sabah,4G/LTE,TP Link Archer A6,Android,Gold,2023-07-15,,300,1128,24,17,2
+SRV001290,CUST00916,Mobile Postpaid,Active,Northern,5G,D Link DIR 842,iOS,Silver,2019-11-19,,30,93,12,14,5
+SRV001291,CUST00195,Unifi Home,Active,East Coast,DSL,ZTE ZXHN F670L,Embedded,Silver,2018-11-11,,800,563,142,17,5
+SRV001292,CUST00054,IoT Connectivity,Terminated,East Coast,4G/LTE,ZTE ZXHN F670L,Linux,Gold,2018-03-24,2018-09-21,100,407,62,27,0
+SRV001293,CUST00943,Cloud Compute,Active,East Coast,4G/LTE,Huawei HG8145V5,iOS,Bronze,2020-12-30,,300,774,44,16,3
+SRV001294,CUST00281,Cloud Storage,Active,Central,4G/LTE,Huawei HG8145V5,macOS,Gold,2019-05-05,,100,969,31,23,3
+SRV001295,CUST00238,Cloud Compute,Active,Northern,5G,Huawei HG8145V5,Linux,Silver,2023-03-22,,300,394,16,11,5
+SRV001296,CUST01008,Mobile Postpaid,Provisioning,East Coast,4G/LTE,Huawei HG8145V5,Android,Silver,2018-10-24,,30,23,58,9,1
+SRV001297,CUST00072,Cloud Storage,Active,Central,5G,TP Link Archer A6,Android,Bronze,2022-02-18,,1000,234,29,23,4
+SRV001298,CUST00589,Cloud Compute,Active,Northern,4G/LTE,TP Link Archer A6,macOS,Silver,2024-10-09,,300,1412,71,30,0
+SRV001299,CUST01177,Cloud Compute,Active,Southern,4G/LTE,Nokia G 2425G A,Linux,Bronze,2019-11-18,,300,909,38,22,6
+SRV001300,CUST00374,Cloud Storage,Active,East Coast,4G/LTE,TP Link Archer A6,Linux,Bronze,2020-11-06,,100,964,63,26,0
+SRV001301,CUST00262,IoT Connectivity,Active,Central,Fibre,TP Link Archer A6,Android,Silver,2020-07-21,,100,590,11,2,0
+SRV001302,CUST00061,Managed Security,Active,Sabah,5G,ZTE ZXHN F670L,iOS,Gold,2020-10-05,,500,1175,19,23,5
+SRV001303,CUST00213,Mobile Postpaid,Active,Southern,5G,Huawei HG8145V5,iOS,Gold,2024-08-14,,100,83,26,25,2
+SRV001304,CUST00972,Unifi Home,Terminated,Sarawak,DSL,Nokia G 2425G A,Windows,Bronze,2024-08-28,2025-08-07,800,224,147,12,4
+SRV001305,CUST00901,Mobile Postpaid,Active,Central,5G,ZTE ZXHN F670L,iOS,Gold,2020-01-05,,100,67,14,13,5
+SRV001306,CUST00111,Unifi Home,Active,Northern,DSL,Huawei HG8145V5,Linux,Bronze,2023-09-02,,1000,674,89,30,3
+SRV001307,CUST01113,Cloud Compute,Active,East Coast,4G/LTE,Nokia G 2425G A,macOS,Silver,2020-06-16,,100,504,48,21,2
+SRV001308,CUST00897,Mobile Postpaid,Active,East Coast,5G,Huawei HG8145V5,iOS,Bronze,2021-06-20,,100,88,22,6,2
+SRV001309,CUST00751,Cloud Storage,Active,Sabah,5G,D Link DIR 842,Android,Bronze,2024-04-25,,500,759,30,17,4
+SRV001310,CUST00267,Mobile Postpaid,Terminated,East Coast,5G,ZTE ZXHN F670L,macOS,Bronze,2023-08-19,2026-02-24,30,79,26,11,0
+SRV001311,CUST00280,IoT Connectivity,Active,Sabah,5G,Nokia G 2425G A,macOS,Gold,2019-11-17,,1000,825,17,15,0
+SRV001312,CUST00761,Managed Security,Provisioning,East Coast,Fibre,TP Link Archer A6,iOS,Silver,2023-07-22,,1000,133,17,14,1
+SRV001313,CUST01011,Unifi Home,Active,Northern,Fibre,D Link DIR 842,iOS,Silver,2022-06-04,,100,404,7,23,1
+SRV001314,CUST00192,Unifi Home,Terminated,Northern,Fibre,TP Link Archer A6,Embedded,Bronze,2023-03-13,2024-02-16,800,620,8,27,0
+SRV001315,CUST00524,Unifi Business,Active,Northern,Fibre,ZTE ZXHN F670L,Linux,Bronze,2020-02-29,,800,1371,11,1,1
+SRV001316,CUST00200,IoT Connectivity,Active,Central,Fibre,ZTE ZXHN F670L,Windows,Platinum,2024-10-27,,300,192,20,5,0
+SRV001317,CUST00802,Mobile Postpaid,Suspended,Sabah,4G/LTE,TP Link Archer A6,iOS,Bronze,2022-04-25,2023-04-26,100,82,29,12,6
+SRV001318,CUST00658,Unifi Home,Provisioning,Central,DSL,Huawei HG8145V5,macOS,Silver,2018-05-24,,500,1667,108,13,6
+SRV001319,CUST00904,Unifi Home,Active,Sabah,DSL,Huawei HG8145V5,Embedded,Silver,2024-12-16,,500,1176,150,27,5
+SRV001320,CUST00047,Mobile Postpaid,Active,Southern,4G/LTE,ZTE ZXHN F670L,macOS,Bronze,2019-01-24,,100,87,37,11,3
+SRV001321,CUST00669,Cloud Storage,Terminated,Northern,4G/LTE,Nokia G 2425G A,Android,Gold,2022-08-20,2023-08-14,500,479,22,11,2
+SRV001322,CUST00114,Cloud Compute,Terminated,Central,5G,TP Link Archer A6,Linux,Bronze,2023-12-17,2024-03-25,300,199,13,24,3
+SRV001323,CUST01021,Cloud Storage,Active,Sarawak,4G/LTE,Huawei HG8145V5,Android,Platinum,2019-06-22,,100,558,76,9,6
+SRV001324,CUST00161,Cloud Compute,Suspended,Sabah,5G,Nokia G 2425G A,Android,Bronze,2020-02-08,2020-05-27,100,621,18,14,2
+SRV001325,CUST00634,IoT Connectivity,Active,Sarawak,Fibre,ZTE ZXHN F670L,Android,Gold,2024-01-25,,100,699,18,9,1
+SRV001326,CUST00516,IoT Connectivity,Active,Central,4G/LTE,Huawei HG8145V5,Windows,Gold,2024-09-13,,1000,818,30,12,3
+SRV001327,CUST00039,Cloud Compute,Terminated,Sarawak,4G/LTE,Nokia G 2425G A,macOS,Bronze,2020-10-15,2022-02-22,1000,375,40,15,3
+SRV001328,CUST00124,Unifi Business,Terminated,Sabah,Fibre,D Link DIR 842,macOS,Silver,2020-09-29,2021-03-29,1000,429,10,22,0
+SRV001329,CUST00787,Cloud Compute,Active,Northern,4G/LTE,TP Link Archer A6,Android,Silver,2024-11-03,,500,1259,41,20,0
+SRV001330,CUST00632,Mobile Postpaid,Active,Northern,5G,D Link DIR 842,Android,Silver,2019-08-15,,30,130,18,16,6
+SRV001331,CUST00992,Managed Security,Suspended,Northern,Fibre,ZTE ZXHN F670L,Embedded,Platinum,2023-12-10,2026-05-13,300,606,8,19,1
+SRV001332,CUST00824,Cloud Storage,Active,Central,5G,TP Link Archer A6,Linux,Bronze,2019-06-06,,500,699,18,13,4
+SRV001333,CUST00859,Cloud Compute,Active,Northern,4G/LTE,Nokia G 2425G A,macOS,Gold,2022-07-29,,500,1499,39,3,5
+SRV001334,CUST01111,Mobile Postpaid,Active,Southern,5G,ZTE ZXHN F670L,iOS,Gold,2018-12-26,,30,89,18,25,3
+SRV001335,CUST00322,IoT Connectivity,Active,Sarawak,4G/LTE,TP Link Archer A6,macOS,Bronze,2019-10-20,,500,1185,78,30,4
+SRV001336,CUST00627,Unifi Business,Suspended,Central,Fibre,TP Link Archer A6,Linux,Silver,2024-11-17,2025-11-03,800,680,9,21,2
+SRV001337,CUST00593,Cloud Storage,Active,Sabah,4G/LTE,D Link DIR 842,iOS,Bronze,2019-12-13,,1000,956,71,9,6
+SRV001338,CUST01172,Managed Security,Terminated,Sarawak,5G,Nokia G 2425G A,Android,Silver,2019-06-15,2022-02-06,300,818,13,19,0
+SRV001339,CUST01102,Cloud Storage,Active,Northern,Fibre,Nokia G 2425G A,macOS,Bronze,2023-05-20,,1000,1037,18,14,2
+SRV001340,CUST00820,Unifi Business,Provisioning,East Coast,Fibre,ZTE ZXHN F670L,macOS,Silver,2019-01-24,,300,979,13,5,1
+SRV001341,CUST01182,IoT Connectivity,Active,Central,5G,D Link DIR 842,macOS,Silver,2023-12-25,,500,961,24,11,4
+SRV001342,CUST00240,Unifi Business,Active,East Coast,DSL,D Link DIR 842,Embedded,Gold,2022-03-11,,800,1193,85,22,2
+SRV001343,CUST00569,Cloud Storage,Active,East Coast,5G,ZTE ZXHN F670L,Windows,Bronze,2024-12-01,,1000,213,14,12,5
+SRV001344,CUST00038,Unifi Home,Active,Southern,DSL,TP Link Archer A6,macOS,Bronze,2021-04-30,,1000,1617,148,11,3
+SRV001345,CUST00664,Cloud Compute,Active,Southern,4G/LTE,Huawei HG8145V5,Linux,Silver,2024-08-11,,500,831,41,24,2
+SRV001346,CUST00970,Cloud Storage,Terminated,Sarawak,4G/LTE,D Link DIR 842,iOS,Bronze,2018-02-23,2020-04-29,500,476,20,23,2
+SRV001347,CUST00055,Cloud Compute,Terminated,Central,Fibre,D Link DIR 842,iOS,Bronze,2021-06-27,2022-02-05,300,1072,17,19,1
+SRV001348,CUST01040,Cloud Storage,Active,Sabah,4G/LTE,Nokia G 2425G A,macOS,Platinum,2021-04-22,,1000,925,21,8,3
+SRV001349,CUST00868,Unifi Home,Provisioning,Sabah,Fibre,D Link DIR 842,Linux,Silver,2019-12-31,,500,1307,10,21,2
+SRV001350,CUST00585,Cloud Compute,Provisioning,Central,Fibre,ZTE ZXHN F670L,Linux,Gold,2022-08-03,,100,985,16,8,1
+SRV001351,CUST01016,Cloud Storage,Provisioning,Central,5G,Huawei HG8145V5,Windows,Bronze,2024-10-05,,500,1255,12,19,0
+SRV001352,CUST00798,Cloud Compute,Terminated,Sarawak,5G,Nokia G 2425G A,Windows,Bronze,2018-07-23,2020-02-15,300,802,29,6,2
+SRV001353,CUST00074,Unifi Home,Active,Southern,Fibre,D Link DIR 842,macOS,Bronze,2020-06-20,,800,1479,9,7,0
+SRV001354,CUST00980,Unifi Home,Active,East Coast,Fibre,Huawei HG8145V5,Embedded,Bronze,2020-01-26,,100,489,11,25,1
+SRV001355,CUST00614,Mobile Postpaid,Active,East Coast,4G/LTE,Nokia G 2425G A,Embedded,Bronze,2019-08-15,,100,45,55,1,0
+SRV001356,CUST00777,Cloud Compute,Terminated,Northern,4G/LTE,ZTE ZXHN F670L,Android,Silver,2019-06-08,2021-04-14,500,961,77,9,0
+SRV001357,CUST00507,Unifi Home,Terminated,Southern,Fibre,Nokia G 2425G A,Linux,Platinum,2020-03-06,2021-02-28,800,931,16,4,0
+SRV001358,CUST00298,Unifi Home,Suspended,East Coast,DSL,Nokia G 2425G A,Embedded,Platinum,2025-02-05,2027-01-13,800,1085,135,21,4
+SRV001359,CUST00520,Mobile Postpaid,Active,Southern,4G/LTE,Huawei HG8145V5,macOS,Silver,2021-08-31,,100,93,76,6,4
+SRV001360,CUST01026,Cloud Compute,Active,East Coast,5G,D Link DIR 842,iOS,Bronze,2018-12-25,,500,209,17,1,6
+SRV001361,CUST00368,Cloud Storage,Active,Central,Fibre,ZTE ZXHN F670L,Linux,Silver,2024-02-19,,1000,424,16,2,1
+SRV001362,CUST00722,Cloud Compute,Active,Northern,5G,Nokia G 2425G A,macOS,Silver,2019-01-25,,500,1483,26,8,5
+SRV001363,CUST00955,Cloud Compute,Active,Central,4G/LTE,D Link DIR 842,Embedded,Silver,2020-05-01,,500,1317,25,26,1
+SRV001364,CUST01079,Managed Security,Active,Northern,4G/LTE,D Link DIR 842,Linux,Silver,2019-12-18,,1000,1362,25,2,2
+SRV001365,CUST00037,Cloud Storage,Active,Northern,Fibre,Nokia G 2425G A,Linux,Gold,2024-11-14,,500,474,14,4,2
+SRV001366,CUST00649,Managed Security,Active,Northern,4G/LTE,Nokia G 2425G A,Android,Silver,2022-07-28,,100,640,24,23,0
+SRV001367,CUST00943,Unifi Home,Active,East Coast,Fibre,TP Link Archer A6,iOS,Silver,2021-01-20,,800,315,10,14,1
+SRV001368,CUST00897,Unifi Home,Active,East Coast,Fibre,TP Link Archer A6,Windows,Bronze,2021-06-09,,300,957,11,29,0
+SRV001369,CUST00163,Unifi Home,Suspended,Central,DSL,Nokia G 2425G A,Windows,Bronze,2024-05-14,2026-12-23,300,1992,91,27,1
+SRV001370,CUST00978,Unifi Business,Provisioning,Central,DSL,ZTE ZXHN F670L,Embedded,Gold,2019-04-25,,1000,590,91,29,3
+SRV001371,CUST00737,Managed Security,Terminated,Southern,5G,Huawei HG8145V5,Android,Silver,2021-11-07,2024-01-28,1000,536,24,7,1
+SRV001372,CUST00986,Unifi Home,Active,Sabah,DSL,ZTE ZXHN F670L,Android,Silver,2023-02-14,,1000,551,132,6,0
+SRV001373,CUST01130,IoT Connectivity,Suspended,Northern,Fibre,TP Link Archer A6,Android,Platinum,2018-03-15,2018-08-31,300,1173,17,11,1
+SRV001374,CUST00874,Cloud Storage,Active,Northern,4G/LTE,TP Link Archer A6,Android,Platinum,2023-05-23,,300,799,54,24,0
+SRV001375,CUST00567,Managed Security,Active,Central,4G/LTE,ZTE ZXHN F670L,Android,Platinum,2023-04-08,,100,269,77,11,5
+SRV001376,CUST00497,Unifi Home,Provisioning,East Coast,Fibre,TP Link Archer A6,macOS,Platinum,2023-12-17,,800,319,9,16,1
+SRV001377,CUST00391,Cloud Compute,Provisioning,Sabah,5G,D Link DIR 842,macOS,Bronze,2020-01-25,,500,625,26,27,2
+SRV001378,CUST00771,Cloud Compute,Active,Sabah,5G,ZTE ZXHN F670L,Windows,Silver,2022-05-03,,1000,634,11,13,4
+SRV001379,CUST00540,Cloud Storage,Provisioning,Sabah,4G/LTE,D Link DIR 842,Windows,Gold,2023-10-22,,300,1121,69,16,0
+SRV001380,CUST00238,Cloud Compute,Active,Northern,Fibre,D Link DIR 842,Android,Bronze,2023-03-30,,100,254,20,22,1
+SRV001381,CUST00726,Cloud Storage,Active,Southern,Fibre,D Link DIR 842,Linux,Silver,2018-10-23,,500,195,13,9,2
+SRV001382,CUST00594,Unifi Business,Terminated,Northern,DSL,TP Link Archer A6,Embedded,Silver,2018-04-03,2020-08-24,300,1733,131,16,6
+SRV001383,CUST00039,Unifi Home,Provisioning,Sarawak,DSL,ZTE ZXHN F670L,Windows,Gold,2020-10-08,,800,1570,145,22,3
+SRV001384,CUST00363,Cloud Storage,Active,East Coast,4G/LTE,D Link DIR 842,Android,Bronze,2021-05-03,,100,941,66,19,5
+SRV001385,CUST01035,Unifi Home,Active,Northern,DSL,ZTE ZXHN F670L,Linux,Platinum,2022-11-02,,1000,360,136,21,0
+SRV001386,CUST00091,Cloud Storage,Active,East Coast,5G,Huawei HG8145V5,Linux,Bronze,2020-09-06,,300,1475,17,20,5
+SRV001387,CUST00958,Managed Security,Active,Central,Fibre,ZTE ZXHN F670L,Windows,Silver,2023-09-20,,100,760,6,1,1
+SRV001388,CUST00886,Unifi Home,Active,Central,DSL,D Link DIR 842,Windows,Silver,2022-10-23,,1000,212,80,29,3
+SRV001389,CUST00970,Cloud Compute,Active,Sarawak,5G,TP Link Archer A6,Windows,Bronze,2018-01-24,,1000,1089,25,26,0
+SRV001390,CUST00888,Cloud Storage,Active,Southern,4G/LTE,ZTE ZXHN F670L,macOS,Silver,2018-06-06,,300,713,57,28,0
+SRV001391,CUST00531,Mobile Postpaid,Active,Central,5G,ZTE ZXHN F670L,Windows,Bronze,2021-05-19,,100,144,27,8,1
+SRV001392,CUST00866,Cloud Storage,Terminated,Northern,5G,ZTE ZXHN F670L,macOS,Silver,2021-02-08,2021-10-30,100,807,28,19,6
+SRV001393,CUST00549,Cloud Compute,Provisioning,Southern,4G/LTE,D Link DIR 842,macOS,Silver,2019-02-26,,100,285,31,22,6
+SRV001394,CUST00339,Cloud Compute,Provisioning,East Coast,Fibre,ZTE ZXHN F670L,macOS,Bronze,2023-11-17,,100,1245,6,5,1
+SRV001395,CUST01006,Unifi Home,Provisioning,Sabah,DSL,Huawei HG8145V5,Embedded,Bronze,2020-01-18,,800,1671,110,15,0
+SRV001396,CUST00464,Cloud Storage,Terminated,Northern,4G/LTE,TP Link Archer A6,macOS,Silver,2021-07-22,2022-11-24,1000,875,68,3,3
+SRV001397,CUST00847,Mobile Postpaid,Terminated,East Coast,4G/LTE,TP Link Archer A6,macOS,Gold,2020-06-03,2021-10-01,30,53,69,12,1
+SRV001398,CUST00770,Cloud Storage,Active,Sabah,Fibre,ZTE ZXHN F670L,macOS,Bronze,2019-02-19,,500,836,6,26,2
+SRV001399,CUST00041,Managed Security,Active,Sabah,Fibre,Nokia G 2425G A,Linux,Gold,2019-04-16,,300,1430,20,30,0
+SRV001400,CUST01098,Mobile Postpaid,Active,Central,4G/LTE,ZTE ZXHN F670L,Android,Platinum,2020-09-08,,30,131,44,11,4
+SRV001401,CUST00600,IoT Connectivity,Active,Southern,Fibre,Nokia G 2425G A,iOS,Platinum,2019-10-05,,500,981,6,8,2
+SRV001402,CUST00642,Managed Security,Active,Central,4G/LTE,Nokia G 2425G A,Embedded,Gold,2018-04-06,,1000,178,44,9,4
+SRV001403,CUST00502,Managed Security,Active,Central,Fibre,TP Link Archer A6,Windows,Silver,2021-10-03,,100,1401,15,24,2
+SRV001404,CUST00497,Unifi Home,Active,East Coast,Fibre,D Link DIR 842,Embedded,Silver,2023-10-01,,300,1938,19,14,1
+SRV001405,CUST00755,Unifi Home,Terminated,East Coast,Fibre,ZTE ZXHN F670L,Windows,Gold,2022-02-28,2024-10-19,100,1476,15,30,1
+SRV001406,CUST00673,Cloud Compute,Active,Northern,4G/LTE,Nokia G 2425G A,Android,Silver,2018-04-28,,1000,729,21,13,1
+SRV001407,CUST01046,Mobile Postpaid,Active,Central,5G,D Link DIR 842,iOS,Bronze,2024-07-21,,30,23,21,23,1
+SRV001408,CUST01099,Cloud Compute,Active,Northern,5G,ZTE ZXHN F670L,Android,Bronze,2024-06-14,,500,1058,12,3,6
+SRV001409,CUST00897,Cloud Storage,Provisioning,East Coast,5G,ZTE ZXHN F670L,Embedded,Bronze,2021-04-22,,100,1186,30,9,0
+SRV001410,CUST01051,Unifi Business,Active,Northern,Fibre,TP Link Archer A6,Android,Silver,2023-02-20,,800,728,6,9,2
+SRV001411,CUST00766,Unifi Business,Active,East Coast,Fibre,Huawei HG8145V5,iOS,Gold,2019-01-02,,800,1033,9,26,1
+SRV001412,CUST01151,Cloud Compute,Active,Central,4G/LTE,D Link DIR 842,macOS,Bronze,2021-11-04,,300,1481,43,6,6
+SRV001413,CUST00418,IoT Connectivity,Active,Northern,Fibre,TP Link Archer A6,Linux,Silver,2023-11-10,,1000,265,9,10,0
+SRV001414,CUST00417,Cloud Storage,Active,Southern,5G,Nokia G 2425G A,Android,Bronze,2022-05-03,,100,1262,17,29,3
+SRV001415,CUST00798,IoT Connectivity,Active,Sarawak,Fibre,D Link DIR 842,Windows,Silver,2018-06-20,,500,1488,11,3,2
+SRV001416,CUST00628,Cloud Storage,Provisioning,Northern,4G/LTE,TP Link Archer A6,Windows,Platinum,2021-06-23,,100,853,22,25,4
+SRV001417,CUST01196,Cloud Compute,Terminated,Central,5G,D Link DIR 842,Embedded,Bronze,2023-01-04,2023-07-23,1000,1364,27,19,3
+SRV001418,CUST00842,Mobile Postpaid,Active,East Coast,5G,Huawei HG8145V5,iOS,Bronze,2019-12-16,,30,81,17,23,4
+SRV001419,CUST01076,Mobile Postpaid,Active,Northern,4G/LTE,ZTE ZXHN F670L,iOS,Bronze,2020-06-07,,30,146,21,9,0
+SRV001420,CUST00050,Cloud Compute,Active,Northern,4G/LTE,D Link DIR 842,Linux,Bronze,2019-11-14,,1000,182,71,16,5
+SRV001421,CUST00313,Cloud Storage,Active,Sarawak,Fibre,D Link DIR 842,Windows,Bronze,2024-11-12,,1000,973,11,14,2
+SRV001422,CUST00060,Cloud Compute,Active,Sabah,5G,Huawei HG8145V5,macOS,Bronze,2025-01-13,,300,512,16,29,6
+SRV001423,CUST00089,IoT Connectivity,Active,Central,Fibre,Nokia G 2425G A,macOS,Gold,2024-02-12,,1000,1123,6,21,2
+SRV001424,CUST00956,Cloud Compute,Active,Southern,4G/LTE,D Link DIR 842,iOS,Bronze,2022-10-08,,1000,485,45,15,4
+SRV001425,CUST00357,Unifi Home,Suspended,Sabah,Fibre,Nokia G 2425G A,Linux,Bronze,2020-04-10,2022-09-10,800,1948,7,29,0
+SRV001426,CUST00997,Unifi Home,Active,Central,DSL,TP Link Archer A6,iOS,Silver,2022-05-12,,800,860,144,30,0
+SRV001427,CUST00865,IoT Connectivity,Provisioning,Central,4G/LTE,D Link DIR 842,macOS,Silver,2020-12-22,,500,306,62,20,4
+SRV001428,CUST00935,Cloud Storage,Active,East Coast,Fibre,ZTE ZXHN F670L,macOS,Bronze,2024-05-30,,500,1244,5,20,2
+SRV001429,CUST00709,Cloud Compute,Active,Southern,4G/LTE,D Link DIR 842,macOS,Silver,2020-01-05,,300,494,36,14,6
+SRV001430,CUST00652,Cloud Storage,Terminated,Central,5G,Huawei HG8145V5,Linux,Bronze,2022-10-13,2023-08-20,100,1472,26,23,0
+SRV001431,CUST00865,Managed Security,Provisioning,Central,5G,TP Link Archer A6,Android,Silver,2020-12-23,,1000,1401,19,8,5
+SRV001432,CUST00050,Cloud Storage,Provisioning,Northern,Fibre,Huawei HG8145V5,Linux,Silver,2019-12-28,,500,593,19,4,0
+SRV001433,CUST00857,IoT Connectivity,Active,East Coast,Fibre,TP Link Archer A6,Android,Silver,2021-12-21,,1000,1206,8,8,2
+SRV001434,CUST00901,Mobile Postpaid,Provisioning,Central,4G/LTE,Huawei HG8145V5,Android,Gold,2020-03-16,,100,119,28,9,3
+SRV001435,CUST00565,Cloud Storage,Active,Central,Fibre,D Link DIR 842,macOS,Silver,2019-07-17,,100,820,20,14,1
+SRV001436,CUST00277,Unifi Home,Active,Central,DSL,D Link DIR 842,macOS,Bronze,2018-10-27,,500,227,94,11,3
+SRV001437,CUST00920,Cloud Storage,Active,East Coast,5G,Huawei HG8145V5,Android,Gold,2020-12-03,,1000,1146,20,27,3
+SRV001438,CUST00703,Cloud Compute,Active,Northern,5G,TP Link Archer A6,iOS,Silver,2021-09-17,,1000,923,24,6,4
+SRV001439,CUST00366,IoT Connectivity,Active,Central,5G,Huawei HG8145V5,iOS,Platinum,2019-03-19,,1000,1361,18,2,3
+SRV001440,CUST00049,Unifi Business,Active,Northern,DSL,ZTE ZXHN F670L,iOS,Gold,2019-01-07,,300,1340,132,22,4
+SRV001441,CUST01077,Cloud Compute,Terminated,Sabah,4G/LTE,Huawei HG8145V5,iOS,Gold,2019-02-16,2021-06-23,1000,382,29,12,5
+SRV001442,CUST00518,Cloud Storage,Active,East Coast,4G/LTE,D Link DIR 842,iOS,Silver,2022-10-11,,100,223,34,12,3
+SRV001443,CUST00764,Managed Security,Active,East Coast,4G/LTE,ZTE ZXHN F670L,macOS,Platinum,2021-09-05,,1000,1434,79,3,5
+SRV001444,CUST00626,Mobile Postpaid,Active,Sabah,4G/LTE,Huawei HG8145V5,Embedded,Bronze,2022-01-26,,100,28,23,24,0
+SRV001445,CUST00305,Cloud Storage,Active,Central,5G,D Link DIR 842,Embedded,Gold,2023-12-05,,1000,254,19,20,6
+SRV001446,CUST00075,Unifi Home,Active,Southern,Fibre,D Link DIR 842,Linux,Bronze,2023-10-31,,1000,1987,15,10,1
+SRV001447,CUST00637,Cloud Compute,Active,Central,Fibre,D Link DIR 842,macOS,Gold,2021-03-04,,300,1440,20,24,1
+SRV001448,CUST00321,Unifi Home,Terminated,Central,Fibre,Huawei HG8145V5,Windows,Silver,2018-04-29,2020-03-03,1000,1137,11,2,1
+SRV001449,CUST00407,Mobile Postpaid,Active,Northern,4G/LTE,TP Link Archer A6,Linux,Silver,2024-03-24,,30,134,23,21,4
+SRV001450,CUST00828,Unifi Home,Suspended,Sabah,DSL,ZTE ZXHN F670L,iOS,Silver,2021-04-08,2021-07-07,300,932,84,1,3
+SRV001451,CUST00553,Mobile Postpaid,Active,Northern,4G/LTE,D Link DIR 842,Windows,Bronze,2020-12-14,,100,125,41,5,3
+SRV001452,CUST00730,Unifi Business,Suspended,Northern,DSL,TP Link Archer A6,Linux,Gold,2021-06-16,2024-02-01,500,362,90,14,0
+SRV001453,CUST00322,IoT Connectivity,Active,Sarawak,4G/LTE,TP Link Archer A6,iOS,Gold,2019-11-25,,1000,803,42,20,5
+SRV001454,CUST01149,Managed Security,Terminated,East Coast,4G/LTE,Huawei HG8145V5,Android,Silver,2021-06-26,2023-08-14,500,761,30,26,4
+SRV001455,CUST00338,Mobile Postpaid,Active,East Coast,5G,D Link DIR 842,Windows,Silver,2020-11-24,,30,54,29,16,3
+SRV001456,CUST00572,Cloud Storage,Active,Northern,5G,Huawei HG8145V5,iOS,Gold,2018-01-31,,500,806,24,17,3
+SRV001457,CUST01022,Cloud Compute,Suspended,Central,Fibre,TP Link Archer A6,Linux,Gold,2021-11-04,2022-10-28,1000,661,20,5,2
+SRV001458,CUST01045,Mobile Postpaid,Provisioning,Sabah,4G/LTE,ZTE ZXHN F670L,macOS,Silver,2023-12-25,,100,39,21,2,4
+SRV001459,CUST01173,Managed Security,Active,Northern,5G,Huawei HG8145V5,macOS,Gold,2023-11-27,,300,235,22,21,2
+SRV001460,CUST00269,Unifi Home,Active,Southern,Fibre,TP Link Archer A6,macOS,Bronze,2024-05-05,,800,1786,6,30,0
+SRV001461,CUST00583,IoT Connectivity,Active,Southern,Fibre,TP Link Archer A6,Embedded,Silver,2024-08-12,,100,840,13,8,1
+SRV001462,CUST00719,Managed Security,Active,East Coast,Fibre,Huawei HG8145V5,iOS,Silver,2024-10-07,,500,214,19,23,0
+SRV001463,CUST01053,Unifi Home,Active,Central,Fibre,ZTE ZXHN F670L,Embedded,Bronze,2024-09-12,,1000,1528,14,8,1
+SRV001464,CUST00922,IoT Connectivity,Provisioning,East Coast,4G/LTE,TP Link Archer A6,Windows,Gold,2018-06-16,,300,352,29,17,1
+SRV001465,CUST00151,Unifi Home,Provisioning,Northern,Fibre,TP Link Archer A6,Embedded,Bronze,2021-12-31,,1000,361,15,9,1
+SRV001466,CUST01016,Mobile Postpaid,Provisioning,Central,4G/LTE,ZTE ZXHN F670L,Linux,Bronze,2024-08-16,,100,26,59,12,5
+SRV001467,CUST00041,Managed Security,Terminated,Sabah,5G,Huawei HG8145V5,iOS,Silver,2019-03-10,2020-02-24,300,366,23,11,3
+SRV001468,CUST00314,Unifi Home,Terminated,Sabah,Fibre,Nokia G 2425G A,Android,Bronze,2018-08-19,2018-12-28,800,1251,12,15,2
+SRV001469,CUST01060,Managed Security,Active,Sarawak,5G,Huawei HG8145V5,Embedded,Platinum,2024-02-26,,1000,499,22,19,6
+SRV001470,CUST00223,IoT Connectivity,Active,Northern,5G,TP Link Archer A6,Android,Gold,2022-09-20,,300,1138,21,15,5
+SRV001471,CUST01165,Cloud Compute,Active,Sarawak,5G,Huawei HG8145V5,Embedded,Gold,2021-08-29,,1000,820,13,11,4
+SRV001472,CUST01183,Cloud Storage,Active,Northern,5G,D Link DIR 842,macOS,Gold,2022-06-15,,100,839,30,11,5
+SRV001473,CUST00459,Mobile Postpaid,Terminated,Sarawak,5G,D Link DIR 842,macOS,Gold,2022-12-02,2023-05-13,30,96,25,11,3
+SRV001474,CUST00131,Cloud Storage,Provisioning,East Coast,5G,D Link DIR 842,Windows,Silver,2018-09-07,,100,141,10,26,0
+SRV001475,CUST00352,Cloud Storage,Active,Southern,5G,Nokia G 2425G A,macOS,Bronze,2020-01-01,,1000,215,10,12,0
+SRV001476,CUST00257,Cloud Compute,Active,Sabah,4G/LTE,ZTE ZXHN F670L,Embedded,Silver,2020-09-26,,100,1357,64,1,2
+SRV001477,CUST00442,Cloud Storage,Suspended,Northern,5G,Nokia G 2425G A,iOS,Bronze,2021-04-20,2022-11-09,300,1119,19,22,6
+SRV001478,CUST00789,Mobile Postpaid,Active,Northern,4G/LTE,TP Link Archer A6,iOS,Bronze,2022-03-26,,30,86,68,26,1
+SRV001479,CUST01104,Managed Security,Active,Central,4G/LTE,ZTE ZXHN F670L,Linux,Silver,2023-01-06,,300,298,39,28,5
+SRV001480,CUST00614,Cloud Compute,Provisioning,East Coast,5G,ZTE ZXHN F670L,macOS,Silver,2019-08-28,,500,746,28,25,6
+SRV001481,CUST00788,Cloud Compute,Active,Central,4G/LTE,Huawei HG8145V5,macOS,Silver,2022-05-18,,300,1109,48,22,0
+SRV001482,CUST00727,Managed Security,Suspended,Southern,Fibre,D Link DIR 842,macOS,Silver,2024-08-26,2026-02-22,100,756,8,29,2
+SRV001483,CUST00320,Cloud Compute,Active,Central,Fibre,ZTE ZXHN F670L,iOS,Bronze,2024-01-14,,1000,1027,9,1,1
+SRV001484,CUST00728,IoT Connectivity,Active,Northern,5G,TP Link Archer A6,Linux,Silver,2019-04-05,,1000,924,24,22,3
+SRV001485,CUST00020,Unifi Home,Provisioning,East Coast,Fibre,TP Link Archer A6,iOS,Bronze,2023-05-08,,100,202,10,13,2
+SRV001486,CUST00762,Cloud Compute,Active,Central,4G/LTE,TP Link Archer A6,Linux,Bronze,2023-06-02,,1000,842,67,15,1
+SRV001487,CUST00286,Cloud Storage,Active,East Coast,5G,ZTE ZXHN F670L,Android,Bronze,2021-07-13,,500,1358,10,26,6
+SRV001488,CUST00312,Mobile Postpaid,Active,Central,4G/LTE,D Link DIR 842,Embedded,Bronze,2023-10-15,,100,25,75,14,6
+SRV001489,CUST00201,Managed Security,Terminated,East Coast,5G,Huawei HG8145V5,Linux,Silver,2022-01-25,2023-03-20,300,706,15,18,4
+SRV001490,CUST00001,Cloud Storage,Provisioning,Southern,Fibre,D Link DIR 842,iOS,Silver,2024-02-01,,1000,328,16,28,0
+SRV001491,CUST00981,Unifi Home,Suspended,East Coast,Fibre,D Link DIR 842,Android,Bronze,2019-05-15,2020-03-25,800,1935,19,2,1
+SRV001492,CUST01181,Unifi Home,Active,Northern,Fibre,Nokia G 2425G A,Embedded,Gold,2018-09-17,,800,1446,18,22,0
+SRV001493,CUST00213,Cloud Compute,Active,Southern,Fibre,Nokia G 2425G A,macOS,Bronze,2024-08-16,,1000,655,18,27,0
+SRV001494,CUST00305,Mobile Postpaid,Active,Central,5G,ZTE ZXHN F670L,macOS,Silver,2023-11-23,,100,140,24,28,4
+SRV001495,CUST01105,IoT Connectivity,Terminated,Sarawak,Fibre,TP Link Archer A6,iOS,Silver,2018-10-09,2020-02-23,1000,1201,18,6,1
+SRV001496,CUST00520,Mobile Postpaid,Terminated,Southern,5G,ZTE ZXHN F670L,Android,Silver,2021-08-26,2022-01-29,100,85,25,27,2
+SRV001497,CUST00727,Unifi Business,Active,Southern,DSL,Huawei HG8145V5,Linux,Silver,2024-06-24,,100,334,121,13,3
+SRV001498,CUST01069,Unifi Home,Active,East Coast,Fibre,Nokia G 2425G A,iOS,Gold,2024-04-06,,500,1447,8,21,0
+SRV001499,CUST00921,Unifi Business,Active,East Coast,Fibre,Nokia G 2425G A,Windows,Gold,2018-07-16,,300,1553,8,12,2
+SRV001500,CUST00837,Cloud Compute,Active,Central,4G/LTE,ZTE ZXHN F670L,iOS,Silver,2018-05-26,,100,846,26,17,5

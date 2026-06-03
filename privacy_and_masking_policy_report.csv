@@ -1,0 +1,53 @@
+dataset_name,column_name,detected_entity,entity_detection_count,entity_detection_ratio,all_detected_entities,sensitivity_level,masking_action,governance_reason
+customer,customer_id,PERSON,7,0.14,"{'DATE_TIME': 2, 'PERSON': 7, 'LOCATION': 1}",Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,customer_type,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,full_name,PERSON,49,0.98,{'PERSON': 49},High,Partial Mask,Governance partial-mask rule
+customer,company_name,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,industry_sector,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,state,LOCATION,22,0.44,"{'LOCATION': 22, 'PERSON': 12, 'NRP': 7}",Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,district,PERSON,21,0.42,"{'NRP': 2, 'PERSON': 21, 'LOCATION': 19, 'DATE_TIME': 1}",Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,postcode,DATE_TIME,11,0.22,"{'DATE_TIME': 11, 'PHONE_NUMBER': 1, 'PERSON': 1}",Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,address,PERSON,86,1.72,"{'PERSON': 86, 'LOCATION': 57, 'NRP': 1}",High,Partial Mask,Governance partial-mask rule
+customer,phone,MY_PHONE_NUMBER,50,1.0,"{'MY_PHONE_NUMBER': 50, 'PHONE_NUMBER': 2, 'US_BANK_NUMBER': 50, 'US_DRIVER_LICENSE': 50, 'DATE_TIME': 10, 'UK_NHS': 4, 'PERSON': 4}",High,Partial Mask,Governance partial-mask rule
+customer,email,EMAIL_ADDRESS,50,1.0,"{'EMAIL_ADDRESS': 50, 'URL': 50, 'NRP': 1, 'PERSON': 1}",High,Partial Mask,Governance partial-mask rule
+customer,subscription_plan,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,subscription_start_date,DATE_TIME,50,1.0,{'DATE_TIME': 50},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,subscription_end_date,DATE_TIME,50,1.0,{'DATE_TIME': 50},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,status,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,payment_method,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,billing_cycle,DATE_TIME,49,0.98,{'DATE_TIME': 49},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,preferred_language,LOCATION,30,0.6,"{'LOCATION': 30, 'NRP': 16}",Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,gender,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,age,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,income,PERSON,9,0.18,{'PERSON': 9},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,sme_flag,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+customer,nric,MY_NRIC,50,1.0,"{'MY_NRIC': 50, 'DATE_TIME': 12, 'US_DRIVER_LICENSE': 50, 'PHONE_NUMBER': 4}",High,Full Mask,Governance full-mask rule
+customer,kyc_status,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+billing,invoice_id,PERSON,3,0.06,"{'LOCATION': 1, 'PERSON': 3, 'DATE_TIME': 1}",Non-sensitive / Business-useful,Preserve,Governance preserve rule
+billing,customer_id,PERSON,5,0.1,"{'LOCATION': 2, 'PERSON': 5}",Non-sensitive / Business-useful,Preserve,Governance preserve rule
+billing,service_id,PERSON,7,0.14,"{'PERSON': 7, 'NRP': 1}",Non-sensitive / Business-useful,Preserve,Governance preserve rule
+billing,billing_period_start,DATE_TIME,50,1.0,{'DATE_TIME': 50},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+billing,billing_period_end,DATE_TIME,50,1.0,{'DATE_TIME': 50},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+billing,pricing_tier,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+billing,currency,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+billing,subtotal_amount,PHONE_NUMBER,1,0.02,{'PHONE_NUMBER': 1},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+billing,discount_amount,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+billing,tax_amount,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+billing,total_amount,PHONE_NUMBER,1,0.02,{'PHONE_NUMBER': 1},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+billing,payment_method,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+service,service_id,PERSON,6,0.12,{'PERSON': 6},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+service,customer_id,PERSON,12,0.24,{'PERSON': 12},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+service,service_category,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+service,service_status,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+service,region,NRP,15,0.3,"{'LOCATION': 8, 'NRP': 15}",Non-sensitive / Business-useful,Preserve,Governance preserve rule
+service,access_technology,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+service,router_model,PERSON,13,0.26,"{'PERSON': 13, 'US_DRIVER_LICENSE': 9}",Non-sensitive / Business-useful,Preserve,Governance preserve rule
+service,device_os,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+service,sla_tier,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+service,service_start_date,DATE_TIME,50,1.0,{'DATE_TIME': 50},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+service,service_end_date,DATE_TIME,50,1.0,{'DATE_TIME': 50},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+service,bandwidth_mbps,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+service,monthly_usage_gb,DATE_TIME,5,0.1,{'DATE_TIME': 5},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+service,avg_latency_ms,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+service,jitter_ms,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule
+service,monthly_outages,None,0,0.0,{},Non-sensitive / Business-useful,Preserve,Governance preserve rule

@@ -1,0 +1,4 @@
+dataset_name,completeness_score,validity_score,uniqueness_score,overall_quality_score,dataset_quality_status
+billing,100.0,100.0,80.28,98.03,Excellent
+customer,96.88,95.17,82.04,94.63,Excellent
+service,94.17,94.17,63.62,91.12,Excellent

@@ -1,0 +1,4 @@
+dataset_name,original_rows,original_columns,cleaned_rows,cleaned_columns,duplicate_rows_removed,dataset_quality_score,dataset_quality_status,high_sensitive_columns,masked_columns,preserved_columns
+customer,1200,24,1200,24,0,94.63,Excellent,5,5,19
+billing,2500,12,2500,12,0,98.03,Excellent,0,0,12
+service,1500,16,1500,16,0,91.12,Excellent,0,0,16
