@@ -2049,7 +2049,7 @@ def get_app_base_url() -> str:
             return value.rstrip("/")
     except Exception:
         pass
-    return "http://localhost:8503"
+    return "https://unified-data-catalog.streamlit.app/"
 
 
 def init_stripe() -> bool:
