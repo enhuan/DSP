@@ -4,3 +4,5 @@ numpy==1.26.4
 presidio-analyzer==2.2.355
 stripe==10.12.0
 setuptools
+
+https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.8.0/en_core_web_lg-3.8.0-py3-none-any.whl
