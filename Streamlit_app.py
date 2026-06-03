@@ -7,6 +7,7 @@ import string
 from datetime import datetime, timedelta
 from io import BytesIO
 from typing import Dict, List, Tuple, Optional
+import pickle
 
 import numpy as np
 import pandas as pd
@@ -135,7 +136,7 @@ ROLE_DESCRIPTIONS = pd.DataFrame(
         ["Data Consumer", "Consumer Administrator", "Manages consumer tenant usage, purchases or requests datasets and monitors tokens for the organization."],
         ["Data Consumer", "Consumer User", "Browses the published catalog, requests access and downloads authorized datasets for PSM research use."],
     ],
-    columns=["Tenant Type", "Role", "Purpose"],
+    columns=["Tenant Category", "Role", "Purpose"],
 )
 
 # Business sensitivity labels inspired by Microsoft Purview sensitivity label practice.
@@ -196,8 +197,7 @@ PAYMENT_METHODS = [
     "Online Banking / FPX",
     "Credit / Debit Card",
     "Touch 'n Go eWallet",
-    "GrabPay",
-    "Boost"
+    "GrabPay"
 ]
 PAYMENT_MODES = ["Simulated Gateway", "Stripe Sandbox Checkout"]
 STRIPE_DEFAULT_PAYMENT_METHOD_TYPES = ["card", "fpx", "grabpay"]
@@ -348,11 +348,9 @@ def show_card(title: str, body: str, status: Optional[str] = None) -> None:
     st.markdown(f"<div class='card'><b>{title}</b><br>{pill}<div class='mini' style='margin-top:8px'>{body}</div></div>", unsafe_allow_html=True)
 
 
-def dataframe_download_button(df: pd.DataFrame, label: str, filename: str) -> None:
+def dataframe_download_button(df: pd.DataFrame, label: str, filename: str, key: Optional[str] = None) -> None:
     csv = df.to_csv(index=False).encode("utf-8")
-    st.download_button(label, data=csv, file_name=filename, mime="text/csv")
-
-
+    st.download_button(label, data=csv, file_name=filename, mime="text/csv", key=key)
 
 def find_project_file(filename: str) -> Optional[str]:
     candidate_paths = []
@@ -432,6 +430,40 @@ def ensure_review_tracking_columns() -> None:
         else:
             st.session_state.tokens["consumer_tenant_id"] = st.session_state.tokens["consumer_tenant_id"].fillna("")
 
+
+DB_FILE = "prototype_db.pkl"
+
+def save_prototype_state():
+    keys_to_save = [
+        "tenants", "users", "datasets", "metadata_store", "data_store",
+        "quality_reports", "privacy_reports", "processing_outputs",
+        "policies", "access_requests", "tokens", "governance_alerts",
+        "audit_log", "payment_transactions", "current_user", "initialized",
+        "newly_registered_dataset_id", "business_domains", "workspaces",
+        "feedback", "sensitivity_catalog", "glossary_terms", "lineage_edges",
+        "data_products", "usage_history"
+    ]
+    state_to_save = {}
+    for k in keys_to_save:
+        if k in st.session_state:
+            state_to_save[k] = st.session_state[k]
+    try:
+        with open(DB_FILE, "wb") as f:
+            pickle.dump(state_to_save, f)
+    except Exception as e:
+        st.warning(f"Failed to save state to disk: {e}")
+
+def load_prototype_state() -> bool:
+    if os.path.exists(DB_FILE):
+        try:
+            with open(DB_FILE, "rb") as f:
+                saved_state = pickle.load(f)
+                for k, v in saved_state.items():
+                    st.session_state[k] = v
+            return True
+        except Exception:
+            return False
+    return False
 
 # =============================================================================
 # Presidio setup
@@ -825,7 +857,95 @@ def create_policy_summary(classification: str, privacy_score: float, is_paid: bo
     }
 
 
+def quality_status_from_score(score: float) -> str:
+    """Map a numerical quality score to the same status scale used in the Fabric notebook."""
+    score = float(score or 0)
+    if score >= 90:
+        return "Excellent"
+    if score >= 75:
+        return "Good"
+    if score >= 60:
+        return "Moderate"
+    return "Poor"
+
+
+def build_dataset_quality_scores(quality_report: pd.DataFrame, dataset_name: str) -> pd.DataFrame:
+    """Build the dataset_quality_scores output dynamically for one processed dataset."""
+    if not isinstance(quality_report, pd.DataFrame) or quality_report.empty:
+        return pd.DataFrame([{
+            "dataset_name": dataset_name,
+            "completeness_score": 0.0,
+            "validity_score": 0.0,
+            "uniqueness_score": 0.0,
+            "overall_quality_score": 0.0,
+            "dataset_quality_status": "Poor",
+        }])
+
+    score_columns = [
+        "completeness_score",
+        "validity_score",
+        "uniqueness_score",
+        "overall_quality_score",
+    ]
+    available = [c for c in score_columns if c in quality_report.columns]
+    if not available:
+        return pd.DataFrame()
+
+    scores = quality_report[available].apply(pd.to_numeric, errors="coerce").mean().round(2).to_dict()
+    overall = float(scores.get("overall_quality_score", 0.0) or 0.0)
+    row = {"dataset_name": dataset_name}
+    for col in score_columns:
+        row[col] = float(scores.get(col, 0.0) or 0.0)
+    row["dataset_quality_status"] = quality_status_from_score(overall)
+    return pd.DataFrame([row])
+
+
+def build_processing_summary_report(
+    raw_df: pd.DataFrame,
+    cleaned_df: pd.DataFrame,
+    quality_report: pd.DataFrame,
+    privacy_report: pd.DataFrame,
+    duplicate_count: int,
+    dataset_name: str,
+) -> pd.DataFrame:
+    """Build the processing_summary_report output dynamically for one processed dataset."""
+    original_rows, original_cols = raw_df.shape if isinstance(raw_df, pd.DataFrame) else (0, 0)
+    cleaned_rows, cleaned_cols = cleaned_df.shape if isinstance(cleaned_df, pd.DataFrame) else (0, 0)
+
+    quality_score = round(float(quality_report["overall_quality_score"].mean()), 2) if isinstance(quality_report, pd.DataFrame) and not quality_report.empty and "overall_quality_score" in quality_report.columns else 0.0
+
+    high_sensitive_columns = 0
+    masked_columns = 0
+    preserved_columns = 0
+    if isinstance(privacy_report, pd.DataFrame) and not privacy_report.empty:
+        if "sensitivity_level" in privacy_report.columns:
+            high_sensitive_columns = int((privacy_report["sensitivity_level"].astype(str) == "High").sum())
+        if "masking_action" in privacy_report.columns:
+            masking_actions = privacy_report["masking_action"].astype(str)
+            masked_columns = int(masking_actions.isin(["Full Mask", "Partial Mask"]).sum())
+            preserved_columns = int((masking_actions == "Preserve").sum())
+
+    return pd.DataFrame([{
+        "dataset_name": dataset_name,
+        "original_rows": int(original_rows),
+        "original_columns": int(original_cols),
+        "cleaned_rows": int(cleaned_rows),
+        "cleaned_columns": int(cleaned_cols),
+        "duplicate_rows_removed": int(duplicate_count or 0),
+        "dataset_quality_score": quality_score,
+        "dataset_quality_status": quality_status_from_score(quality_score),
+        "high_sensitive_columns": high_sensitive_columns,
+        "masked_columns": masked_columns,
+        "preserved_columns": preserved_columns,
+    }])
+
+
 def process_dataset(raw_df: pd.DataFrame, dataset_name: str, source_platform: str, fmt: str, source_uri: str = "") -> Dict:
+    """
+    Run the same core processing flow used by the Fabric notebook for any DataFrame:
+    clean data, discover metadata, calculate quality, detect privacy risk, apply masking,
+    and create the three report outputs shown in the catalog tabs.
+    """
     cleaned_df, duplicate_count = clean_dataset(raw_df)
     metadata = discover_metadata(cleaned_df, dataset_name, source_platform, fmt, source_uri)
     quality_report = generate_quality_report(cleaned_df, dataset_name)
@@ -834,12 +954,23 @@ def process_dataset(raw_df: pd.DataFrame, dataset_name: str, source_platform: st
     quality_score = round(float(quality_report["overall_quality_score"].mean()), 2) if not quality_report.empty else 0.0
     privacy_score = calculate_privacy_score(privacy_report)
     classification = recommend_classification(privacy_report, quality_score)
+    dataset_quality_scores = build_dataset_quality_scores(quality_report, dataset_name)
+    processing_summary_report = build_processing_summary_report(
+        raw_df,
+        cleaned_df,
+        quality_report,
+        privacy_report,
+        duplicate_count,
+        dataset_name,
+    )
     return {
         "cleaned_df": cleaned_df,
         "masked_df": masked_df,
         "metadata": metadata,
         "quality_report": quality_report,
         "privacy_report": privacy_report,
+        "dataset_quality_scores": dataset_quality_scores,
+        "processing_summary_report": processing_summary_report,
         "quality_score": quality_score,
         "privacy_score": privacy_score,
         "classification": classification,
@@ -899,6 +1030,19 @@ def apply_demo_processing_outputs(dataset_id: str, dataset_name: str) -> None:
     summary_df = get_report_for_dataset("processing_summary", dataset_name)
     quality_score_df = get_report_for_dataset("dataset_quality_scores", dataset_name)
 
+    # For the three demo datasets, prefer the Fabric-generated CSV report outputs
+    # when those files exist locally. If they are missing, the dynamic reports
+    # already generated by process_dataset remain available.
+    if "processing_outputs" not in st.session_state or not isinstance(st.session_state.processing_outputs, dict):
+        st.session_state.processing_outputs = {}
+    existing_outputs = st.session_state.processing_outputs.get(dataset_id, {})
+    st.session_state.processing_outputs[dataset_id] = {
+        "dataset_quality_scores": quality_score_df if not quality_score_df.empty else existing_outputs.get("dataset_quality_scores", pd.DataFrame()),
+        "column_level_quality": quality_df if not quality_df.empty else existing_outputs.get("column_level_quality", pd.DataFrame()),
+        "privacy_masking_policy": privacy_df if not privacy_df.empty else existing_outputs.get("privacy_masking_policy", pd.DataFrame()),
+        "processing_summary": summary_df if not summary_df.empty else existing_outputs.get("processing_summary", pd.DataFrame()),
+    }
+
     if not summary_df.empty:
         s = summary_df.iloc[0]
         idx = st.session_state.datasets[st.session_state.datasets["dataset_id"].astype(str) == str(dataset_id)].index
@@ -926,8 +1070,15 @@ def apply_demo_processing_outputs(dataset_id: str, dataset_name: str) -> None:
 # =============================================================================
 # Session state initialization
 # =============================================================================
+
 def init_state() -> None:
     if "initialized" in st.session_state:
+        return
+
+    if load_prototype_state():
+        if "current_user" not in st.session_state:
+            st.session_state.current_user = None
+        st.session_state.initialized = True
         return
 
     tenants = pd.DataFrame([
@@ -980,27 +1131,25 @@ def init_state() -> None:
     st.session_state.data_store = {}
     st.session_state.quality_reports = {}
     st.session_state.privacy_reports = {}
-    st.session_state.policies = pd.DataFrame([
-        {"policy_id": "POL-ACCESS-001", "policy_type": "Access Policy", "policy_name": "Government Email Only", "rule": "Allow only domains ending .gov.my", "enabled": True},
-        {"policy_id": "POL-ACCESS-002", "policy_type": "Access Policy", "policy_name": "University Email Only", "rule": "Allow only domains ending .edu.my or university domain", "enabled": True},
-        {"policy_id": "POL-MASK-001", "policy_type": "Masking Policy", "policy_name": "Mask Direct Identifiers", "rule": "Mask email, phone, NRIC, passport, names, and addresses", "enabled": True},
-        {"policy_id": "POL-APP-001", "policy_type": "Approval Policy", "policy_name": "MSP Manual Approval", "rule": "New provider datasets require MSP approval unless disabled per provider", "enabled": True},
-        {"policy_id": "POL-COMP-001", "policy_type": "Compliance Policy", "policy_name": "PDPA-Aligned Privacy Review", "rule": "Sensitive personal data requires review before publication", "enabled": True},
-    ])
+    st.session_state.policies = pd.DataFrame(columns=["policy_id", "policy_type", "policy_name", "rule", "enabled"])
     st.session_state.access_requests = pd.DataFrame(columns=[
-        "request_id", "dataset_id", "dataset_name", "consumer_email", "consumer_tenant_id", "purpose", "status", "payment_status",
-        "amount_rm", "msp_commission_rate", "msp_commission_rm", "provider_revenue_rm", "created_at", "reviewed_by", "reviewed_at",
+        "request_id", "dataset_id", "dataset_name", "consumer_email", "consumer_tenant_id", "purpose", "status",
+        "payment_status",
+        "amount_rm", "msp_commission_rate", "msp_commission_rm", "provider_revenue_rm", "created_at", "reviewed_by",
+        "reviewed_at",
     ])
     st.session_state.tokens = pd.DataFrame(columns=[
-        "token", "dataset_id", "dataset_name", "consumer_email", "consumer_tenant_id", "permission", "expiry", "status", "created_at",
+        "token", "dataset_id", "dataset_name", "consumer_email", "consumer_tenant_id", "permission", "expiry", "status",
+        "created_at",
     ])
     st.session_state.governance_alerts = pd.DataFrame(columns=[
-        "alert_id", "dataset_id", "dataset_name", "triggered_by", "check_type", "severity",
-        "status", "created_at", "finding", "recommended_action",
+        "alert_id", "dataset_id", "dataset_name", "triggered_by", "check_type", "severity", "status", "created_at",
+        "finding", "recommended_action",
     ])
     st.session_state.audit_log = pd.DataFrame(columns=["Time", "Actor", "Tenant", "Action"])
     st.session_state.current_user = None
     st.session_state.processing_reports = load_processing_report_tables()
+    st.session_state.processing_outputs = {}
     st.session_state.payment_transactions = pd.DataFrame(columns=[
         "transaction_id", "request_id", "dataset_id", "dataset_name", "consumer_email",
         "payment_method", "gateway", "amount_rm", "msp_commission_rm", "provider_revenue_rm",
@@ -1008,8 +1157,6 @@ def init_state() -> None:
     ])
     ensure_review_tracking_columns()
     st.session_state.initialized = True
-
-    # Preload demo datasets so every role has meaningful content.
     _ = preload_demo_datasets()
 
 
@@ -1019,7 +1166,7 @@ def tenant_name(tenant_id: str) -> str:
 
 
 def get_current_user() -> Optional[Dict]:
-    return st.session_state.current_user
+    return st.session_state.get("current_user")
 
 
 def roles_for_tenant_type(tenant_type: str) -> List[str]:
@@ -1112,40 +1259,21 @@ def fabric_reference_for_file(filename: str) -> Dict[str, str]:
 
 
 def add_dataset_record(
-    dataset_name: str,
-    description: str,
-    owner_email: str,
-    owner_tenant_id: str,
-    registration_method: str,
-    source_platform: str,
-    fmt: str,
-    source_uri: str,
-    processed: Dict,
-    price_rm: float,
-    is_paid: bool,
-    tags: str,
-    provider_internal_note: str = "",
-    storage_platform: str = "",
-    fabric_workspace: str = "",
-    lakehouse_name: str = "",
-    fabric_path: str = "",
-    fabric_url: str = "",
-    onelake_url: str = "",
-    abfss_path: str = "",
-    status: Optional[str] = None,
-    approved_by: str = "",
+        dataset_name: str, description: str, owner_email: str, owner_tenant_id: str, registration_method: str,
+        source_platform: str, fmt: str, source_uri: str, processed: Dict, price_rm: float, is_paid: bool, tags: str,
+        provider_internal_note: str = "", storage_platform: str = "", fabric_workspace: str = "",
+        lakehouse_name: str = "",
+        fabric_path: str = "", fabric_url: str = "", onelake_url: str = "", abfss_path: str = "",
+        status: Optional[str] = None, approved_by: str = ""
 ) -> str:
     dataset_id = generate_id("DS")
     approval_required = get_provider_setting(owner_tenant_id)
+
     if status is None:
-        if approval_required:
-            status = "MSP Review"
-        else:
-            status = "Published"
-            approved_by = "Auto approval based on provider setting"
+        status = "Draft"
+        approved_by = ""
 
     meta = processed["metadata"]
-    # If no explicit storage reference is supplied, assign a Fabric reference for known demo CSVs.
     if not storage_platform and dataset_name in DEMO_DATASET_FILES:
         ref = fabric_reference_for_file(dataset_name)
         storage_platform = ref["storage_platform"]
@@ -1157,54 +1285,38 @@ def add_dataset_record(
         abfss_path = ref["abfss_path"]
 
     row = pd.DataFrame([{
-        "dataset_id": dataset_id,
-        "dataset_name": dataset_name,
-        "description": description,
-        "owner_email": owner_email,
-        "owner_tenant_id": owner_tenant_id,
-        "registration_method": registration_method,
+        "dataset_id": dataset_id, "dataset_name": dataset_name, "description": description, "owner_email": owner_email,
+        "owner_tenant_id": owner_tenant_id, "registration_method": registration_method,
         "source_platform": source_platform,
-        "format": fmt,
-        "source_uri": source_uri,
-        "classification": processed["classification"],
+        "format": fmt, "source_uri": source_uri, "classification": processed["classification"],
         "quality_score": processed["quality_score"],
-        "privacy_score": processed["privacy_score"],
-        "rows": meta.get("Rows", 0),
-        "columns": meta.get("Columns", 0),
-        "size_kb": meta.get("Size Estimate KB", 0),
-        "price_rm": float(price_rm),
-        "is_paid": bool(is_paid),
+        "privacy_score": processed["privacy_score"], "rows": meta.get("Rows", 0), "columns": meta.get("Columns", 0),
+        "size_kb": meta.get("Size Estimate KB", 0), "price_rm": float(price_rm), "is_paid": bool(is_paid),
         "status": status,
-        "approval_required": bool(approval_required),
-        "created_at": today_str(),
-        "approved_by": approved_by,
-        "approved_at": today_str() if status == "Published" else "",
-        "download_count": 0,
-        "revenue_rm": 0.0,
-        "msp_commission_rate": MSP_COMMISSION_RATE,
-        "msp_commission_rm": 0.0,
-        "provider_revenue_rm": 0.0,
-        "tags": tags,
-        "provider_internal_note": provider_internal_note,
-        "storage_platform": storage_platform,
+        "approval_required": bool(approval_required), "created_at": today_str(), "approved_by": approved_by,
+        "approved_at": today_str() if status == "Published" else "", "download_count": 0, "revenue_rm": 0.0,
+        "msp_commission_rate": MSP_COMMISSION_RATE, "msp_commission_rm": 0.0, "provider_revenue_rm": 0.0, "tags": tags,
+        "provider_internal_note": provider_internal_note, "storage_platform": storage_platform,
         "fabric_workspace": fabric_workspace,
-        "lakehouse_name": lakehouse_name,
-        "fabric_path": fabric_path,
-        "fabric_url": fabric_url,
-        "onelake_url": onelake_url,
-        "abfss_path": abfss_path,
+        "lakehouse_name": lakehouse_name, "fabric_path": fabric_path, "fabric_url": fabric_url,
+        "onelake_url": onelake_url, "abfss_path": abfss_path,
     }])
     if st.session_state.datasets.empty:
         st.session_state.datasets = row.copy()
     else:
         st.session_state.datasets = pd.concat([st.session_state.datasets, row], ignore_index=True)
     st.session_state.metadata_store[dataset_id] = processed["metadata"]
-    st.session_state.data_store[dataset_id] = {
-        "cleaned": processed["cleaned_df"],
-        "masked": processed["masked_df"],
-    }
+    st.session_state.data_store[dataset_id] = {"cleaned": processed["cleaned_df"], "masked": processed["masked_df"]}
     st.session_state.quality_reports[dataset_id] = processed["quality_report"]
     st.session_state.privacy_reports[dataset_id] = processed["privacy_report"]
+    if "processing_outputs" not in st.session_state or not isinstance(st.session_state.processing_outputs, dict):
+        st.session_state.processing_outputs = {}
+    st.session_state.processing_outputs[dataset_id] = {
+        "dataset_quality_scores": processed.get("dataset_quality_scores", pd.DataFrame()),
+        "column_level_quality": processed.get("quality_report", pd.DataFrame()),
+        "privacy_masking_policy": processed.get("privacy_report", pd.DataFrame()),
+        "processing_summary": processed.get("processing_summary_report", pd.DataFrame()),
+    }
     policy = create_policy_summary(processed["classification"], processed["privacy_score"], is_paid)
     st.session_state.metadata_store[dataset_id]["Governance Policies"] = json.dumps(policy)
     st.session_state.metadata_store[dataset_id]["Storage Platform"] = storage_platform
@@ -1215,6 +1327,8 @@ def add_dataset_record(
     st.session_state.metadata_store[dataset_id]["OneLake URL"] = onelake_url
     st.session_state.metadata_store[dataset_id]["ABFSS Path"] = abfss_path
     st.session_state.metadata_store[dataset_id]["Provider Internal Note"] = provider_internal_note
+
+    save_prototype_state()
     return dataset_id
 
 
@@ -1330,6 +1444,9 @@ def login_screen():
             else:
                 user = match.iloc[0].to_dict()
                 st.session_state.current_user = user
+
+                st.session_state.current_page = None
+
                 _ = add_log(user["email"], f"Logged in as {user['role']}", user["tenant_id"])
                 st.rerun()
 
@@ -1374,14 +1491,14 @@ def login_screen():
                 st.success("Account created. You may now log in.")
 
     with tab_accounts:
-        st.subheader("Tenant Hierarchy")
+        st.subheader("Platform Stakeholders")
 
         hierarchy = pd.DataFrame([
             ["MSP", "Own and operate the platform"],
             ["Data Provider", "Publish and monetize datasets"],
             ["Data Consumer", "Discover, request and consume datasets"]
         ],
-            columns=["Tenant Type", "Purpose"])
+            columns=["Tenant Category", "Purpose"])
 
         st.dataframe(
             hierarchy,
@@ -1426,7 +1543,7 @@ def login_screen():
              "Browses the published catalog, requests access and downloads authorized datasets for PSM research use."]
         ],
             columns=[
-                "Tenant Type",
+                "Tenant Category",
                 "Role",
                 "Email",
                 "Password",
@@ -1447,13 +1564,11 @@ def login_screen():
 def visible_datasets_for_user(user: Dict) -> pd.DataFrame:
     df = st.session_state.datasets.copy()
     if is_msp_role(user["role"]):
-        return df
+        return df[df["status"].astype(str) != "Draft"]
     if is_provider_role(user["role"]):
         return df[df["owner_tenant_id"] == user["tenant_id"]]
     # Consumer sees only published datasets in marketplace.
     return df[df["status"] == "Published"]
-
-
 
 # =============================================================================
 # MSP Admin pages
@@ -1484,7 +1599,7 @@ def page_provider_approval_settings():
 
 def page_dataset_approval_queue():
     _ = show_header("Dataset Approval Queue", "Approve or reject provider-submitted datasets before they are published to the catalog.")
-    pending = st.session_state.datasets[st.session_state.datasets["status"].isin(["Submitted", "Privacy Review", "MSP Review", "Approved"])]
+    pending = st.session_state.datasets[st.session_state.datasets["status"].isin(["Submitted", "Privacy Review", "MSP Review"])]
     if pending.empty:
         st.success("No pending datasets requiring action.")
         return
@@ -1702,7 +1817,7 @@ def page_governance_monitoring():
 def page_audit_log():
     _ = show_header("Audit Log", "Traceability for login, registration, approval, policy and access events.")
     st.dataframe(st.session_state.audit_log.sort_values("Time", ascending=False), width="stretch", hide_index=True)
-    _ = dataframe_download_button(st.session_state.audit_log, "Export audit log", "audit_log.csv")
+    _ = dataframe_download_button(st.session_state.audit_log, "Export audit log", "audit_log.csv", key="dl_audit_log_main")
 
 # =============================================================================
 # Governance Officer pages
@@ -1793,9 +1908,15 @@ def page_governance_dashboard():
     else:
         st.info("No governance alerts have been generated yet. Use Governance Monitoring to run compliance checks.")
 
+
 def page_privacy_review_queue():
-    _ = show_header("Dataset Review / Audit", "Review or audit sensitive datasets before approval or marketplace publication.")
+    _ = show_header("Dataset Review / Audit",
+                    "Review or audit sensitive datasets before approval or marketplace publication.")
     ds = st.session_state.datasets.copy()
+
+    # Hide Drafts - MSP shouldn't review privacy until provider submits it
+    ds = ds[ds["status"].astype(str) != "Draft"]
+
     ds["privacy_score_numeric"] = pd.to_numeric(ds["privacy_score"], errors="coerce")
     queue = ds[(ds["privacy_score_numeric"] >= 3) | (ds["status"].isin(["Privacy Review", "MSP Review", "Submitted"]))]
     if queue.empty:
@@ -1804,8 +1925,6 @@ def page_privacy_review_queue():
     for _, row in queue.iterrows():
         with st.expander(f"{row['dataset_name']} | {row['classification']} | Privacy Score {row['privacy_score']}"):
             _ = render_dataset_detail(row["dataset_id"], allow_data_preview=True)
-
-
 
 # =============================================================================
 # Data Provider pages
@@ -1930,7 +2049,7 @@ def get_app_base_url() -> str:
             return value.rstrip("/")
     except Exception:
         pass
-    return "unified-data-catalog.streamlit.app"
+    return "http://localhost:8503"
 
 
 def init_stripe() -> bool:
@@ -2039,11 +2158,6 @@ def _retrieve_stripe_session(session_id: str):
 
 
 def _rebuild_access_request_from_stripe(request_id: str, session_id: str):
-    """Rebuild the approved access request if Stripe returns into a fresh Streamlit session.
-
-    This prevents the 'request ID does not exist' error after hosted checkout redirects back
-    and the user logs in again.
-    """
     if not session_id:
         return None
 
@@ -2176,7 +2290,6 @@ def create_stripe_checkout_session(request_id: str) -> Optional[str]:
 
 
 def complete_stripe_payment(request_id: str, session_id: str = "") -> None:
-    """Mark Stripe sandbox payment as successful after Stripe redirects back to the app."""
     _ = ensure_enhanced_state()
     user = get_current_user()
 
@@ -2211,7 +2324,6 @@ def complete_stripe_payment(request_id: str, session_id: str = "") -> None:
     already_paid = str(request_row.get("payment_status", "")) == "Paid" or str(request_row.get("status", "")) == "Access Granted"
     if already_paid:
         create_token_for_request(request_id)
-        st.success("This Stripe payment was completed. Access token is available.")
         return
 
     stripe_reference = session_id or "STRIPE-REDIRECT"
@@ -2252,10 +2364,16 @@ def complete_stripe_payment(request_id: str, session_id: str = "") -> None:
 
     st.session_state.access_requests.loc[idx, "status"] = "Access Granted"
     st.session_state.access_requests.loc[idx, "payment_status"] = "Paid"
-    st.session_state.access_requests.loc[idx, "reviewed_by"] = str(request_row.get("reviewed_by", "")) or "Stripe Checkout"
+    st.session_state.access_requests.loc[idx, "reviewed_by"] = str(
+        request_row.get("reviewed_by", "")) or "Stripe Checkout"
     st.session_state.access_requests.loc[idx, "reviewed_at"] = now_str()
     create_token_for_request(request_id)
-    add_log(str(request_row["consumer_email"]), f"Completed Stripe Sandbox payment {tx_id} for {request_row['dataset_name']}", str(request_row.get("consumer_tenant_id", "System")))
+    st.session_state.current_page = "My Tokens & Downloads"
+    save_prototype_state()
+
+    add_log(str(request_row["consumer_email"]),
+            f"Completed Stripe Sandbox payment {tx_id} for {request_row['dataset_name']}",
+            str(request_row.get("consumer_tenant_id", "System")))
 
 
 def handle_stripe_checkout_return() -> None:
@@ -2277,29 +2395,30 @@ def handle_stripe_checkout_return() -> None:
         session_id = session_id[0] if session_id else ""
 
     if stripe_payment == "success" and request_id:
-        if get_current_user() is None:
-            st.session_state.pending_stripe_return = {
-                "request_id": str(request_id),
-                "session_id": str(session_id or ""),
-            }
-            st.info("Stripe payment returned successfully. Please log in again to complete token generation.")
-            return
+        # 1. Capture the transaction details safely into memory
+        st.session_state.pending_stripe_return = {
+            "request_id": str(request_id),
+            "session_id": str(session_id or ""),
+        }
+        # 2. Break the session so they must re-authenticate
+        st.session_state.current_user = None
 
-        complete_stripe_payment(str(request_id), str(session_id or ""))
+        # 3. Wipe the URL query parameters immediately so the login button works
         try:
             st.query_params.clear()
         except Exception:
             pass
+
+        # 4. Refresh page to cleanly show the Login Screen
+        st.rerun()
+
     elif stripe_payment == "cancelled" and request_id:
         st.warning("Stripe Checkout was cancelled. You can retry payment from this page.")
         try:
             st.query_params.clear()
         except Exception:
             pass
-
-
 def complete_pending_stripe_return_after_login() -> None:
-    """Complete Stripe payment after the user logs back in following hosted checkout."""
     pending = st.session_state.get("pending_stripe_return")
     if not isinstance(pending, dict):
         return
@@ -2367,9 +2486,14 @@ def complete_simulated_payment(request_id: str, payment_method: str) -> None:
     st.session_state.access_requests.loc[idx, "reviewed_at"] = now_str()
 
     create_token_for_request(request_id)
-    add_log(str(r["consumer_email"]), f"Completed simulated payment {tx_id} for {r['dataset_name']} using {payment_method}", str(r.get("consumer_tenant_id", "System")))
-    st.success(f"Payment successful. Gateway authorization code: {auth_code}. Access token has been generated.")
 
+    st.session_state.current_page = "My Tokens & Downloads"
+    save_prototype_state()
+
+    add_log(str(r["consumer_email"]),
+            f"Completed simulated payment {tx_id} for {r['dataset_name']} using {payment_method}",
+            str(r.get("consumer_tenant_id", "System")))
+    st.success(f"Payment successful. Gateway authorization code: {auth_code}. Access token has been generated.")
 
 def page_checkout_payment():
     _ = ensure_enhanced_state()
@@ -2713,54 +2837,71 @@ def output_file_display_path(filename: str) -> str:
     return path if path else filename
 
 
-def render_output_table(title: str, filename: str, df: pd.DataFrame, download_name: Optional[str] = None) -> None:
+def render_output_table(title: str, filename: str, df: pd.DataFrame, download_name: Optional[str] = None, key: Optional[str] = None) -> None:
     st.subheader(title)
     if isinstance(df, pd.DataFrame) and not df.empty:
         st.dataframe(df, width="stretch", hide_index=True)
-        dataframe_download_button(df, f"Download {download_name or filename}", download_name or filename)
+        dataframe_download_button(df, f"Download {download_name or filename}", download_name or filename, key=key)
     else:
-        st.info("No matching records found for this dataset in the selected processing output file.")
+        st.info("No matching records found for this dataset. Upload or connect a dataset and run processing to generate this report dynamically.")
 
-def render_dataset_quality_outputs(dataset_name: str) -> None:
+def get_processing_output_for_dataset(dataset_id: str, report_key: str, dataset_name: str = "") -> pd.DataFrame:
+
+    outputs = st.session_state.get("processing_outputs", {})
+    if isinstance(outputs, dict):
+        dataset_outputs = outputs.get(dataset_id, {})
+        if isinstance(dataset_outputs, dict):
+            df = dataset_outputs.get(report_key, pd.DataFrame())
+            if isinstance(df, pd.DataFrame) and not df.empty:
+                return df.copy()
+
+    # Backward-compatible fallback for demo files generated by the Fabric notebook.
+    if dataset_name:
+        return get_report_for_dataset(report_key, dataset_name)
+    return pd.DataFrame()
+
+
+def render_dataset_quality_outputs(dataset_id: str, dataset_name: str) -> None:
     dataset_key = processing_dataset_key(dataset_name)
-    df_scores = get_report_for_dataset("dataset_quality_scores", dataset_name)
+    df_scores = get_processing_output_for_dataset(dataset_id, "dataset_quality_scores", dataset_name)
     render_output_table(
         "Dataset quality scores",
         PROCESSING_REPORT_FILES["dataset_quality_scores"],
         df_scores,
         f"{dataset_key}_dataset_quality_scores.csv",
+        key=f"dl_qs_{dataset_id}"
     )
-    df_column = get_report_for_dataset("column_level_quality", dataset_name)
+    df_column = get_processing_output_for_dataset(dataset_id, "column_level_quality", dataset_name)
     render_output_table(
         "Column-level quality report",
         PROCESSING_REPORT_FILES["column_level_quality"],
         df_column,
         f"{dataset_key}_column_level_quality_report.csv",
+        key=f"dl_col_{dataset_id}"
     )
 
 
-def render_privacy_masking_policy_output(dataset_name: str) -> None:
+def render_privacy_masking_policy_output(dataset_id: str, dataset_name: str) -> None:
     dataset_key = processing_dataset_key(dataset_name)
-    df = get_report_for_dataset("privacy_masking_policy", dataset_name)
+    df = get_processing_output_for_dataset(dataset_id, "privacy_masking_policy", dataset_name)
     render_output_table(
         "Privacy and masking policy report",
         PROCESSING_REPORT_FILES["privacy_masking_policy"],
         df,
         f"{dataset_key}_privacy_and_masking_policy_report.csv",
+        key=f"dl_priv_{dataset_id}"
     )
 
-
-def render_processing_summary_outputs(dataset_name: str) -> None:
+def render_processing_summary_outputs(dataset_id: str, dataset_name: str) -> None:
     dataset_key = processing_dataset_key(dataset_name)
-    df = get_report_for_dataset("processing_summary", dataset_name)
+    df = get_processing_output_for_dataset(dataset_id, "processing_summary", dataset_name)
     st.subheader("Processing summary overview")
     if isinstance(df, pd.DataFrame) and not df.empty:
-        # Just display the first row which is the overall summary of the dataset
         overview_df = df.head(1).copy()
         st.dataframe(overview_df, width="stretch", hide_index=True)
-        dataframe_download_button(df, "Download processing summary report", f"{dataset_key}_processing_summary_report.csv")
+        dataframe_download_button(df, "Download processing summary report", f"{dataset_key}_processing_summary_report.csv", key=f"dl_sum_{dataset_id}")
     else:
-        st.info("No matching processing summary record found for this dataset.")
+        st.info("No processing summary is available yet. Upload a file or connect a source with readable data and run processing.")
 
 def render_governance_action_panel(dataset_id: str) -> None:
     user = get_current_user()
@@ -2787,24 +2928,7 @@ def render_governance_action_panel(dataset_id: str) -> None:
 
     c1, c2, c3 = st.columns(3)
 
-    if c1.button("Approve dataset", key=f"detail_approve_{dataset_id}"):
-        idx = st.session_state.datasets[
-            st.session_state.datasets["dataset_id"].astype(str) == str(dataset_id)
-        ].index
-
-        st.session_state.datasets.loc[idx, "status"] = "Approved"
-        st.session_state.datasets.loc[idx, "approved_by"] = user["email"]
-        st.session_state.datasets.loc[idx, "approved_at"] = today_str()
-
-        add_log(
-            user["email"],
-            f"Approved dataset {row['dataset_name']}",
-            user["tenant_id"]
-        )
-
-        st.rerun()
-
-    if c2.button("Publish dataset", key=f"detail_publish_{dataset_id}"):
+    if c1.button("Approve & Publish Dataset", key=f"detail_approve_{dataset_id}"):
         idx = st.session_state.datasets[
             st.session_state.datasets["dataset_id"].astype(str) == str(dataset_id)
         ].index
@@ -2815,7 +2939,7 @@ def render_governance_action_panel(dataset_id: str) -> None:
 
         add_log(
             user["email"],
-            f"Published dataset {row['dataset_name']}",
+            f"Approved and published dataset {row['dataset_name']}",
             user["tenant_id"]
         )
 
@@ -2975,11 +3099,14 @@ def render_dataset_detail(dataset_id: str, allow_data_preview: bool = False, pub
         return
     row = ds.iloc[0]
     mode = "public" if public_view else dataset_visibility_mode(row, user)
-    is_owner_provider = bool(user and is_provider_role(user["role"]) and str(row.get("owner_tenant_id", "")) == str(user.get("tenant_id", "")))
+    is_owner_provider = bool(user and is_provider_role(user["role"]) and str(row.get("owner_tenant_id", "")) == str(
+        user.get("tenant_id", "")))
 
     st.markdown(f"<div class='catalog-title'>{catalog_title(row)}</div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='catalog-meta'>Provider: {tenant_name(row['owner_tenant_id'])} · Domain: {row.get('domain','Other')} · {row.get('asset_type', row.get('format','Unknown'))} · {int(row.get('rows',0)):,} rows · {int(row.get('columns',0))} columns · RM {float(row.get('price_rm',0)):.2f}</div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='catalog-desc'>{row.get('description','')}</div>", unsafe_allow_html=True)
+    st.markdown(
+        f"<div class='catalog-meta'>Provider: {tenant_name(row['owner_tenant_id'])} · Domain: {row.get('domain', 'Other')} · {row.get('asset_type', row.get('format', 'Unknown'))} · {int(row.get('rows', 0)):,} rows · {int(row.get('columns', 0))} columns · RM {float(row.get('price_rm', 0)):.2f}</div>",
+        unsafe_allow_html=True)
+    st.markdown(f"<div class='catalog-desc'>{row.get('description', '')}</div>", unsafe_allow_html=True)
     st.markdown(tag_pills(row.get("tags", "")), unsafe_allow_html=True)
 
     c1, c2, c3 = st.columns(3)
@@ -2990,11 +3117,76 @@ def render_dataset_detail(dataset_id: str, allow_data_preview: bool = False, pub
     if str(row.get("status", "")) == "Rejected" and str(row.get("rejection_reason", "")).strip():
         st.error(f"Rejection reason: {row.get('rejection_reason', '')}")
 
-    st.write(f"**Source platform:** {row.get('source_platform','')}")
-    st.write(f"**Classification:** {row.get('classification','')} | **Privacy risk:** {row.get('privacy_score','')} / 10 | **Policy version:** {row.get('usage_policy_version','v1.0')}")
+    if is_owner_provider and str(row.get("status", "")) in ["Draft", "Rejected"]:
+        st.info(
+            "This dataset is currently a Draft (or Rejected) and is not published to the catalog. Review the processing outputs below before submitting.")
+
+        if can_approve_provider_request(user["role"]):
+            approval_req = get_provider_setting(user["tenant_id"])
+            btn_label = "Submit Publication Request" if approval_req else "Publish Dataset directly (MSP approval disabled)"
+
+            # --- MODIFIED: Added side-by-side layout for Delete and Submit buttons ---
+            action_col1, action_col2 = st.columns([1, 4])
+
+            with action_col1:
+                if st.button("🗑️ Delete Draft", type="secondary", key=f"delete_draft_{dataset_id}"):
+                    # Deep clean: Remove from main dataframe and all related storage dictionaries
+                    st.session_state.datasets = st.session_state.datasets[
+                        st.session_state.datasets["dataset_id"] != dataset_id].reset_index(drop=True)
+                    st.session_state.metadata_store.pop(dataset_id, None)
+                    st.session_state.data_store.pop(dataset_id, None)
+                    st.session_state.quality_reports.pop(dataset_id, None)
+                    st.session_state.privacy_reports.pop(dataset_id, None)
+                    if "processing_outputs" in st.session_state and isinstance(st.session_state.processing_outputs,
+                                                                               dict):
+                        st.session_state.processing_outputs.pop(dataset_id, None)
+
+                    _ = add_log(user["email"], f"Deleted draft dataset {row.get('dataset_name', '')}",
+                                user["tenant_id"])
+                    st.success("Draft deleted successfully.")
+                    st.rerun()
+
+            with action_col2:
+                if st.button(btn_label, type="primary", key=f"submit_pub_{dataset_id}"):
+                    idx = st.session_state.datasets[st.session_state.datasets["dataset_id"] == dataset_id].index
+                    if approval_req:
+                        st.session_state.datasets.loc[idx, "status"] = "MSP Review"
+                        _ = add_log(user["email"], f"Submitted dataset {row.get('dataset_name', '')} for MSP review",
+                                    user["tenant_id"])
+                        st.success("Submitted for MSP Review. It will appear in the catalog once approved.")
+                    else:
+                        st.session_state.datasets.loc[idx, "status"] = "Published"
+                        st.session_state.datasets.loc[idx, "approved_by"] = user["email"]
+                        st.session_state.datasets.loc[idx, "approved_at"] = today_str()
+                        _ = add_log(user["email"], f"Published dataset {row.get('dataset_name', '')} directly",
+                                    user["tenant_id"])
+                        st.success("Dataset is now published to the catalog.")
+                    st.rerun()
+            # --- END MODIFIED BLOCK ---
+
+        else:
+            st.warning(
+                f"Your current role ({user['role']}) allows you to review this draft and maintain metadata, but only a Provider Administrator or Data Owner can submit or delete it.")
+
+    elif is_owner_provider and str(row.get("status", "")) in ["Submitted", "MSP Review", "Privacy Review"]:
+        st.info("This dataset is currently pending MSP review. It is not yet visible to consumers.")
+
+    st.write(f"**Source platform:** {row.get('source_platform', '')}")
+    policy_version = row.get("usage_policy_version", "v1.0")
+
+    if pd.isna(policy_version) or str(policy_version).strip().lower() in ["", "nan", "none", "null"]:
+        policy_version = "v1.0"
+
+    st.write(
+        f"**Classification:** {row.get('classification', '')} | "
+        f"**Privacy risk:** {row.get('privacy_score', '')} / 10 | "
+        f"**Policy version:** {policy_version}"
+    )
+
     if str(row.get("storage_platform", "")).strip():
         with st.expander("Storage reference"):
-            st.write("The platform stores the catalog and governance reference. The physical data remains in the external platform, such as Microsoft Fabric, ADLS or S3.")
+            st.write(
+                "The platform stores the catalog and governance reference. The physical data remains in the external platform, such as Microsoft Fabric, ADLS or S3.")
             st.write(f"**Storage platform:** {row.get('storage_platform', '')}")
             st.write(f"**Workspace:** {row.get('fabric_workspace', '')}")
             st.write(f"**Lakehouse:** {row.get('lakehouse_name', '')}")
@@ -3002,7 +3194,8 @@ def render_dataset_detail(dataset_id: str, allow_data_preview: bool = False, pub
             if str(row.get("fabric_url", "")).startswith("https://"):
                 st.link_button("Open storage location", row.get("fabric_url"))
 
-    tab_labels = ["Metadata", "Dataset to be Monetized", "Quality", "Privacy & Masking", "Processing Summary", "Lineage"]
+    tab_labels = ["Metadata", "Dataset to be Monetized", "Quality", "Privacy & Masking", "Processing Summary",
+                  "Lineage"]
     if user and can_review_dataset(user.get("role", "")):
         tab_labels.append("Governance Action")
     tabs = st.tabs(tab_labels)
@@ -3029,29 +3222,33 @@ def render_dataset_detail(dataset_id: str, allow_data_preview: bool = False, pub
 
     with tabs[1]:
         st.subheader("Final dataset for monetization / consumer view")
-        st.caption("This is the governed dataset view that consumers receive after approval, payment and token generation.")
+        st.caption(
+            "This is the governed dataset view that consumers receive after approval, payment and token generation.")
         store = st.session_state.data_store.get(dataset_id, {})
-        consumer_view = store.get("authorized") if isinstance(store.get("authorized"), pd.DataFrame) else store.get("masked")
+        consumer_view = store.get("authorized") if isinstance(store.get("authorized"), pd.DataFrame) else store.get(
+            "masked")
         if isinstance(consumer_view, pd.DataFrame) and not consumer_view.empty:
             st.dataframe(consumer_view.head(50), width="stretch", hide_index=True)
-            _ = dataframe_download_button(consumer_view, "Download consumer-view dataset", f"consumer_view_{row['dataset_name']}")
+            _ = dataframe_download_button(consumer_view, "Download consumer-view dataset",
+                                          f"consumer_view_{row['dataset_name']}", key=f"dl_cons_{dataset_id}")
         else:
             st.info("No consumer-view dataset is available yet.")
         if is_owner_provider:
             raw_df = store.get("cleaned")
             if isinstance(raw_df, pd.DataFrame) and not raw_df.empty:
                 with st.expander("Provider-only raw / cleaned source preview"):
-                    st.caption("This preview is shown only to the owning provider for verification. Consumers do not see this raw view.")
+                    st.caption(
+                        "This preview is shown only to the owning provider for verification. Consumers do not see this raw view.")
                     st.dataframe(raw_df.head(50), width="stretch", hide_index=True)
 
     with tabs[2]:
-        render_dataset_quality_outputs(row["dataset_name"])
+        render_dataset_quality_outputs(dataset_id, row["dataset_name"])
 
     with tabs[3]:
-        render_privacy_masking_policy_output(row["dataset_name"])
+        render_privacy_masking_policy_output(dataset_id, row["dataset_name"])
 
     with tabs[4]:
-        render_processing_summary_outputs(row["dataset_name"])
+        render_processing_summary_outputs(dataset_id, row["dataset_name"])
 
     with tabs[5]:
         _ = draw_lineage_flow(row.get("dataset_name", "Dataset"))
@@ -3179,7 +3376,9 @@ def page_my_tokens_downloads():
             display_df = authorized if isinstance(authorized, pd.DataFrame) and not authorized.empty else masked
             if isinstance(display_df, pd.DataFrame):
                 st.dataframe(display_df.head(10), width="stretch", hide_index=True)
-                _ = dataframe_download_button(display_df, "Download authorized masked dataset", f"authorized_{row['dataset_name']}")
+                _ = dataframe_download_button(display_df, "Download authorized masked dataset",
+                                              f"authorized_{row['dataset_name']}",
+                                              key=f"dl_auth_{row['dataset_id']}_{row['token']}")
             st.subheader("How to explore this dataset")
             for idea in BI_TOOL_IDEAS:
                 st.write(f"• {idea}")
@@ -3434,7 +3633,8 @@ def catalog_datasets_for_user(user: Dict) -> pd.DataFrame:
     if ds.empty:
         return ds
     if is_msp_role(user["role"]):
-        return ds
+        # Hide Drafts from MSP in the global catalog.
+        return ds[ds["status"].astype(str) != "Draft"]
     if is_provider_role(user["role"]):
         own = ds["owner_tenant_id"].astype(str).eq(str(user["tenant_id"]))
         published = ds["status"].astype(str).eq("Published")
@@ -3731,10 +3931,12 @@ def page_feedback():
         "https://forms.office.com/r/iMzrg1X4X3"
     )
 
+
 def page_register_dataset():
     _ = ensure_enhanced_state()
     user = get_current_user()
-    _ = show_header("Register Dataset", "Register a dataset by uploading a file for prototype scanning or linking to an external platform location.")
+    _ = show_header("Register Dataset",
+                    "Register a dataset by uploading a file for prototype scanning or linking to an external platform location.")
 
     st.subheader("1. Source location")
     location_type = st.radio(
@@ -3752,22 +3954,32 @@ def page_register_dataset():
     connection_details = {}
 
     if location_type == "Upload file here for prototype scanning":
-        st.info("Upload is used only for prototype metadata, quality and privacy scanning. In the real platform, the physical data can remain in Fabric, ADLS, S3, database, API or another governed source.")
-        upload_file = st.file_uploader("Upload dataset file", type=["csv", "xlsx", "xls", "json", "parquet"], key="register_upload_file")
+        st.info(
+            "Upload is used only for prototype metadata, quality and privacy scanning. In the real platform, the physical data can remain in Fabric, ADLS, S3, database, API or another governed source.")
+        upload_file = st.file_uploader("Upload dataset file", type=["csv", "xlsx", "xls", "json", "parquet"],
+                                       key="register_upload_file")
         if upload_file is not None:
             fmt = upload_file.name.split(".")[-1].upper()
             source_uri = upload_file.name
     else:
-        st.info("Use this when the dataset already exists in an external platform. The catalog stores metadata, source reference, policy and token workflow, not the large physical dataset itself.")
+        st.info(
+            "Use this when the dataset already exists in an external platform. The catalog stores metadata, source reference, policy and token workflow, not the large physical dataset itself.")
         c1, c2 = st.columns(2)
         with c1:
-            source_platform = st.selectbox("Source platform", CONNECTION_SOURCE_PLATFORMS, key="external_source_platform")
+            source_platform = st.selectbox("Source platform", CONNECTION_SOURCE_PLATFORMS,
+                                           key="external_source_platform")
             fmt = st.selectbox("File / dataset type", ASSET_TYPE_OPTIONS, key="external_asset_type")
-            connection_name = st.text_input("Connection name", placeholder="Example: TM One Fabric Lakehouse", key="external_connection_name")
+            connection_name = st.text_input("Connection name", placeholder="Example: TM One Fabric Lakehouse",
+                                            key="external_connection_name")
         with c2:
-            source_uri = st.text_input("Storage URL / path / endpoint", placeholder="OneLake URL, ABFSS path, S3 URI, database table, or API endpoint", key="external_source_uri")
-            auth_method = st.selectbox("Access method", ["Managed identity", "Service principal", "Shared access signature", "API key", "Database credential", "Manual reference only"], key="external_auth_method")
-            refresh_mode = st.selectbox("Metadata refresh", ["Manual scan", "Daily", "Weekly", "Monthly", "On demand"], key="external_refresh_mode")
+            source_uri = st.text_input("Storage URL / path / endpoint",
+                                       placeholder="OneLake URL, ABFSS path, S3 URI, database table, or API endpoint",
+                                       key="external_source_uri")
+            auth_method = st.selectbox("Access method",
+                                       ["Managed identity", "Service principal", "Shared access signature", "API key",
+                                        "Database credential", "Manual reference only"], key="external_auth_method")
+            refresh_mode = st.selectbox("Metadata refresh", ["Manual scan", "Daily", "Weekly", "Monthly", "On demand"],
+                                        key="external_refresh_mode")
 
         with st.expander("Optional external source details", expanded=False):
             d1, d2, d3 = st.columns(3)
@@ -3795,9 +4007,12 @@ def page_register_dataset():
             pii_declaration = st.selectbox("Does the dataset contain PII?", ["Yes", "No", "Unsure"])
         with c2:
             price_rm = st.number_input("Dataset price (RM)", min_value=0.0, value=100.0, step=10.0)
-            selected_tags = st.multiselect("Business tags", TAG_OPTIONS, default=[], help="Select business-domain, use-case, geography, or industry tags. Avoid technical/governance tags such as masked, quality checked, or PII.")
-            custom_tags = st.text_input("Provider-defined tags (comma separated)", help="Add your own business-friendly tags, for example a product line, department, or project name.")
-        description = st.text_area("Business description", placeholder="Describe the dataset, business meaning, expected use cases and key columns.")
+            selected_tags = st.multiselect("Business tags", TAG_OPTIONS, default=[],
+                                           help="Select business-domain, use-case, geography, or industry tags. Avoid technical/governance tags such as masked, quality checked, or PII.")
+            custom_tags = st.text_input("Provider-defined tags (comma separated)",
+                                        help="Add your own business-friendly tags, for example a product line, department, or project name.")
+        description = st.text_area("Business description",
+                                   placeholder="Describe the dataset, business meaning, expected use cases and key columns.")
 
         st.markdown("**Provider publication policy:**")
         for term in PROVIDER_USAGE_TERMS:
@@ -3827,7 +4042,6 @@ def page_register_dataset():
             if not source_uri.strip():
                 st.error("Please enter the external storage URL, path, table name, or endpoint reference.")
                 return
-            # The prototype stores and scans a metadata reference because the physical data remains in the external platform.
             raw_df = pd.DataFrame({
                 "metadata_reference": [source_uri],
                 "source_platform": [source_platform],
@@ -3843,7 +4057,8 @@ def page_register_dataset():
             st.error("Please select or enter a domain name.")
             return
 
-        tags = ", ".join(clean_label_list([t.strip() for t in selected_tags] + [t.strip() for t in custom_tags.split(",") if t.strip()]))
+        tags = ", ".join(clean_label_list(
+            [t.strip() for t in selected_tags] + [t.strip() for t in custom_tags.split(",") if t.strip()]))
         processed = process_dataset(raw_df, title, source_platform, fmt, source_uri)
         provider_note = "Registered through provider workflow. "
         if location_type == "Connect / register external platform location":
@@ -3856,7 +4071,9 @@ def page_register_dataset():
             description=description or "Registered dataset for governed catalog publication.",
             owner_email=user["email"],
             owner_tenant_id=user["tenant_id"],
-            registration_method=("File Upload" if location_type == "Upload file here for prototype scanning" else default_registration_method_for_source(source_platform)),
+            registration_method=(
+                "File Upload" if location_type == "Upload file here for prototype scanning" else default_registration_method_for_source(
+                    source_platform)),
             source_platform=source_platform,
             fmt=fmt,
             source_uri=source_uri,
@@ -3877,10 +4094,24 @@ def page_register_dataset():
             st.session_state.metadata_store[ds_id]["External Source Details"] = json.dumps(connection_details)
 
         _ = add_log(user["email"], f"Registered dataset {title} and ran processing", user["tenant_id"])
-        st.success("Dataset processed and submitted to the catalog governance workflow.")
-        with st.expander("Processing result", expanded=True):
-            _ = render_dataset_detail(ds_id, allow_data_preview=True)
 
+        st.session_state.newly_registered_dataset_id = ds_id
+        save_prototype_state()
+        st.rerun()
+
+    if st.session_state.get("newly_registered_dataset_id"):
+        ds_id = st.session_state.newly_registered_dataset_id
+
+        if not st.session_state.datasets[st.session_state.datasets["dataset_id"] == ds_id].empty:
+            st.markdown("---")
+            st.success("Dataset processed successfully and saved as a Draft package.")
+
+            with st.expander("Registration Result & Publication Action", expanded=True):
+                _ = render_dataset_detail(ds_id, allow_data_preview=True)
+
+            if st.button("Dismiss and register another dataset", key="clear_registration_view"):
+                st.session_state.newly_registered_dataset_id = None
+                st.rerun()
 
 DIRECT_PURCHASE_CLASSIFICATIONS = ["Public", "Internal"]
 PROVIDER_APPROVAL_CLASSIFICATIONS = ["Confidential"]
@@ -4195,16 +4426,21 @@ def render_catalog_card(row, user):
 
     with st.container(border=True):
         top_left, top_right = st.columns([5, 1])
+        status_val = str(row.get("status", ""))
+        status_badge = f" <span style='color:#ea580c; font-size:14px; font-weight:bold'>[{status_val}]</span>" if status_val != "Published" else ""
+
         with top_left:
-            st.markdown(f"<div class='catalog-title'>{title}</div>", unsafe_allow_html=True)
+            st.markdown(f"<div class='catalog-title'>{title}{status_badge}</div>", unsafe_allow_html=True)
             st.markdown(
-                f"<div class='catalog-meta'>Provider: {provider} &nbsp;|&nbsp; Format: {row.get('format','')} &nbsp;|&nbsp; Rows: {_int(row.get('rows',0)):,} &nbsp;|&nbsp; Quality: {quality_pct}</div>",
+                f"<div class='catalog-meta'>Provider: {provider} &nbsp;|&nbsp; Format: {row.get('format', '')} &nbsp;|&nbsp; Rows: {_int(row.get('rows', 0)):,} &nbsp;|&nbsp; Quality: {quality_pct}</div>",
                 unsafe_allow_html=True,
             )
             st.markdown(tag_pills(tags), unsafe_allow_html=True)
         with top_right:
-            st.markdown(f"<div style='text-align:right;font-weight:850;color:#047857;font-size:17px;white-space:nowrap;'>{price}</div>", unsafe_allow_html=True)
-            st.caption(f"{_int(row.get('download_count',0))} downloads")
+            st.markdown(
+                f"<div style='text-align:right;font-weight:850;color:#047857;font-size:17px;white-space:nowrap;'>{price}</div>",
+                unsafe_allow_html=True)
+            st.caption(f"{_int(row.get('download_count', 0))} downloads")
 
         if is_msp:
             expander_title = "View Details"
@@ -4219,7 +4455,8 @@ def render_catalog_card(row, user):
             _ = c2.metric("Quality Score", quality_pct)
             _ = c3.metric("Classification", classification)
             _ = c4.metric("Price", price)
-            st.markdown(f"**Provider:** {provider} &nbsp; | &nbsp; **Format:** {row.get('format','')} &nbsp; | &nbsp; **Rows/Columns:** {_int(row.get('rows', 0)):,} / {_int(row.get('columns', 0))}")
+            st.markdown(
+                f"**Provider:** {provider} &nbsp; | &nbsp; **Format:** {row.get('format', '')} &nbsp; | &nbsp; **Rows/Columns:** {_int(row.get('rows', 0)):,} / {_int(row.get('columns', 0))}")
             st.markdown(tag_pills(tags), unsafe_allow_html=True)
             st.write(desc)
 
@@ -4242,11 +4479,11 @@ def render_catalog_card(row, user):
                     with st.expander("Raw metadata JSON"):
                         st.json(safe_meta)
                 with tabs[1]:
-                    render_dataset_quality_outputs(row.get("dataset_name", ""))
+                    render_dataset_quality_outputs(dataset_id, row.get("dataset_name", ""))
                 with tabs[2]:
-                    render_privacy_masking_policy_output(row.get("dataset_name", ""))
+                    render_privacy_masking_policy_output(dataset_id, row.get("dataset_name", ""))
                 with tabs[3]:
-                    render_processing_summary_outputs(row.get("dataset_name", ""))
+                    render_processing_summary_outputs(dataset_id, row.get("dataset_name", ""))
                 with tabs[4]:
                     _ = draw_lineage_flow(row.get("dataset_name", "Dataset"))
 
@@ -4511,6 +4748,7 @@ def page_msp_dashboard():
 
     gross_revenue = _num(ds.get("revenue_rm", pd.Series([0])).sum() if len(ds) else 0)
     msp_commission = _num(ds.get("msp_commission_rm", pd.Series([0])).sum() if len(ds) else 0)
+    provider_revenue = _num(ds.get("provider_revenue_rm", pd.Series([0])).sum() if len(ds) else 0)
     trend_revenue = _num(usage.get("revenue_rm", pd.Series([0])).sum() if len(usage) else 0)
 
     pending_review = int(ds["status"].isin(["Submitted", "Privacy Review", "MSP Review"]).sum()) if len(ds) else 0
@@ -4520,7 +4758,7 @@ def page_msp_dashboard():
     _ = c2.metric("Data Consumers", int((tenants["tenant_type"] == "Data Consumer").sum()))
     _ = c3.metric("Published Datasets", int((ds["status"] == "Published").sum()) if len(ds) else 0)
     _ = c4.metric("Pending Review", pending_review)
-    _ = c5.metric("Platform Revenue", f"RM {gross_revenue:,.2f}")
+    _ = c5.metric("Data Provider Revenue", f"RM {provider_revenue:,.2f}")
     _ = c6.metric("MSP Revenue", f"RM {msp_commission:,.2f}")
 
     left, right = st.columns(2)
@@ -4682,10 +4920,14 @@ def page_managed_fabric_storage():
 def page_provider_dashboard():
     _ = ensure_enhanced_state()
     user = get_current_user()
-    _ = show_header("Provider Dashboard", "Provider analytics for catalog publication, access requests, downloads and revenue.")
+    _ = show_header("Provider Dashboard",
+                    "Provider analytics for catalog publication, access requests, downloads and revenue.")
 
-    ds = st.session_state.datasets[st.session_state.datasets["owner_tenant_id"].astype(str) == str(user["tenant_id"])].copy()
-    req = st.session_state.access_requests[st.session_state.access_requests["dataset_id"].isin(ds["dataset_id"])] if len(ds) and len(st.session_state.access_requests) else pd.DataFrame()
+    ds = st.session_state.datasets[
+        st.session_state.datasets["owner_tenant_id"].astype(str) == str(user["tenant_id"])].copy()
+    req = st.session_state.access_requests[
+        st.session_state.access_requests["dataset_id"].isin(ds["dataset_id"])] if len(ds) and len(
+        st.session_state.access_requests) else pd.DataFrame()
     usage = st.session_state.usage_history.copy() if "usage_history" in st.session_state else pd.DataFrame()
     gross_revenue = _num(ds.get("revenue_rm", pd.Series([0])).sum() if len(ds) else 0)
     provider_revenue = _num(ds.get("provider_revenue_rm", pd.Series([0])).sum() if len(ds) else 0)
@@ -4694,9 +4936,19 @@ def page_provider_dashboard():
     c1, c2, c3, c4, c5, c6 = st.columns(6)
     _ = c1.metric("My datasets", len(ds))
     _ = c2.metric("Published", int((ds["status"] == "Published").sum()) if len(ds) else 0)
-    _ = c3.metric("Access requests", len(req))
-    _ = c4.metric("Pending review", int(req["status"].astype(str).isin(["Pending Provider Approval", "Pending Provider/MSP Approval"]).sum()) if len(req) else 0)
-    _ = c5.metric("Downloads", int(pd.to_numeric(ds.get("download_count", pd.Series([0])), errors="coerce").fillna(0).sum()) if len(ds) else 0)
+
+    pending_dataset_review = int(
+        ds["status"].astype(str).isin(["MSP Review", "Submitted", "Privacy Review"]).sum()) if len(ds) else 0
+    _ = c3.metric("Pending dataset review", pending_dataset_review)
+
+    pending_access_requests = int(
+        req["status"].astype(str).isin(["Pending Provider Approval", "Pending Provider/MSP Approval"]).sum()) if len(
+        req) else 0
+    _ = c4.metric("Pending access requests", pending_access_requests)
+
+    _ = c5.metric("Downloads",
+                  int(pd.to_numeric(ds.get("download_count", pd.Series([0])), errors="coerce").fillna(0).sum()) if len(
+                      ds) else 0)
     _ = c6.metric("Provider Revenue", f"RM {provider_revenue:,.2f}")
 
     left, right = st.columns(2)
@@ -4723,8 +4975,8 @@ def page_provider_dashboard():
         st.subheader("Revenue trend")
         if not usage.empty and "revenue_rm" in usage.columns:
             st.line_chart(usage.set_index("month")[["revenue_rm"]])
-            st.caption(f"Gross demo revenue represented in trend: RM {_num(usage['revenue_rm'].sum()):,.2f}. Current provider gross revenue: RM {gross_revenue:,.2f}.")
-
+            st.caption(
+                f"Gross demo revenue represented in trend: RM {_num(usage['revenue_rm'].sum()):,.2f}. Current provider gross revenue: RM {gross_revenue:,.2f}.")
 
 def page_tenant_user_management():
     _ = ensure_enhanced_state()
@@ -4840,7 +5092,7 @@ def sidebar_navigation() -> str:
         try:
             st.image("Credence_full_logo.png", width=180)
         except:
-            pass # Fallback just in case the image file is missing
+            pass
         st.markdown(f"### {APP_NAME}")
         st.write(f"**User:** {user['name']}")
         st.write(f"**Role:** {user['role']}")
@@ -4891,14 +5143,27 @@ def sidebar_navigation() -> str:
         else:
             pages = ["Data Catalog", "Profile Settings"]
 
-        page = st.radio("Navigation", pages)
+        # --- MODIFIED: Enforce routing using session state index mapping ---
+        if "current_page" not in st.session_state or st.session_state.current_page not in pages:
+            st.session_state.current_page = pages[0]
+
+        try:
+            default_index = pages.index(st.session_state.current_page)
+        except ValueError:
+            default_index = 0
+            st.session_state.current_page = pages[0]
+
+        page = st.radio("Navigation", pages, index=default_index)
+        st.session_state.current_page = page
+        # --- END MODIFIED ---
+
         st.divider()
         if st.button("Log out"):
             _ = add_log(user["email"], "Logged out", user["tenant_id"])
             st.session_state.current_user = None
+            st.session_state.current_page = None
             st.rerun()
     return page
-
 
 def main():
     handle_stripe_checkout_return()
