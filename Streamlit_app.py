@@ -3326,14 +3326,117 @@ def page_global_catalog():
 
 
 def page_consumer_dashboard():
-    _ = ensure_enhanced_state(); user = get_current_user()
-    _ = show_header("Consumer Dashboard", "PSM access overview and recommended next steps.")
-    req = st.session_state.access_requests[st.session_state.access_requests["consumer_email"] == user["email"]]; tok = st.session_state.tokens[st.session_state.tokens["consumer_tenant_id"].astype(str) == str(user["tenant_id"])]
+    _ = ensure_enhanced_state();
+    user = get_current_user()
+    _ = show_header("Consumer Dashboard", "Access overview and recommended next steps.")
+    
+    # ---------------------------------------------------------
+    # 1. Core Metrics Calculation
+    # ---------------------------------------------------------
+    req = st.session_state.access_requests[st.session_state.access_requests["consumer_email"] == user["email"]];
+    tok = st.session_state.tokens[st.session_state.tokens["consumer_tenant_id"].astype(str) == str(user["tenant_id"])]
+    
     c1, c2, c3, c4 = st.columns(4)
-    _ = c1.metric("My requests", len(req)); _ = c2.metric("Approved tokens", int((tok["status"] == "Active").sum()) if not tok.empty else 0); _ = c3.metric("Available catalog assets", int((st.session_state.datasets["status"] == "Published").sum())); _ = c4.metric("Total spend RM", f"{float(pd.to_numeric(req.get('amount_rm', pd.Series(dtype=float)), errors='coerce').sum() if not req.empty else 0):,.2f}")
+    _ = c1.metric("My requests", len(req));
+    _ = c2.metric("Approved tokens", int((tok["status"] == "Active").sum()) if not tok.empty else 0);
+    _ = c3.metric("Available catalog assets", int((st.session_state.datasets["status"] == "Published").sum()));
+    _ = c4.metric("Total spend RM",
+                  f"{float(pd.to_numeric(req.get('amount_rm', pd.Series(dtype=float)), errors='coerce').sum() if not req.empty else 0):,.2f}")
+    
+    # ---------------------------------------------------------
+    # 2. Recommended Workflow Panel
+    # ---------------------------------------------------------
     st.subheader("Recommended workflow")
-    for i, text in enumerate(["Browse the Data Catalog using title, provider, domain, tag, type and size filters.", "Review public metadata and submit an access purpose with policy acceptance.", "Review the billing summary, choose a payment method, simulate gateway payment, then use the issued token to download the authorized masked dataset or open BI tools."], 1):
+    for i, text in enumerate(["Browse the Data Catalog using title, provider, domain, tag, type and size filters.",
+                              "Review public metadata and submit an access purpose with policy acceptance.",
+                              "Review the billing summary, choose a payment method, simulate gateway payment, then use the issued token to download the authorized masked dataset or open BI tools."],
+                             1):
         st.markdown(f"<div class='flow-box'>{i}. {text}</div>", unsafe_allow_html=True)
+
+    st.divider()
+
+    # ---------------------------------------------------------
+    # 3. Analytics & Charts Visualization Layer
+    # ---------------------------------------------------------
+    left_col, right_col = st.columns(2)
+
+    with left_col:
+        st.subheader("Monthly Acquisition & Activity Trend")
+        
+        # Pull global timeframe alignment from usage history reference table
+        if "usage_history" in st.session_state and not st.session_state.usage_history.empty:
+            months = st.session_state.usage_history["month"].tolist()
+        else:
+            months = pd.date_range(end=pd.Timestamp.today().normalize(), periods=12, freq="MS").strftime("%Y-%m").tolist()
+            
+        # Initialize a zero baseline frame matching your organization's timeframe
+        consumer_trend = pd.DataFrame({
+            "month": months,
+            "Requests": [0] * len(months),
+            "Downloads": [0] * len(months),
+            "Purchases": [0] * len(months)
+        })
+
+        # Dynamically inject historical data from user transactions if they exist
+        if not req.empty:
+            req_df = req.copy()
+            req_df["created_at_dt"] = pd.to_datetime(req_df["created_at"], errors='coerce')
+            
+            # Extract month string component (YYYY-MM)
+            valid_dates = req_df["created_at_dt"].notna()
+            req_df.loc[valid_dates, "month_str"] = req_df.loc[valid_dates, "created_at_dt"].dt.strftime("%Y-%m")
+            
+            for idx, row in consumer_trend.iterrows():
+                target_m = row["month"]
+                month_slice = req_df[req_df["month_str"] == target_m]
+                
+                if not month_slice.empty:
+                    # Count total requested data packets
+                    consumer_trend.loc[idx, "Requests"] = len(month_slice)
+                    # Count paid/approved settlements
+                    consumer_trend.loc[idx, "Purchases"] = len(month_slice[month_slice["payment_status"] == "Paid"])
+                    
+        if not tok.empty:
+            tok_df = tok.copy()
+            tok_df["created_at_dt"] = pd.to_datetime(tok_df["created_at"], errors='coerce')
+            valid_tok_dates = tok_df["created_at_dt"].notna()
+            tok_df.loc[valid_tok_dates, "month_str"] = tok_df.loc[valid_tok_dates, "created_at_dt"].dt.strftime("%Y-%m")
+            
+            for idx, row in consumer_trend.iterrows():
+                target_m = row["month"]
+                token_slice = tok_df[tok_df["month_str"] == target_m]
+                if not token_slice.empty:
+                    consumer_trend.loc[idx, "Downloads"] = len(token_slice)
+
+        # Render the custom historical flatline/activity chart
+        st.line_chart(consumer_trend.set_index("month"))
+        st.caption("Multi-metric pipeline tracing resource queries against localized token generation history.")
+
+    with right_col:
+        st.subheader("Interacted Catalog Assets by Domain")
+        
+        # Gather all distinct data asset IDs targeted by this tenant profile
+        interacted_dataset_ids = []
+        if not req.empty:
+            interacted_dataset_ids.extend(req["dataset_id"].dropna().unique().tolist())
+        if not tok.empty:
+            interacted_dataset_ids.extend(tok["dataset_id"].dropna().unique().tolist())
+            
+        interacted_dataset_ids = list(set(interacted_dataset_ids))
+
+        # Check domain metrics from the underlying environment registry
+        if interacted_dataset_ids and "datasets" in st.session_state and not st.session_state.datasets.empty:
+            matched_assets = st.session_state.datasets[st.session_state.datasets["dataset_id"].isin(interacted_dataset_ids)]
+            
+            if not matched_assets.empty and "domain" in matched_assets.columns:
+                domain_counts = matched_assets["domain"].value_counts()
+                st.bar_chart(domain_counts)
+                st.caption("Distribution mix across business domains based on current token workspace allocations.")
+            else:
+                st.info("No categorical domains found associated with requested assets.")
+        else:
+            # Clean empty slate fallback if nothing has been ordered yet
+            st.info("No active or pending interactions on book. Browse the Data Catalog to seed your domain distribution chart.")
 
 
 
