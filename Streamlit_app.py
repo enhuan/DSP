@@ -4716,7 +4716,7 @@ def page_policy_configuration():
 
     with tab3:
         st.subheader("Platform policy rules")
-        st.caption("Policies are no longer tied to specific email domains. Tenant eligibility is handled through tenant accounts, while policy rules are based on classification, masking, approval, retention and audit requirements.")
+        st.caption("Tenant eligibility is handled through tenant accounts, while policy rules are based on classification, masking, approval, retention and audit requirements.")
         edited = st.data_editor(st.session_state.policies, width="stretch", hide_index=True, key="policy_editor")
         if st.button("Save policy rules"):
             st.session_state.policies = edited
