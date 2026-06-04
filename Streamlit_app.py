@@ -2728,19 +2728,15 @@ def catalog_title(row) -> str:
     return str(row.get("catalog_title", "") or CATALOG_TITLES.get(str(row.get("dataset_name", "")), row.get("dataset_name", "Untitled Dataset")))
 
 
-
-
-
-
-
-
 def dataset_visibility_mode(row, user: Dict) -> str:
     if is_provider_role(user["role"]) and row["owner_tenant_id"] == user["tenant_id"]:
         return "full"
     if is_msp_role(user["role"]):
         return "governance"
-    if is_consumer_role(user["role"]) and user_has_dataset_access(row["dataset_id"], user):
+    if is_consumer_role(user["role"]) and user_has_dataset_access(row["dataset_id"]):
         return "full"
+    if is_consumer_role(user["role"]):
+        return "consumer_preview"  
     return "public"
 
 
@@ -4485,6 +4481,52 @@ def render_catalog_card(row, user):
                     render_processing_summary_outputs(dataset_id, row.get("dataset_name", ""))
                 with tabs[4]:
                     _ = draw_lineage_flow(row.get("dataset_name", "Dataset"))
+
+            elif mode == "consumer_preview":
+                tabs = st.tabs(["Schema / Columns", "Masked 10-Row Preview"])
+                
+                with tabs[0]:
+                    st.subheader("Dataset Schema")
+                    st.markdown("Review the structural column definitions of this dataset below:")
+                    safe_meta = dict(st.session_state.metadata_store.get(dataset_id, {}))
+                    
+                    # Extract Data Types map if available from metadata discovery
+                    raw_types = safe_meta.get("Data Types", "{}")
+                    try:
+                        data_types = json.loads(raw_types)
+                    except Exception:
+                        data_types = {}
+                        
+                    if data_types:
+                        schema_df = pd.DataFrame([
+                            {"Column Name": col, "Data Type": dtype} 
+                            for col, dtype in data_types.items()
+                        ])
+                        st.dataframe(schema_df, width="stretch", hide_index=True)
+                    else:
+                        # Fallback to tokenizing the string list of column names
+                        col_string = safe_meta.get("Column Names", "")
+                        if col_string:
+                            schema_df = pd.DataFrame([{"Column Name": c.strip()} for c in col_string.split(",")])
+                            st.dataframe(schema_df, width="stretch", hide_index=True)
+                        else:
+                            st.info("Schema details currently unavailable for this draft format.")
+
+                with tabs[1]:
+                    st.subheader("Masked Sample Data Preview")
+                    st.caption("Showing a limited 10-row preview of the anonymized/masked dataset environment.")
+                    store = st.session_state.data_store.get(dataset_id, {})
+                    
+                    # Grab masked dataframe
+                    masked_preview = store.get("masked")
+                    if isinstance(masked_preview, pd.DataFrame) and not masked_preview.empty:
+                        # Strictly clamp to 10 rows maximum for catalog exploration
+                        st.dataframe(masked_preview.head(10), width="stretch", hide_index=True)
+                        st.caption("⚠️ Full download requires submitting an access request and completing payment checkout.")
+                    else:
+                        st.info("Sample preview generation is pending processing pipeline results.")
+
+            
 
             if is_consumer and public_view:
                 st.divider()
