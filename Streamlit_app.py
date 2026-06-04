@@ -3762,7 +3762,7 @@ def draw_lineage_flow(dataset_name: str = "Dataset"):
 
 def page_lineage_glossary():
     _ = ensure_enhanced_state()
-    _ = show_header("Lineage, Glossary & Data Products", "Catalog governance features inspired by Purview and DataArts Catalog.")
+    _ = show_header("Lineage, Glossary & Data Products", "Catalog governance features inspired by Purview Catalog.")
     tab1, tab2, tab3, tab4 = st.tabs(["Lineage", "Business Glossary", "Data Products", "Domains"])
     with tab1:
         st.subheader("Dataset-centric lineage")
@@ -4152,7 +4152,6 @@ def access_workflow_for_classification(classification: str) -> dict:
 
 
 def ensure_policy_reference_tables() -> None:
-    """Create Purview/DataArts-style governance reference tables and richer policy rules."""
     default_labels = pd.DataFrame([
         {"label": "Public", "severity": "Low", "approval_workflow": "Direct purchase", "policy": "Visible in catalog. Consumer may purchase directly after accepting usage terms."},
         {"label": "Internal", "severity": "Low", "approval_workflow": "Direct purchase", "policy": "Visible to registered tenants. Direct purchase allowed; access token and download activity are logged."},
