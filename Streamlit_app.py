@@ -3349,7 +3349,8 @@ def page_consumer_dashboard():
     st.subheader("Recommended workflow")
     for i, text in enumerate(["Browse the Data Catalog using title, provider, domain, tag, type and size filters.",
                               "Review public metadata and submit an access purpose with policy acceptance.",
-                              "Review the billing summary, choose a payment method, simulate gateway payment, then use the issued token to download the authorized masked dataset or open BI tools."],
+                              "Review the billing summary, choose a payment method, and simulate gateway payment.",
+                              "Use the issued token to download the authorized masked dataset or open BI tools."],
                              1):
         st.markdown(f"<div class='flow-box'>{i}. {text}</div>", unsafe_allow_html=True)
 
