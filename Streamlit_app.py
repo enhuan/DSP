@@ -4401,6 +4401,7 @@ def create_access_request(dataset_id: str, purpose: str, other_purpose: str, acc
 
 
 def render_catalog_card(row, user):
+    mode = dataset_visibility_mode(row, user)
     dataset_id = row["dataset_id"]
     is_msp, is_owner_provider, consumer_token = _access_flags(row, user)
     is_consumer = is_consumer_role(user["role"])
